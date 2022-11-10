@@ -1,0 +1,291 @@
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-repeat: repeat;
+}
+
+/* cards */
+
+.card-footer {
+  background: transparent;
+  border-top: 0px;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 40rem;
+    max-width: 100vw;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+ 
+  
+  .welcome-carousel-image1{
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+    background-image:url('./components/images/carousel1.jpg');
+  }
+
+  .welcome-carousel-image2{
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+    background-image:url('./components/images/products/services-discoverscuba.jpg');
+
+  }
+
+  .welcome-carousel-image3{
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+    background-image:url('./components/images/products/services-advancedopen.jpg');
+  }
+
+  /* Shopping cart offcanvas */
+
+  #shoppingCart {
+    width: 500px;
+  }
+  
+
+/* Jumbotron */
+
+.jumbotron-detail-open-water {
+  background: url('./components/images/products/openwater.jpg') no-repeat fixed;
+}
+
+.jumbotron-detail-dolphin {
+  background: url('./components/images/header-dolphin.jpg') no-repeat fixed;
+}
+
+.jumbotron-detail-adv-open-water {
+  background: url('./components/images/products/padi-shop.jpg') no-repeat fixed;
+}
+
+.jumbotron-detail-rescue {
+  background: url('./components/images/openwater-background.jpg') no-repeat fixed;
+}
+
+
+.jumbotron-detail-allcourses {
+  background: url('./components/images/openwater-background.jpg') no-repeat fixed;  
+}
+
+.jumbotron-team {
+  background: url('./components/images/openwater-background.jpg') no-repeat fixed;
+}
+
+.jumbotron-contact {
+  background: url('./components/images/products/services-advancedopen.jpg') no-repeat fixed;
+}
+
+.jumbotron-shop {
+  background: url('./components/images/products/dive-photography1.jpg') no-repeat fixed;
+}
+
+.jumbotron-testimonial {
+  background: url('./components/images/products/services-scubaupdate.jpg') no-repeat fixed;
+}
+
+
+
+.jumbotron {
+  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.1);
+  height: 40vh;
+  background-size: cover;
+}
+
+
+
+
+
+/*FOOTER */
+
+.main-footer {
+  margin-bottom: -100px;
+}
+
+
+.page-footer a {
+  background: #0c62d3;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 0 0 4px;
+  
+}
+footer a:hover { text-decoration: underline; }
+
+
+.page-footer {
+  background: #0c62d3;
+  color: #fff;
+  text-align:left;
+  margin-bottom: -100px;
+  }
+
+.footer-copyright{
+    padding-bottom: 1000px;
+  }
+
+
+  .links-footer-col1 {
+    float: left;
+    width: 25%;
+    background: #0c62d3;
+    color: #fff;
+    }
+
+
+.footer-shop{
+  float: left;
+  width: 100%;
+}
+
+
+.social {
+  background: #0c62d3;
+  text-indent: 20px;
+  padding: 2px;
+  color: white;
+}
+
+.social ul li { display: inline-block; 
+  
+}
+.social ul li a {
+    display: block;
+    width: 23px;
+    height: 23px;
+    background-size: 23px 23px;
+    background-position: center;
+
+    
+}
+
+.fa-ul a:link{
+  color: white;
+}
+
+.copyright {
+float: left;
+text-align: center;
+width: 100%;
+height: 50px;
+padding-top: 100px;
+background: #043b83;
+color: white;
+}
+
+
+
+iframe.services-open-water {
+	width: 850px;
+	height: 500px;
+
+}
+
+.container-openwater {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; 
+  
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+.dolphin-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: -500px; 
+  
+}
+
+
+/* MAP */
+
+.map-container{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.map-container iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+
+
+/*Products - Shop */
+
+.card-product {
+  height: 700px;
+  width: 350px;
+  float: left;  
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: -150px;
+  padding-bottom: 20px;
+}
+
+
+
+/*profile pic*/
+.profile-pic { width: 50px; height: 50px; 
+margin-right: 70px;}
+.profile-pic img {
+    border-radius: 100px;
+    max-width: 100%;    
+}
+
+
+
+/*submenu */
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+	.dropdown-menu li{ position: relative; 	}
+	.nav-item .submenu{ 
+		display: none;
+		position: absolute;
+		left:100%; top:-7px;
+	}
+	.nav-item .submenu-left{ 
+		right:100%; left:auto;
+	}
+	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
+	.dropdown-menu > li:hover > .submenu{ display: block; }
+}	
+/* ============ desktop view .end// ============ */
+
+/* ============ small devices ============ */
+@media (max-width: 991px) {
+
+  .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+	.dropdown-menu > li:hover > .submenu{ display: block; }
+  
+}	
+/* ============ small devices .end// ============ */
