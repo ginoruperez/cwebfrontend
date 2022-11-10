@@ -14,6 +14,7 @@ let token =  Math.ceil(Math.random() * 1000).toString(32);
 const Connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
+  //password: 'lab-password',
   password: 'passw0rd',
   port: '3306',
   database: 'contractordb',
@@ -45,7 +46,7 @@ const subscription = req.body.subscription && 1;
 const password = req.body.password;
 
 console.log('Hi from registration api ', firstName, lastName, email, subscription, password);
-let sql = 'INSERT INTO users SET firstname = ?, lastname = ?, email = ?, subscription = ?,  password = ?';
+let sql = 'INSERT INTO user SET firstname = ?, lastname = ?, email = ?, subscription = ?,  password = ?';
 
 Connection.query(sql, [firstName, lastName, email, subscription, password],
 (err, result) => {
@@ -71,7 +72,7 @@ app.post('/api/users/login', async (req, res) =>
   console.log(' /api/users/login endpoint', email, password);
    
 
-  Connection.query('Select id, password from users where email = ? ', email, (err, result) =>
+  Connection.query('Select id, password from user where email = ? ', email, (err, result) =>
   {
     if (err) throw err;
     console.log(result)
@@ -106,4 +107,4 @@ app.post('/api/users/login', async (req, res) =>
 });
 
 
-// app.listen(8080, () => console.log('API is running on http://localhost:8080/api/users/login'));
+app.listen(8081, () => console.log('API is running on http://localhost:8081/api/users/login'));

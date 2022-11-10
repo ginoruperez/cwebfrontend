@@ -1,29 +1,63 @@
-import React, { useState } from 'react'
-import dolphinico from './images/dolphin.ico';
-import { useNavigate } from 'react-router-dom';
+import React from 'react'
+import Grid from '@mui/material/Grid'
+import { Typography } from '@mui/material';
+import { Container } from '@mui/material';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { useState } from 'react';
+
 import { footer } from './Footer';
+import dolphinico from './images/dolphin.ico';
+
+
+const theme = createTheme();
+
+async function signUp(credentials) {
+
+    return fetch('http://localhost:8081/api/users/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(credentials)
+    })
+        .then(data => data.json())
+}
+
 
 export default function SignUp() {
+    const [firstName, setFirstName] = useState();
+    const [lastName, setLastName] = useState();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
 
-    const navigateTo = useNavigate();
 
-    const [password, setPassword] = useState('');
-    const [repeatPassword, setRepeatpassword] = useState('');
 
-    const handleSubmit = (event) => {
-        if (`${password}` !== `${repeatPassword}`) {
-            window.alert(`Password mismatched!`)
-        } else {
-            window.alert(`Form Submitted! Thank you for registration!`)
-            navigateTo('/');
 
-        }
+    const handleSubmit = async e => {
+        e.preventDefault();
+        console.log(password, email);
+        const token = await signUp({
+            firstName,
+            lastName,
+            email,
+            password
+        });
+
+        console.log(token, "token");
+        //setToken(token);
     }
 
     return (
         <div>
             <header>
-                
+
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
@@ -90,7 +124,8 @@ export default function SignUp() {
                     </div>
                     <div className="nav-item dropdown active" style={{ "width": "170px", "height": "20px" }} >
 
-                        <div className="profile-pic dropdown-toggle" data-bs-toggle="dropdown">
+                        <div className="profile-pic dropdown-toggle" data-bs-toggle="dropdown"
+                        >
                             <i className="fa fa-user" aria-hidden="true"></i>
                         </div>
 
@@ -109,69 +144,101 @@ export default function SignUp() {
 
             </header>
             <main role="main">
-                <div className="container-fluid jumbotron jumbotron-team py-5">
-                    <div className="container">
-                        <h1 className="display-3 fw-bold text-white">Register here</h1>
-                    </div>
-                </div>
-                <div className="container py-5 h-100">
-                    <div className="mask d-flex align-items-center h-100 gradient-custom-3">
-                        <div className="container h-100">
-                            <div className="row d-flex justify-content-center align-items-center h-100">
-                                <div className="col-12 col-md-9 col-lg-7 col-xl-6">
-                                    <div className="card" style={{ "borderRadius": "15px" }}>
-                                        <div className="card-body p-5">
-                                            <h2 className="text-uppercase text-center mb-5">Create an account</h2>
+            <ThemeProvider theme={theme}>
+                <Container component="main" maxWidth='xs'>
+                    <CssBaseline />
+                    <Box
+                        sx={{
+                            marginTop: 8,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <Grid container spacing={2}>
+                            <Typography variant='h1' component='h5'>
+                                Sign Up
+                            </Typography>
 
-                                            <form name="register" onSubmit={handleSubmit}>
+                            <Box component="form" noValidate sx={{ mt: 3 }} onSubmit={handleSubmit}>
+                                <Grid container spacing={2}>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            autoComplete='give-name'
+                                            name="firstName"
+                                            onChange={(e) => setFirstName(e.target.value)}
+                                            required
+                                            fullWidth
+                                            id="firstName"
+                                            label="First Name"
+                                            autoFocus
+                                        />
 
-                                                <div className="form-outline mb-4">
-                                                    <input type="text" id="form3Example1cg" className="form-control form-control-lg" required />
-                                                    <label className="form-label" htmlFor="form3Example1cg">Your Name</label>
-                                                </div>
+                                    </Grid>
+                                    <Grid item xs={12} sm={6}>
+                                        <TextField
+                                            autoComplete='last-name'
+                                            name="lastName"
+                                            onChange={(e) => setLastName(e.target.value)}
+                                            required
+                                            fullWidth
+                                            id="lastName"
+                                            label="Last Name"
+                                            autoFocus
+                                        />
 
-                                                <div className="form-outline mb-4">
-                                                    <input type="email" id="form3Example3cg" className="form-control form-control-lg" required/>
-                                                    <label className="form-label" htmlFor="form3Example3cg">Your Email</label>
-                                                </div>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <TextField
+                                            required
+                                            fullWidth
+                                            id="email"
+                                            label="Email Address"
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            name="email"
+                                            autoComplete='email'
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <TextField
+                                            required
+                                            fullWidth
+                                            name="password"
+                                            type="password"
+                                            onChange={(e) => setPassword(e.target.value)}
+                                            label="Password"
+                                            id="password"
+                                            autoComplete='new-password'
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <FormControlLabel control={<Checkbox defaultChecked />} label="I want to receive inspiration, marketing promotions and updates via email." />
 
-                                                <div className="form-outline mb-4">
-                                                    <input type="password" name="password" className="form-control form-control-lg"
-                                                        onChange={(e) => setPassword(e.target.value)} />
-                                                    <label className="form-label" htmlFor="form3Example4cg">Password</label>
-                                                </div>
 
-                                                <div className="form-outline mb-4">
-                                                    <input type="password" id="repeatpassword" className="form-control form-control-lg"
-                                                        onChange={(e) => setRepeatpassword(e.target.value)} />
-                                                    <label className="form-label" htmlFor="form3Example5cdg">Repeat your password</label>
-                                                </div>
+                                    </Grid>
+                                </Grid>
+                                <Button
+                                    type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                    sx={{ mt: 3, mb: 2 }}>
+                                    Sign Up
+                                </Button>
+                                <Grid item>
+                                    <Link
+                                        to="/SignIn"
 
-                                                <div className="form-check d-flex justify-content-center mb-5">
-                                                    <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
-                                                    <label className="form-check-label" htmlFor="form2Example3g">
-                                                        I agree all statements in <a href="#!" className="text-body"><u>Terms of service</u></a>
-                                                    </label>
-                                                </div>
+                                    >
+                                        Already have an account? Sign in
+                                    </Link>
+                                </Grid>
+                            </Box>
 
-                                                <div className="d-flex justify-content-center">
-                                                    <button type="submit"
-                                                        className="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
-                                                    >Register</button>
-                                                </div>
+                        </Grid>
+                    </Box>
 
-                                                <p className="text-center text-muted mt-5 mb-0">Have already an account? <a href="/SignInLink"
-                                                    className="fw-bold text-body"><u>Login here</u></a></p>
-
-                                            </form>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </Container>
+            </ThemeProvider>
             </main>
             {footer}
         </div>

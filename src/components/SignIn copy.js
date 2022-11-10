@@ -1,48 +1,28 @@
 import React, { useState } from 'react'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { Avatar, Container, CssBaseline, Box, Typography, TextField, Grid, FormControlLabel, Checkbox, Button, Alert } from '@mui/material';
-import { Link } from "react-router-dom"
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import PropTypes from 'prop-types';
-
 import { footer } from './Footer';
 import dolphinico from './images/dolphin.ico';
 
+
 async function loginUser(credentials) {
-    return fetch('http://localhost:8081/api/users/login', {
+    return fetch('http://localhost:8080/contractorweb/loginResult?email=tien&password=123', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(credentials)
     })
-        .then(res => {
-
-            if (res.ok)
-                return res.json()
-            else {
-                alert("Incorrect Password/Email!, Try Again" + res.status);
-                console.log(res.status)
-            }
-
-        })
-        .catch(err => {
-            console.log('err', err);
-
-
-        })
-
+        .then(data => data.json())
 }
 
-
-
-export default function SignIn({ setToken }) {
-    const mytheme = createTheme();
+export default function SignIn({ setToken, setAdmin }) {
 
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
     const handleSubmit = async e => {
+        console.log("navigate");
+        
+
         e.preventDefault();
 
         const token = await loginUser({
@@ -50,24 +30,24 @@ export default function SignIn({ setToken }) {
             password
         });
 
-        if (token) {
-            console.log(token, "token");
-            setToken(token);
-            console.log('the password is correct test atest')
+        console.log(token);
+
+        setToken(token);
+
+        if (password === 'lab-password') {
+            setAdmin(true);
+
+        } else {
+            window.alert('Incorrect Login Password!')
         }
-
-        else if (token === "User does not exist")
-            console.log("User does not exist");
-
-        else if (token === "Incorrect Password!, Try Again")
-            console.log("User does not exist");
 
     }
 
     return (
         <div>
-            <header>
 
+            <header>
+                
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
@@ -153,105 +133,47 @@ export default function SignIn({ setToken }) {
                 </nav>
 
             </header>
+
             <main role="main">
-                <ThemeProvider theme={mytheme}>
-                    <Container component="main" maxWidth="xs">
-                        <CssBaseline />
-                        <Box
-                            sx={{
-                                marginTop: 8,
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center'
+                <div className="container-fluid jumbotron jumbotron-team py-5">
+                    <div className="container">
+                        <h1 className="display-3 fw-bold text-white">Login Page</h1>
+                    </div>
+                </div>
 
+                <div className="container py-5 h-100">
+                    <div className="row d-flex justify-content-center align-items-center h-100">
+                        <div className="col-12 col-md-8 col-lg-6 col-xl-5">
+                            <div className="card shadow-2-strong" style={{ "borderRadius": "1rem" }}>
+                                <div className="card-body p-5 text-center">
 
-                            }}>
+                                    <h3 className="mb-5">Sign in</h3>
 
-                            <Avatar sx={{
-                                m: 1, bgcolor: 'secondery.main'
-                            }}>
-                                <LockOutlinedIcon />
-                            </Avatar>
-                            <Typography component="h1" variant='h5'>
-                                Sign in
-                            </Typography>
-                            <Box component="form" noValidate sx={{ mt: 1 }} onSubmit={handleSubmit}>
-                                <Grid container spacing={2}>
-                                    <Grid item xs={12}>
-                                        <TextField
-                                            required
-                                            fullWidth
-                                            id="email"
-                                            label="Email Address"
-                                            name="email"
-                                            autoComplete="email"
-                                            onChange={(e) => setEmail(e.target.value)}
-                                            autoFocus>
+                                    <div className="form-outline mb-4">
+                                        <input type="email" id="typeEmailX-2" className="form-control form-control-lg" required
+                                            onChange={(e) => setEmail(e.target.value)}  />
+                                        <label className="form-label" htmlFor="typeEmailX-2">Email</label>
+                                    </div>
 
-                                        </TextField>
+                                    <div className="form-outline mb-4">
+                                        <input type="password" id="typePasswordX-2" className="form-control form-control-lg"
+                                            onChange={(e) => setPassword(e.target.value)} required />
+                                        <label className="form-label" htmlFor="typePasswordX-2">Password</label>
+                                    </div>
 
-
-                                    </Grid>
-
-                                    <Grid item xs={12}>
-
-                                        <TextField
-                                            required
-                                            fullWidth
-                                            name="password"
-                                            id="password"
-                                            label="Password"
-                                            type="password"
-                                            autoComplete="current-password"
-                                            onChange={(e) => setPassword(e.target.value)}
-
-                                            autoFocus>
-                                        </TextField>
-
-                                    </Grid>
-                                    <FormControlLabel
-                                        control={<Checkbox value="remmber" color="secondary" />}
-                                        label="Remember me" />
-
-
-
-                                    <Button
-                                        type='submit'
-                                        fullWidth
-                                        variant='contained'
-                                        sx={{ mt: 3, mb: 2 }}>
-                                        Sign in
-                                    </Button>
-                                    <Grid item>
-                                        <Link to="/SignUp">
-                                            {"Don't have an account ? Sign up"}
-                                        </Link>
-                                    </Grid>
-
-                                </Grid>
-
-
-
-
-
-                            </Box>
-
-                        </Box>
-
-
-
-
-                    </Container>
-
-
-
-                </ThemeProvider>
-
+                                    <div className="form-check d-flex justify-content-start mb-4">
+                                        <input className="form-check-input" type="checkbox" value="" id="form1Example3" />
+                                        <label className="form-check-label" htmlFor="form1Example3"> Remember password </label>
+                                    </div>
+                                    <button className="btn btn-primary btn-lg btn-block" type="submit" onClick={handleSubmit} >Login</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
             {footer}
+            
         </div>
     )
 }
-SignIn.propTypes = {
-    setToken: PropTypes.func.isRequired
-};
