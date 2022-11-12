@@ -130,7 +130,7 @@ function Contractors() {
                 </tbody>
             </table>
             <br />
-            <Link to={'/addcontractor'}><font size="5">Register contractor</font></Link>
+            <Link to={'/AddContractor'}><font size="5">Register contractor</font></Link>
         </main>
 
         {footer}
