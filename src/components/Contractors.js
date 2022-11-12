@@ -42,25 +42,14 @@ function Contractors() {
                             <li className="nav-item ">
                                 <a className="nav-link" href="/">Home</a>
                             </li>
-                            <li className="nav-item dropdown">
 
-                                <a className="nav-link dropdown-toggle" href="test.html" id="nav-dropdown" data-bs-toggle="dropdown"
-                                    aria-expanded="false" >
-                                    Courses
-                                </a>
-
-                                <ul className="dropdown-menu " aria-labelledby="nav-dropdown">
-                                    <li><a className="dropdown-item" href="/OpenWater">Open Water</a></li>
-                                    <li><a className="dropdown-item" href="/AdvOpenWater">Advanced Open Water</a></li>
-                                    <li><a className="dropdown-item" href="/Rescue">Rescue Diving</a></li>
-                                    <li>
-                                        <hr className="dropdown-divider" />
-                                    </li>
-                                    <li><a className="dropdown-item" href="/AllCourses">All Dive Courses</a></li>
-                                </ul>
-                            </li>
                             <li className="nav-item">
-                                <a className="nav-link active" href="/Products">Shop</a>
+                                <a className="nav-link" href="/Services">Services</a>
+                            </li>
+
+                            <li className="nav-item">
+                                <a className="nav-link" href="/Contractors">Contractors</a>
+
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link " href="/AboutUs">About Us</a>
@@ -112,25 +101,40 @@ function Contractors() {
 
         <main role="main">
 
-            <h2>Contractors:</h2>
-            <table align='center'>
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Location</th>
-                        <th>Specialties</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {!isLoading ? contractorData.map(contractor => <RowCreator item={contractor} />) : ""}
+            <div className="container-fluid jumbotron jumbotron-team py-5">
+                <div className="container">
+                    <h1 className="display-3 fw-bold text-white">Contractors List</h1>
+                </div>
+            </div>
 
-                </tbody>
-            </table>
-            <br />
-            <Link to={'/AddContractor'}><font size="5">Register contractor</font></Link>
+            <div className="container">
+
+                
+                <Link to={'/SearchContractor'}><font size="5">Search contractor</font></Link>
+                <br></br>
+                <Link to={'/RequestQuote'}><font size="5">Request for Quote</font></Link>
+                <table align='center'>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Location</th>
+                            <th>Specialties</th>
+                            <th>Size</th>
+                            <th>Rate</th>
+                            <th>Owner</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {!isLoading ? contractorData.map(contractor => <RowCreator item={contractor} />) : ""}
+
+                    </tbody>
+                </table>
+                <br />
+               
+            </div>
         </main>
 
         {footer}
@@ -145,8 +149,11 @@ function RowCreator(props) {
         <td>{contractor.name}</td>
         <td>{contractor.location}</td>
         <td>{contractor.specialties}</td>
-        <td><Link to={'/contractorDetails/' + contractor.id}>Add Data</Link></td>
-        <td><Link to={'/analyze/' + contractor.id}>Analyze</Link></td>
+        <td>{contractor.size}</td>
+        <td>{contractor.rate}</td>
+        <td>{contractor.owner}</td>
+        <td><Link to={'/contractorDetails/' + contractor.id}>View  </Link></td>
+        <td><Link to={'/analyze/' + contractor.id}>Select</Link></td>
     </tr>
 
 }

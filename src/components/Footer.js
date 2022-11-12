@@ -1,4 +1,4 @@
-import dolphin3 from './images/dolphin3.png';
+import dolphin3 from './images/contractorlogo.png';
 
 export const footer =
     <div>
@@ -11,7 +11,7 @@ export const footer =
                 <div className="row mt-4">
                     <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
 
-                        <img src={dolphin3} width="180" height="180" className="d-inline-block align-top"
+                        <img src={dolphin3} width="200" height="150" className="d-inline-block align-top"
                             alt="Celtic Sea Dive Shop Logo" />
 
                     </div>
