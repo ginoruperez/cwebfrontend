@@ -34,7 +34,7 @@ export const footer =
                             </li>
                             <li className="mb-3">
                                 <span className="fa-li"><i className="fas fa-envelope"></i></span><span className="ms-1">
-                                    <a href="mailto:info@celticdiveshop.ie">info@celticdiveshop.com </a> </span>
+                                    <a href="mailto:info@celticdiveshop.ie">info@k2gcontractor.com </a> </span>
                             </li>
                             <li className="mb-3">
                                 <span className="fa-li"><i className="fas fa-phone"></i></span><span className="ms-1">+ 353 234 567 88</span>
@@ -70,7 +70,7 @@ export const footer =
 
             </div>
 
-            <div className="copyright text-center py-3">Copyright © 2022 Celtic Sea Dive Shop. All Rights Reserved.</div>
+            <div className="copyright text-center py-3">Copyright © 2022 K2G Contractor Ltd. All Rights Reserved.</div>
 
 
         </footer>

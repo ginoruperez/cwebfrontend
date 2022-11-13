@@ -2,7 +2,7 @@ import dolphinico from './images/contractorlogo-tiny.png';
 import dolphinsmall from './images/products/dolphin-small.jpg';
 import servicesadvancedopen from './images/products/services-advancedopen-small.jpg';
 import servicesopensmall from './images/products/services-discoverscuba.jpg';
-import padi5star from './images/5star_IDC.jpg';
+import padi5star from './images/products/seai-approved-2.jpg';
 import { footer } from './Footer';
 
 function Main() {
@@ -35,7 +35,7 @@ function Main() {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/Contractors">Contractors</a>
+                                    <a className="nav-link" href="/ContractorsList">Contractors</a>
 
                                 </li>
                                 <li className="nav-item">
@@ -106,22 +106,22 @@ function Main() {
                     <div className="carousel-inner">
                         <div className="carousel-item welcome-carousel-image1 active">
                             <div className="carousel-caption">
-                                <h1>Welcome to Celtic Sea Dive Shop</h1>
-                                <p>The best place for Underwater adventure.</p>
+                                <h1>Welcome to K2G Contractor Ltd.</h1>
+                                <p>The best place for your Home Improvement Needs!</p>
                             </div>
                         </div>
                         <div className="carousel-item welcome-carousel-image2">
                             <div className="carousel-caption text-start">
-                                <h1>High Quality Scuba Diving Products</h1>
+                                <h1>High Quality House Painting</h1>
                                 <p>Shop with our wide range of High Quality Products</p>
-                                <p><a className="btn btn-lg btn-primary" href="/Products" role="button">Dive Shop</a></p>
+                                <p><a className="btn btn-lg btn-primary" href="/Products" role="button">Services</a></p>
                             </div>
                         </div>
                         <div className="carousel-item welcome-carousel-image3">
                             <div className="carousel-caption text-end">
-                                <h1>Browse all our Dive Adventures.</h1>
-                                <p>Every season has its special activities. Enjoy our summer fun dive activities.</p>
-                                <p><a className="btn btn-lg btn-primary" href="/OpenWater" role="button">Open Water</a></p>
+                                <h1>Bathroom Fixtures.</h1>
+                                <p>Avail our affordable rates from wide selections of contractor!</p>
+                                <p><a className="btn btn-lg btn-primary" href="/OpenWater" role="button">Contractors</a></p>
                             </div>
                         </div>
                     </div>

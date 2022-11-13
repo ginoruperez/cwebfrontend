@@ -51,6 +51,7 @@ export default function SignUp() {
         });
 
         console.log(token, "token");
+        window.alert('Successfully added')
         //setToken(token);
     }
 

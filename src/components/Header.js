@@ -6,8 +6,8 @@ export default function Header(props) {
 
             <div className="container">
                 <div>
-                    <h1 className="fw-bolder text-center" > Dive Shop
-                        <small className="fw-normal fst-italic"> Your Shopping Cart </small>
+                    <h1 className="fw-bolder text-center" > Contractor
+                        <small className="fw-normal fst-italic"> List of Services </small>
                         {' '}
                         {props.countCartItems ? (
                             <button type="button" className="btn btn-primary" >{props.countCartItems}</button>

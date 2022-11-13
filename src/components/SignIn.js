@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { Avatar, Container, CssBaseline, Box, Typography, TextField, Grid, FormControlLabel, Checkbox, Button, Alert } from '@mui/material';
+import { Avatar, Container, CssBaseline, Box, Typography, TextField, Grid, FormControlLabel, Checkbox, Button } from '@mui/material';
 import { Link } from "react-router-dom"
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import PropTypes from 'prop-types';
@@ -36,7 +36,7 @@ async function loginUser(credentials) {
 
 
 
-export default function SignIn({ setToken }) {
+export default function SignIn({ setToken, setAdmin }) {
     const mytheme = createTheme();
 
     const [email, setEmail] = useState();
@@ -53,7 +53,9 @@ export default function SignIn({ setToken }) {
         if (token) {
             console.log(token, "token");
             setToken(token);
+            setAdmin(true);
             console.log('the password is correct test atest')
+            
         }
 
         else if (token === "User does not exist")
