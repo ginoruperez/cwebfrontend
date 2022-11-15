@@ -81,6 +81,7 @@ function Main() {
                         <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
                             <li><a className="dropdown-item" href="/SignInLink">Sign-In</a></li>
                             <li><a className="dropdown-item" href="/SignUp">Sign-Up</a></li>
+                            <li><a className="dropdown-item" href="/Profile">Profile</a></li>
                             <li>
                                 <hr className="dropdown-divider" />
                             </li>

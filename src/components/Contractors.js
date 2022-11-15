@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 
 import { Button, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Rating, TextField } from '@mui/material'
 import { useNavigate } from 'react-router-dom';
-import dolphinico from './images/dolphin.ico';
+import dolphinico from './images/contractorlogo-tiny.png';
 import { footer } from './Footer';
 
 import useToken from './useToken';
@@ -63,12 +63,11 @@ export default function DataTable() {
     return (
         <div>
             <header>
-
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
-                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="Celtic Sea Dive Shop Logo" />
-                            Celtic Sea Dive Shop
+                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
+                            K 2 G Contractor Ltd.
                         </a>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -77,17 +76,19 @@ export default function DataTable() {
                         </button>
 
                         <div className="collapse navbar-collapse" id="navbarCollapse">
+
+
                             <ul className="nav navbar-nav mr-auto">
+
                                 <li className="nav-item ">
                                     <a className="nav-link" href="/">Home</a>
-                                </li>
-
+                                </li>                                
                                 <li className="nav-item">
                                     <a className="nav-link" href="/Services">Services</a>
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/Contractors">Contractors</a>
+                                    <a className="nav-link active" href="/ContractorsList">Contractors</a>
 
                                 </li>
                                 <li className="nav-item">
@@ -96,6 +97,8 @@ export default function DataTable() {
                                 <li className="nav-item">
                                     <a className="nav-link" href="/Contact">Contact</a>
                                 </li>
+
+
                                 <li className="nav-item dropdown">
 
                                     <a className="nav-link dropdown-toggle" href="/" id="nav-dropdown" data-bs-toggle="dropdown"
@@ -114,12 +117,16 @@ export default function DataTable() {
                                         </li>
                                     </ul>
                                 </li>
+
+
                             </ul>
+
                         </div>
                     </div>
+
                     <div className="nav-item dropdown" style={{ "width": "170px", "height": "20px" }} >
 
-                        <div className="profile-pic dropdown-toggle" data-bs-toggle="dropdown" >
+                        <div className="profile-pic dropdown-toggle" data-bs-toggle="dropdown">
                             <i className="fa fa-user" aria-hidden="true"></i>
                         </div>
 
@@ -127,6 +134,7 @@ export default function DataTable() {
                         <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
                             <li><a className="dropdown-item" href="/SignInLink">Sign-In</a></li>
                             <li><a className="dropdown-item" href="/SignUp">Sign-Up</a></li>
+                            <li><a className="dropdown-item" href="/Profile">Profile</a></li>
                             <li>
                                 <hr className="dropdown-divider" />
                             </li>
@@ -134,6 +142,7 @@ export default function DataTable() {
                         </ul>
 
                     </div>
+
                 </nav>
 
             </header>

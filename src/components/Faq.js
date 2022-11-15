@@ -1,5 +1,5 @@
 import React from 'react';
-import dolphinico from './images/dolphin.ico';
+import dolphinico from './images/contractorlogo-tiny.png';
 import { footer } from './Footer';
 
 function Faq() {
@@ -7,12 +7,11 @@ function Faq() {
     return (
         <div>
             <header>
-
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
-                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="Celtic Sea Dive Shop Logo" />
-                            Celtic Sea Dive Shop
+                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
+                            K 2 G Contractor Ltd.
                         </a>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -21,29 +20,20 @@ function Faq() {
                         </button>
 
                         <div className="collapse navbar-collapse" id="navbarCollapse">
+
+
                             <ul className="nav navbar-nav mr-auto">
+
                                 <li className="nav-item ">
                                     <a className="nav-link" href="/">Home</a>
-                                </li>
-                                <li className="nav-item dropdown">
-
-                                    <a className="nav-link dropdown-toggle" href="test.html" id="nav-dropdown" data-bs-toggle="dropdown"
-                                        aria-expanded="false" >
-                                        Courses
-                                    </a>
-
-                                    <ul className="dropdown-menu active" aria-labelledby="nav-dropdown">
-                                        <li><a className="dropdown-item" href="/OpenWater">Open Water</a></li>
-                                        <li><a className="dropdown-item" href="/AdvOpenWater">Advanced Open Water</a></li>
-                                        <li><a className="dropdown-item" href="/Rescue">Rescue Diving</a></li>
-                                        <li>
-                                            <hr className="dropdown-divider" />
-                                        </li>
-                                        <li><a className="dropdown-item active" href="/AllCourses">All Dive Courses</a></li>
-                                    </ul>
-                                </li>
+                                </li>                                
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/Products">Shop</a>
+                                    <a className="nav-link" href="/Services">Services</a>
+                                </li>
+
+                                <li className="nav-item">
+                                    <a className="nav-link" href="/ContractorsList">Contractors</a>
+
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link " href="/AboutUs">About Us</a>
@@ -51,16 +41,18 @@ function Faq() {
                                 <li className="nav-item">
                                     <a className="nav-link" href="/Contact">Contact</a>
                                 </li>
-                                <li className="nav-item dropdown active">
 
-                                    <a className="nav-link active dropdown-toggle" href="/" id="nav-dropdown" data-bs-toggle="dropdown"
+
+                                <li className="nav-item dropdown">
+
+                                    <a className="nav-link dropdown-toggle active" href="/" id="nav-dropdown" data-bs-toggle="dropdown"
                                         aria-expanded="false" >
                                         Extras
                                     </a>
 
                                     <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
                                         <li><a className="dropdown-item" href="/Testimonial">Testimonial</a></li>
-                                        <li><a className="dropdown-item active" href="/Faq">FAQ</a></li>
+                                        <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
                                                 <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
@@ -69,9 +61,13 @@ function Faq() {
                                         </li>
                                     </ul>
                                 </li>
+
+
                             </ul>
+
                         </div>
                     </div>
+
                     <div className="nav-item dropdown" style={{ "width": "170px", "height": "20px" }} >
 
                         <div className="profile-pic dropdown-toggle" data-bs-toggle="dropdown">
@@ -82,6 +78,7 @@ function Faq() {
                         <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
                             <li><a className="dropdown-item" href="/SignInLink">Sign-In</a></li>
                             <li><a className="dropdown-item" href="/SignUp">Sign-Up</a></li>
+                            <li><a className="dropdown-item" href="/Profile">Profile</a></li>
                             <li>
                                 <hr className="dropdown-divider" />
                             </li>
@@ -89,11 +86,12 @@ function Faq() {
                         </ul>
 
                     </div>
+
                 </nav>
 
             </header>
             <main role="main">
-                <div className="container-fluid jumbotron jumbotron-detail-allcourses py-5">
+                <div className="container-fluid jumbotron jumbotron-faq py-5">
                     <div className="container">
                         <h1 className="display-3 fw-bold text-white">FAQ</h1>
                     </div>

@@ -28,6 +28,7 @@ import AddContractor from './components/AddContractor';
 import SearchContractor from './components/SearchContractor';
 import Services from './components/Services';
 import ContractorsList from './components/ContractorsList';
+import Profile from './components/Profile';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -55,6 +56,7 @@ root.render(
       <Route path="SignIn" element={<SignIn />} />
       <Route path="SignInLink" element={<SignInLink />} />
       <Route path="SignUp" element={<SignUp />} />
+      <Route path="Profile" element={<Profile />} />
       <Route path="Login" element={<Login />} />
       <Route path="DolphinEncounter" element={<DolphinEncounter />} />
 

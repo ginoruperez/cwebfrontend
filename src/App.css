@@ -61,6 +61,10 @@ body {
   background: url('./components/images/products/openwater.jpg') no-repeat fixed;
 }
 
+.jumbotron-painting {
+  background: url('./components/images/products/painting.jpg') no-repeat fixed;
+}
+
 .jumbotron-detail-dolphin {
   background: url('./components/images/header-dolphin.jpg') no-repeat fixed;
 }
@@ -79,19 +83,19 @@ body {
 }
 
 .jumbotron-team {
-  background: url('./components/images/openwater-background.jpg') no-repeat fixed;
+  background: url('./components/images/products/house.jpg') no-repeat fixed;
 }
 
 .jumbotron-contact {
-  background: url('./components/images/products/services-advancedopen.jpg') no-repeat fixed;
+  background: url('./components/images/products/lampost.jpg') no-repeat fixed;
 }
 
-.jumbotron-shop {
-  background: url('./components/images/products/dive-photography1.jpg') no-repeat fixed;
+.jumbotron-faq {
+  background: url('./components/images/products/faq.jpg') no-repeat fixed;
 }
 
 .jumbotron-testimonial {
-  background: url('./components/images/products/services-scubaupdate.jpg') no-repeat fixed;
+  background: url('./components/images/products/bulb.jpg') no-repeat fixed;
 }
 
 
