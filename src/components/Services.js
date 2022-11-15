@@ -66,8 +66,8 @@ function Services() {
 
   return (
     <div>
-
-
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
       <header>
         <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
           <div className="container">
@@ -140,6 +140,7 @@ function Services() {
             <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
               <li><a className="dropdown-item" href="/SignInLink">Sign-In</a></li>
               <li><a className="dropdown-item" href="/SignUp">Sign-Up</a></li>
+              <li><a className="dropdown-item" href="/Profile">Profile</a></li>
               <li>
                 <hr className="dropdown-divider" />
               </li>
@@ -166,7 +167,7 @@ function Services() {
 
       {/*End of Shopping Cart*/}
 
-    
+
 
       <div className='footer-shop'>
 
