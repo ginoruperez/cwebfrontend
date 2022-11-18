@@ -58,8 +58,8 @@ function Main() {
                                         <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="/" rel="noreferrer">Other Contractor Site</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -143,33 +143,22 @@ function Main() {
                                 Our Company
                             </h2>
                             <section>
-                                Our Dive Shop is located in Kinsale, Southwest coast of Ireland near Celtic Sea. We stock a wide range of
-                                Scubapro, Mares, Apeks and Aqualung dive equipment.
-
-                                For convenience, customers may also order from our on line shop.
-                                We are PADI accredited servicing and our test centre is also located within our shop
-
-                                With exclusive deals in Malta and Gozo and other fantastic dive locations around Ireland,
-                                we guarantee you the best diving all around.
-
+                                Our Company is located in Kinsale, Southwest coast of Ireland near Celtic Sea. 
+                                
                                 With over 10 years of experience, we guarantee the highest standards of quality in
-                                terms of teaching, safety, and services.
+                                terms of home improvement and services.
 
-                                All our equipment is renewed every 2 years, to guarantee your comfort and safety.
-                                So start your PADI Adventure with us today, get diving and change your life.
-                                Our team is here to assist you to step by step.
+                                
                             </section>
                             <br />
 
                             <section>
-                                The Celtic Sea Dive shop aims to provide training and education in a fun-filled safe environment
-                                to people from all walks of life.
+                                The K2G Contractor Company aims to provide you the highest quality services you need 
+                                for your home improvement and services.
                             </section>
                             <br />
                             <section>
-                                The team helps people conquer their fear in an open water. They focus mainly in making sure
-                                anybody visiting them has an unforgettable experience and leave with a smile. It also offers a
-                                wide range of diving equipment and accessories with high quality brands
+                                
 
                             </section>
                             <br />
@@ -183,9 +172,8 @@ function Main() {
                         <aside className="col-lg-4">
                             <div className="p-4 mb-3 mt-2 bg-light rounded">
                                 <h4>Thank You for Joining Us !</h4>
-                                <p className="mb-0 fst-italic">We are a proud 5 star <a target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI</a> facility incorporating our own Dive Shop
-                                    and Servicing
-                                    Centre, we thrive on quality service, safety and of course a lot of fun!</p>
+                                <p className="mb-0 fst-italic">We are a proud SEAI certified <a target="_blank" href="https://www.padi.com/" rel="noreferrer">SEAI</a>facility incorporating our own company
+                                    and Services, we thrive on quality service for home improvement!</p>
 
                                 <img className="card-img-top" src={padi5star} alt="padi 5 star" />
                             </div>
