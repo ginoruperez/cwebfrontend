@@ -36,7 +36,16 @@ async function loginUser(credentials) {
 
 
 
-export default function SignIn({ setToken, setAdmin }) {
+export default function SignIn({ setToken }) {
+
+    const [name, setUserName] = useState('');
+    
+ 
+    const handle = () => {
+       localStorage.setItem('username', email);       
+    };
+
+    
     const mytheme = createTheme();
 
     const [email, setEmail] = useState();
@@ -53,7 +62,7 @@ export default function SignIn({ setToken, setAdmin }) {
         if (token) {
             console.log(token, "token");
             setToken(token);
-            setAdmin(true);
+            
             console.log('the password is correct test atest')
             
         }
@@ -94,7 +103,7 @@ export default function SignIn({ setToken, setAdmin }) {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/ContractorsList">Contractors</a>
+                                    <a className="nav-link" href="/Contractors">Contractors</a>
 
                                 </li>
                                 <li className="nav-item">
@@ -140,11 +149,11 @@ export default function SignIn({ setToken, setAdmin }) {
                         <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
                             <li><a className="dropdown-item" href="/SignInLink">Sign-In</a></li>
                             <li><a className="dropdown-item" href="/SignUp">Sign-Up</a></li>
-                            <li><a className="dropdown-item" href="/Profile">Profile</a></li>
+                            <li><a className="dropdown-item" href="/MyProfile">Profile</a></li>
                             <li>
                                 <hr className="dropdown-divider" />
                             </li>
-                            <li><a className="dropdown-item" href="/">Logout</a></li>
+                            <li><a className="dropdown-item" href="/SignOut">Logout</a></li>
                         </ul>
 
                     </div>
@@ -216,6 +225,7 @@ export default function SignIn({ setToken, setAdmin }) {
 
                                     <Button
                                         type='submit'
+                                        onClick={handle}
                                         fullWidth
                                         variant='contained'
                                         sx={{ mt: 3, mb: 2 }}>

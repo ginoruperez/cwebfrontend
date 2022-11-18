@@ -1,59 +1,91 @@
-import React from 'react'
-import Grid from '@mui/material/Grid'
-import { Typography } from '@mui/material';
-import { Container } from '@mui/material';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import Checkbox from '@mui/material/Checkbox';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import { useState } from 'react';
+import React, { useState } from 'react'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { Avatar, Container, CssBaseline, Box, Typography, TextField, Grid, FormControlLabel, Checkbox, Button } from '@mui/material';
+import { Link } from "react-router-dom"
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import PropTypes from 'prop-types';
 
 import { footer } from './Footer';
 import dolphinico from './images/contractorlogo-tiny.png';
+import Main from './Main';
 
-
-const theme = createTheme();
-
-async function profileChange(credentials) {
-
-    return fetch('http://localhost:8081/api/users/register', {
+async function profile(credentials) {
+    return fetch('http://localhost:8081/api/users/profile', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(credentials)
     })
-        .then(data => data.json())
+        .then(res => {
+
+            if (res.ok)
+                return res.json()
+            else {
+                alert("Incorrect Password/Email!, Try Again" + res.status);
+                console.log(res.status)
+            }
+
+        })
+        .catch(err => {
+            console.log('err', err);
+
+
+        })
+
 }
 
 
-export default function MyProfile() {
-    const [firstName, setFirstName] = useState();
-    const [lastName, setLastName] = useState();
+export default function MyProfile({ setToken }) {
+
+    const mytheme = createTheme();
+
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const [password2,setPassword2] = useState();
+    let username=''
 
+    const checkAuthenticate = () => {
+        let username=localStorage.getItem('username') 
+
+        if ( (typeof username === 'string' && username.trim().length === 0) || username==null) {
+            console.log('string is empty');
+            alert('Sign-In required for this page!');
+            return < Main />  
+
+          } else {
+            { /* alert(username); */ }
+          }
+          
+        
+    }
     const handleSubmit = async e => {
         e.preventDefault();
-        console.log(password, email);
-        const token = await profileChange({
-            firstName,
-            lastName,
+
+     
+        const token = await profile({
             email,
-            password
+            password,
+            password2
         });
 
-        console.log(token, "token");
-        window.alert('Successfully added')
-        //setToken(token);
+        if (token === "incorrect password"){
+            console.log("incorrect password");}
+
+        else {        
+            console.log(token, "token");            
+            alert('Profile changed! The password is correct');
+            
+
+        }
+
+        
     }
 
     return (
         <div>
+            {checkAuthenticate()}
             <header>
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
@@ -74,13 +106,13 @@ export default function MyProfile() {
 
                                 <li className="nav-item ">
                                     <a className="nav-link" href="/">Home</a>
-                                </li>                                
+                                </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/Services">Services</a>
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/ContractorsList">Contractors</a>
+                                    <a className="nav-link" href="/Contractors">Contractors</a>
 
                                 </li>
                                 <li className="nav-item">
@@ -116,7 +148,7 @@ export default function MyProfile() {
                         </div>
                     </div>
 
-                    <div className="nav-item dropdown active " style={{ "width": "170px", "height": "20px" }} >
+                    <div className="nav-item dropdown" style={{ "width": "170px", "height": "20px" }} >
 
                         <div className="profile-pic dropdown-toggle" data-bs-toggle="dropdown">
                             <i className="fa fa-user" aria-hidden="true"></i>
@@ -126,11 +158,11 @@ export default function MyProfile() {
                         <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
                             <li><a className="dropdown-item" href="/SignInLink">Sign-In</a></li>
                             <li><a className="dropdown-item" href="/SignUp">Sign-Up</a></li>
-                            <li><a className="dropdown-item" href="/Profile">Profile</a></li>
+                            <li><a className="dropdown-item" href="/MyProfile">Profile</a></li>
                             <li>
                                 <hr className="dropdown-divider" />
                             </li>
-                            <li><a className="dropdown-item" href="/">Logout</a></li>
+                            <li><a className="dropdown-item" href="/SignOut">Logout</a></li>
                         </ul>
 
                     </div>
@@ -139,106 +171,117 @@ export default function MyProfile() {
 
             </header>
             <main role="main">
-            <ThemeProvider theme={theme}>
-                <Container component="main" maxWidth='xs'>
-                    <CssBaseline />
-                    <Box
-                        sx={{
-                            marginTop: 8,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                        }}
-                    >
-                        <Grid container spacing={2}>
-                            <Typography variant='h1' component='h5'>
+                <ThemeProvider theme={mytheme}>
+                    <Container component="main" maxWidth="xs">
+                        <CssBaseline />
+                        <Box
+                            sx={{
+                                marginTop: 8,
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center'
+
+
+                            }}>
+
+                            <Avatar sx={{
+                                m: 1, bgcolor: 'secondery.main'
+                            }}>
+                                <AccountBoxIcon />
+                            </Avatar>
+                            <Typography component="h1" variant='h5'>
                                 My Profile
                             </Typography>
-
-                            <Box component="form" noValidate sx={{ mt: 3 }} onSubmit={handleSubmit}>
+                            <Box component="form" noValidate sx={{ mt: 1 }} onSubmit={handleSubmit}>
                                 <Grid container spacing={2}>
-                                    <Grid item xs={12} sm={6}>
-                                        <TextField
-                                            autoComplete='give-name'
-                                            name="firstName"
-                                            onChange={(e) => setFirstName(e.target.value)}
-                                            required
-                                            fullWidth
-                                            id="firstName"
-                                            label="First Name"
-                                            autoFocus
-                                        />
-
-                                    </Grid>
-                                    <Grid item xs={12} sm={6}>
-                                        <TextField
-                                            autoComplete='last-name'
-                                            name="lastName"
-                                            onChange={(e) => setLastName(e.target.value)}
-                                            required
-                                            fullWidth
-                                            id="lastName"
-                                            label="Last Name"
-                                            autoFocus
-                                        />
-
-                                    </Grid>
                                     <Grid item xs={12}>
-                                        <TextField
+                                        <TextField  defaultValue={username}                                      
                                             required
                                             fullWidth
                                             id="email"
                                             label="Email Address"
-                                            onChange={(e) => setEmail(e.target.value)}
                                             name="email"
-                                            autoComplete='email'
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <TextField
-                                            required
-                                            fullWidth
-                                            name="newpassword"
-                                            type="newpassword"
-                                            onChange={(e) => setPassword(e.target.value)}
-                                            label="New Password"
-                                            id="newpassword"
-                                            autoComplete='new-password'
-                                        />
+                                            autoComplete="email"                                            
+                                            onChange={(e) => setEmail(e.target.value)}                                            
+                                            autoFocus>
+
+                                        </TextField>
+
+
                                     </Grid>
 
                                     <Grid item xs={12}>
+
                                         <TextField
                                             required
                                             fullWidth
-                                            name="confirmpassword"
-                                            type="confirmpassword"
+                                            name="password"
+                                            id="password"
+                                            label="Password"
+                                            type="password"
+                                            autoComplete="current-password"
                                             onChange={(e) => setPassword(e.target.value)}
-                                            label="Confirm Password"
-                                            id="confirmpassword"
-                                            autoComplete='confirm-password'
-                                        />
+
+                                            autoFocus>
+                                        </TextField>
+
+
+
                                     </Grid>
-                                    
+
+                                    <Grid item xs={12}>
+
+                                        <TextField
+                                            required
+                                            fullWidth
+                                            name="password2"
+                                            id="password2"
+                                            label="Confirm Password"
+                                            type="password"
+                                            autoComplete="password2"
+                                            onChange={(e) => setPassword2(e.target.value)}
+
+                                            autoFocus>
+                                        </TextField>
+
+
+
+                                    </Grid>
+
+
+                                    <Button
+                                        type='submit'                                        
+                                        fullWidth
+                                        variant='contained'
+                                        sx={{ mt: 3, mb: 2 }}>
+                                        Submit
+                                    </Button>
+
+
                                 </Grid>
-                                <Button
-                                    type="submit"
-                                    fullWidth
-                                    variant="contained"
-                                    sx={{ mt: 3, mb: 2 }}>
-                                    Submit
-                                </Button>
-                                
+
+
+
+
+
                             </Box>
 
-                        </Grid>
-                    </Box>
+                        </Box>
 
-                </Container>
-            </ThemeProvider>
+
+
+
+                    </Container>
+
+
+
+                </ThemeProvider>
+
             </main>
             {footer}
         </div>
-
     )
 }
+MyProfile.propTypes = {
+    setToken: PropTypes.func.isRequired
+};

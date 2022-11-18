@@ -1,5 +1,4 @@
 
-
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -49,7 +48,6 @@ app.post('/api/users/register', async (req, res) => {
   const email = req.body.email;
   const subscription = req.body.subscription && 1;
   let password = req.body.password;
-
   bcrypt.hash(password, 10, function (err, hash) {
     password = hash;
     console.log('password hash ' + hash);
@@ -65,20 +63,20 @@ app.post('/api/users/register', async (req, res) => {
         res.status(200).send({ message: "Registered successfuly" });
         token = result.insertId.toString(32) + token;
         console.log(token, "token =>");
-
-
+        
+        
 
         //res.send({
-        // token: token
-        //
-        //    });
+         // token: token
+      //
+    //    });
       });
 
 
   });
 
 
-
+  
 });
 
 app.post('/api/users/login', async (req, res) => {
@@ -129,44 +127,58 @@ app.post('/api/users/login', async (req, res) => {
 
 
 app.post('/api/users/profile', async (req, res) => {
-
   console.log(' /api/users/profile endpoint');
-  let email = req.body.email;
-  let password = req.body.password;
-  let password2 = req.body.password2
-
-  console.log(' /api/users/profile endpoint', email, password, password2);
+  const email = req.body.email;
+  const password = req.body.password;
+  const confirmpassword = req.body.confirmpassword;
+  const firstname = req.body.firstname;
+  const lastname = req.body.lastname;
   
-  if (password === password2) {
+  console.log(' /api/users/profile endpoint', email, password,confirmpassword,firstname,lastname);
+
+  
+  Connection.query('Select id, password,firstname,lastname,email from user where email = ? ', email, (err, result) => {
+    if (err) throw err;
     
-    bcrypt.hash(password, 10, function (err, hash) {
+    console.log(result)
 
-      password = hash;
+    if (result.length) {
+      console.log(result[0].password, "result.password");
+      console.log(result[0].password.toString())
+      console.log(result[0].firstname.toString())
+      console.log(result[0].lastname.toString())
+      console.log(result[0].email.toString())
+/** 
+      bcrypt.compare(password, dbPassword, function (err, loginSuccess) {
 
-      console.log('password hash ' + hash);
-      console.log('Hi from profile api ', email, password, password2);
+        // execute code to test for access and login
+        console.log('Bcrypt compare result ' + loginSuccess);
+        console.log('dbPassword ' + dbPassword);
 
-      let sql = 'UPDATE user SET password = ? WHERE email = ?';
-      Connection.query(sql, [password, email],
-        (err, result) => {
-          if (err) throw err;
-          res.status(200).send({ message: "Profile change successfuly" });
-          console.log("Profile change successfuly");
-          
-        });
+        if (loginSuccess) {
+          console.log('User password correct!');
+          token = result[0].id.toString(32);
+          res.send(
+            {
+              token: token
+            }
+          )
+        }
+        else {
+          console.log("Incorrect Password!, Try Again");
+          res.status(400).send({ message: "Incorrect Password!, Try Again" });
+        }
 
-       
+      });
+      */
 
+    }
+    else {
+      console.log('User does not exist');
+      res.status(400).send({ message: "User does not exist!" });
+    }
 
-    });
-
-  } else {
-    res.status(400).send({ message: "incorrect password" });
-    console.log("Incorrect Password!" );
-
-  }
-
-
+  });
 });
 
 

@@ -14,6 +14,8 @@ import { footer } from './Footer';
 
 import useToken from './useToken';
 import { Token } from '@mui/icons-material';
+import SignIn from './SignIn';
+import Main from './Main';
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', type: 'number', width: 70 },
@@ -45,8 +47,6 @@ const columns: GridColDef[] = [
 
 export default function DataTable() {
 
-
-
     const [contractorData, setcontractorData] = useState([])
     const [isLoading, setLoading] = useState(true)
 
@@ -60,8 +60,24 @@ export default function DataTable() {
 
     const rows = contractorData
 
+    const checkAuthenticate = () => {
+        let username=localStorage.getItem('username') 
+
+        if ( (typeof username === 'string' && username.trim().length === 0) || username==null) {
+            console.log('string is empty');
+            alert('Sign-In required for this page!');
+            return < Main />  
+
+          } else {
+            { /* alert(username); */ }
+          }
+          
+        
+    }
+
     return (
         <div>
+            {checkAuthenticate()}
             <header>
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
@@ -88,7 +104,7 @@ export default function DataTable() {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link active" href="/ContractorsList">Contractors</a>
+                                    <a className="nav-link active" href="/Contractors">Contractors</a>
 
                                 </li>
                                 <li className="nav-item">
@@ -134,11 +150,11 @@ export default function DataTable() {
                         <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
                             <li><a className="dropdown-item" href="/SignInLink">Sign-In</a></li>
                             <li><a className="dropdown-item" href="/SignUp">Sign-Up</a></li>
-                            <li><a className="dropdown-item" href="/Profile">Profile</a></li>
+                            <li><a className="dropdown-item" href="/MyProfile">Profile</a></li>
                             <li>
                                 <hr className="dropdown-divider" />
                             </li>
-                            <li><a className="dropdown-item" href="/">Logout</a></li>
+                            <li><a className="dropdown-item" href="/SignOut">Logout</a></li>
                         </ul>
 
                     </div>

@@ -1,7 +1,7 @@
 import dolphinico from './images/contractorlogo-tiny.png';
-import dolphinsmall from './images/products/dolphin-small.jpg';
-import servicesadvancedopen from './images/products/services-advancedopen-small.jpg';
-import servicesopensmall from './images/products/services-discoverscuba.jpg';
+import dolphinsmall from './images/products/heating.jpg';
+import servicesadvancedopen from './images/products/roofrepair.jpg';
+import servicesopensmall from './images/products/plumbing.jpg';
 import padi5star from './images/products/seai-approved-2.jpg';
 import { footer } from './Footer';
 
@@ -35,7 +35,7 @@ function Main() {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/ContractorsList">Contractors</a>
+                                    <a className="nav-link" href="/Contractors">Contractors</a>
 
                                 </li>
                                 <li className="nav-item">
@@ -85,7 +85,7 @@ function Main() {
                             <li>
                                 <hr className="dropdown-divider" />
                             </li>
-                            <li><a className="dropdown-item" href="/">Logout</a></li>
+                            <li><a className="dropdown-item" href="/SignOut">Logout</a></li>
                         </ul>
 
                     </div>
@@ -194,14 +194,14 @@ function Main() {
                     </div>
                 </div>
                 <div className="container history">
-                    <h2 className="pb-4 mb-2 mt-5">Exciting Dive Adventure for the Season!</h2>
+                    <h2 className="pb-4 mb-2 mt-5">Available Services Most In-demand!</h2>
                     <div className="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4">
                         <div className="col">
                             <div className="card rounded mb-4 shadow-sm">
                                 <img className="card-img-top" src={dolphinsmall} alt="dolphinsmall" />
                                 <div className="card-body">
-                                    <h5 className="card-title">Diving with Dolphin</h5>
-                                    <p className="card-text">Feels Great to swim with our Dolphin!</p>
+                                    <h5 className="card-title">Taking care of your Heating</h5>
+                                    <p className="card-text">Warm your Home during the Winter cold season!</p>
                                 </div>
                                 <div className="card-footer">
                                     <a href="/DolphinEncounter" className="btn btn-primary">View details</a>
@@ -213,8 +213,8 @@ function Main() {
                             <div className="card rounded mb-4 shadow-sm">
                                 <img className="card-img-top" src={servicesopensmall} alt="services open water" />
                                 <div className="card-body">
-                                    <h5 className="card-title">Open Water Diving</h5>
-                                    <p className="card-text">My God, this is awesome!</p>
+                                    <h5 className="card-title">Unclog your pipes!</h5>
+                                    <p className="card-text">We take care of your pipes at Home</p>
                                 </div>
                                 <div className="card-footer">
                                     <a href="/OpenWater" className="btn btn-primary">View details</a>
@@ -226,8 +226,8 @@ function Main() {
                             <div className="card rounded mb-4 shadow-sm">
                                 <img className="card-img-top" src={servicesadvancedopen} alt="services advanced open water" />
                                 <div className="card-body">
-                                    <h5 className="card-title">Advanced Open Water</h5>
-                                    <p className="card-text">This is sooooo cool and exhilarating!</p>
+                                    <h5 className="card-title">Roof Repair</h5>
+                                    <p className="card-text">An Irish way of repairing Roof!</p>
                                 </div>
                                 <div className="card-footer">
                                     <a href="/AdvOpenWater" className="btn btn-primary">View details</a>

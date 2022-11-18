@@ -18,16 +18,16 @@ import Testimonial from './components/Testimonial';
 import Faq from './components/Faq';
 import Products from './components/Products';
 import CreateProduct from './components/CreateProduct';
-import SignIn from './components/SignIn';
+import SignInlocal from './components/SignIn-localstorage';
 import SignInLink from './components/SignInLink';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
+import SignOut from './components/SignOut';
 import DolphinEncounter from './components/DolphinEncounter';
 import Contractors from './components/Contractors';
 import AddContractor from './components/AddContractor';
 import SearchContractor from './components/SearchContractor';
 import Services from './components/Services';
-import ContractorsList from './components/ContractorsList';
 import MyProfile from './components/MyProfile';
 
 
@@ -48,12 +48,13 @@ root.render(
       <Route path="Faq" element={<Faq />} />
       <Route path="Products" element={<Products />} />
       <Route path="Contractors" element={<Contractors />} />
-      <Route path="ContractorsList" element={<ContractorsList />} />
+    
       <Route path="Services" element={<Services />} />
       <Route path="CreateProduct" element={<CreateProduct />} />
       <Route path="AddContractor" element={<AddContractor />} />
       <Route path="SearchContractor" element={<SearchContractor />} />
-      <Route path="SignIn" element={<SignIn />} />
+      <Route path="SignIn" element={<SignInlocal />} />
+      <Route path="SignOut" element={<SignOut />} />
       <Route path="SignInLink" element={<SignInLink />} />
       <Route path="SignUp" element={<SignUp />} />
       <Route path="MyProfile" element={<MyProfile />} />

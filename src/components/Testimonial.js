@@ -33,7 +33,7 @@ function Testimonial() {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/ContractorsList">Contractors</a>
+                                    <a className="nav-link" href="/Contractors">Contractors</a>
 
                                 </li>
                                 <li className="nav-item">
@@ -79,11 +79,11 @@ function Testimonial() {
                         <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
                             <li><a className="dropdown-item" href="/SignInLink">Sign-In</a></li>
                             <li><a className="dropdown-item" href="/SignUp">Sign-Up</a></li>
-                            <li><a className="dropdown-item" href="/Profile">Profile</a></li>
+                            <li><a className="dropdown-item" href="/MyProfile">Profile</a></li>
                             <li>
                                 <hr className="dropdown-divider" />
                             </li>
-                            <li><a className="dropdown-item" href="/">Logout</a></li>
+                            <li><a className="dropdown-item" href="/SignOut">Logout</a></li>
                         </ul>
 
                     </div>
