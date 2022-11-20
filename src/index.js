@@ -29,6 +29,7 @@ import AddContractor from './components/AddContractor';
 import SearchContractor from './components/SearchContractor';
 import Services from './components/Services';
 import MyProfile from './components/MyProfile';
+import ContractorAdmin from './components/ContractorAdmin';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -51,6 +52,7 @@ root.render(
     
       <Route path="Services" element={<Services />} />
       <Route path="CreateProduct" element={<CreateProduct />} />
+      <Route path="ContractorAdmin" element={<ContractorAdmin />} />
       <Route path="AddContractor" element={<AddContractor />} />
       <Route path="SearchContractor" element={<SearchContractor />} />
       <Route path="SignIn" element={<SignInlocal />} />
