@@ -30,7 +30,8 @@ import SearchContractor from './components/SearchContractor';
 import Services from './components/Services';
 import MyProfile from './components/MyProfile';
 import ContractorAdmin from './components/ContractorAdmin';
-
+import UpdateContractor from './components/UpdateContractor';
+import DeleteContractor from './components/DeleteContractor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -54,6 +55,9 @@ root.render(
       <Route path="CreateProduct" element={<CreateProduct />} />
       <Route path="ContractorAdmin" element={<ContractorAdmin />} />
       <Route path="AddContractor" element={<AddContractor />} />
+      <Route path="/updatecontractor/:id" element={<UpdateContractor />} />
+      <Route path="/deletecontractor/:id" element={<DeleteContractor />} />
+
       <Route path="SearchContractor" element={<SearchContractor />} />
       <Route path="SignIn" element={<SignInlocal />} />
       <Route path="SignOut" element={<SignOut />} />
