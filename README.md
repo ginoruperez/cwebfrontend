@@ -9,6 +9,8 @@
  2. node server/server.js
  3. run the contractorweb from ide or  spring framework
 
+
+This version is draft for CRUD CONTRACTORS
  
 
 
