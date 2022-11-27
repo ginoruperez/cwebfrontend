@@ -123,9 +123,11 @@ function OpenWater() {
 
                             <div className="container-openwater">
                                 <iframe className="responsive-iframe"
-                                    src="https://www.youtube.com/embed/mw-_-sUBPEc?autoplay=1&mute=1"
+                                    src="https://www.youtube.com/embed/hlJUezuNFuI"
                                     title="YouTube video player">
                                 </iframe>
+
+                                
                             </div>
 
                         </div>

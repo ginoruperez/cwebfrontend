@@ -3,9 +3,20 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
+
+import { useNavigate } from "react-router-dom";
+
 import dolphinico from './images/contractorlogo-tiny.png';
 
 function ContractorAdmin() {
+
+
+    const navigate = useNavigate();
+
+    const refreshPage = () => {
+        window.location.reload(false);
+    }
+
 
     const [contractorData, setcontractorData] = useState([])
     const [isLoading, setLoading] = useState(true)
@@ -18,7 +29,29 @@ function ContractorAdmin() {
         })
     }, [])
 
+
+    const checkAuthenticate = () => {
+        let username=localStorage.getItem('username') 
+        
+        if ( (typeof username === 'string' && username.trim().length === 0) || username==null) {
+            console.log('string is empty');
+            alert('Sign-In required for this page!');
+           
+            // Somewhere in your code, e.g. inside a handler:
+            navigate("/SignInLink"); 
+            
+          } else {
+            { /* alert(username); */ }
+          }
+          
+        
+    }
+
     return (<div>
+
+
+        { /* {refreshPage} */}
+        {checkAuthenticate()}
 
         <header>
             <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
@@ -53,13 +86,13 @@ function ContractorAdmin() {
                                 <a className="nav-link " href="/AboutUs">About Us</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" href="/Contact">Contact</a>
+                                <a className="nav-link" href="/Contact">Contact</a>
                             </li>
 
 
                             <li className="nav-item dropdown">
 
-                                <a className="nav-link dropdown-toggle" href="/" id="nav-dropdown" data-bs-toggle="dropdown"
+                                <a className="nav-link dropdown-toggle active" href="/" id="nav-dropdown" data-bs-toggle="dropdown"
                                     aria-expanded="false" >
                                     Extras
                                 </a>
@@ -69,8 +102,8 @@ function ContractorAdmin() {
                                     <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                     <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                         <ul className="submenu dropdown-menu">
-                                            <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                            <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                            <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                            <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -108,7 +141,8 @@ function ContractorAdmin() {
 
 
         <h2>Contractors:</h2>
-        <Link to={'/addcontractor'}><font size="5">Register contractor</font></Link>
+        <Link to={'/addcontractor'}><font size="5">Register contractor</font></Link><br></br>
+        <button onClick={refreshPage}>Click to reload!</button>
         <table align='center'>
             <thead>
                 <tr>
@@ -130,16 +164,17 @@ function ContractorAdmin() {
         </table>
         <br />
         <Link to={'/addcontractor'}><font size="5">Register contractor</font></Link>
+
     </div>)
 }
 
 function RowCreator(props) {
 
     var contractor = props.item;
-    let id= contractor.id;
+    let id = contractor.id;
 
     return <tr>
-        
+
         <td>{id}</td>
         <td>{contractor.name}</td>
         <td>{contractor.location}</td>
@@ -147,8 +182,8 @@ function RowCreator(props) {
         <td>{contractor.size}</td>
         <td>{contractor.rate}</td>
         <td>{contractor.owner}</td>
-        <td><Link to={'/deletecontractor/' +id}>Delete</Link></td>
-        <td><Link to={'/updatecontractor/'+id}>Update </Link></td>
+        <td><Link to={'/deletecontractor/' + id}>Delete</Link></td>
+        <td><Link to={'/updatecontractor/' + id}>Update </Link></td>
     </tr>
 
 }

@@ -39,13 +39,13 @@ async function loginUser(credentials) {
 export default function SignIn({ setToken }) {
 
     const [name, setUserName] = useState('');
-    
- 
+
+
     const handle = () => {
-       localStorage.setItem('username', email);       
+        localStorage.setItem('username', email);
     };
 
-    
+
     const mytheme = createTheme();
 
     const [email, setEmail] = useState();
@@ -62,9 +62,9 @@ export default function SignIn({ setToken }) {
         if (token) {
             console.log(token, "token");
             setToken(token);
-            
+
             console.log('the password is correct test atest')
-            
+
         }
 
         else if (token === "User does not exist")
@@ -97,7 +97,7 @@ export default function SignIn({ setToken }) {
 
                                 <li className="nav-item ">
                                     <a className="nav-link" href="/">Home</a>
-                                </li>                                
+                                </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/Services">Services</a>
                                 </li>
@@ -126,8 +126,8 @@ export default function SignIn({ setToken }) {
                                         <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                                <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>

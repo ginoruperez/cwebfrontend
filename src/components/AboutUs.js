@@ -2,8 +2,8 @@ import React from 'react';
 import dolphinico from './images/contractorlogo-tiny.png';
 import aboutdiveteam from './images/products/about-us.jpg';
 import divergino from './images/diver-gino1.jpg';
-import diverjohn from './images/diver-john.jpg';
-import diverfiona from './images/diver-fiona.jpg';
+import diverjohn from './images/foreman.jpg';
+import diverfiona from './images/foreman2.jpg';
 import { footer } from './Footer';
 
 
@@ -61,8 +61,8 @@ function AboutUs() {
                                         <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                                <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -221,10 +221,10 @@ function AboutUs() {
                                 <div className="card rounded mb-4 shadow-sm">
                                     <img className="card-img-top" src={diverfiona} alt="diver" />
                                     <div className="card-body">
-                                        <h5 className="card-title">Fiona Madrigal</h5>
-                                        <p className="card-text">joined in 2017 and qualified as Dive Master
+                                        <h5 className="card-title">Jorge Madrigal</h5>
+                                        <p className="card-text">joined in 2017 and qualified as Painter and Plumber
                                             since 2008.
-                                            Fiona is an integral member of our dive center and is our senior Assistant instructor.</p>
+                                            Jorge is an integral member of our dive center and is our senior Assistant instructor.</p>
                                     </div>
 
                                 </div>

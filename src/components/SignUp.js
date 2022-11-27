@@ -77,7 +77,7 @@ export default function SignUp() {
 
                                 <li className="nav-item ">
                                     <a className="nav-link" href="/">Home</a>
-                                </li>                                
+                                </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/Services">Services</a>
                                 </li>
@@ -106,8 +106,8 @@ export default function SignUp() {
                                         <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                                <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -142,101 +142,101 @@ export default function SignUp() {
 
             </header>
             <main role="main">
-            <ThemeProvider theme={theme}>
-                <Container component="main" maxWidth='xs'>
-                    <CssBaseline />
-                    <Box
-                        sx={{
-                            marginTop: 8,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                        }}
-                    >
-                        <Grid container spacing={2}>
-                            <Typography variant='h1' component='h5'>
-                                Sign Up
-                            </Typography>
-
-                            <Box component="form" noValidate sx={{ mt: 3 }} onSubmit={handleSubmit}>
-                                <Grid container spacing={2}>
-                                    <Grid item xs={12} sm={6}>
-                                        <TextField
-                                            autoComplete='give-name'
-                                            name="firstName"
-                                            onChange={(e) => setFirstName(e.target.value)}
-                                            required
-                                            fullWidth
-                                            id="firstName"
-                                            label="First Name"
-                                            autoFocus
-                                        />
-
-                                    </Grid>
-                                    <Grid item xs={12} sm={6}>
-                                        <TextField
-                                            autoComplete='last-name'
-                                            name="lastName"
-                                            onChange={(e) => setLastName(e.target.value)}
-                                            required
-                                            fullWidth
-                                            id="lastName"
-                                            label="Last Name"
-                                            autoFocus
-                                        />
-
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <TextField
-                                            required
-                                            fullWidth
-                                            id="email"
-                                            label="Email Address"
-                                            onChange={(e) => setEmail(e.target.value)}
-                                            name="email"
-                                            autoComplete='email'
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <TextField
-                                            required
-                                            fullWidth
-                                            name="password"
-                                            type="password"
-                                            onChange={(e) => setPassword(e.target.value)}
-                                            label="Password"
-                                            id="password"
-                                            autoComplete='new-password'
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <FormControlLabel control={<Checkbox defaultChecked />} label="I want to receive inspiration, marketing promotions and updates via email." />
-
-
-                                    </Grid>
-                                </Grid>
-                                <Button
-                                    type="submit"
-                                    fullWidth
-                                    variant="contained"
-                                    sx={{ mt: 3, mb: 2 }}>
+                <ThemeProvider theme={theme}>
+                    <Container component="main" maxWidth='xs'>
+                        <CssBaseline />
+                        <Box
+                            sx={{
+                                marginTop: 8,
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                            }}
+                        >
+                            <Grid container spacing={2}>
+                                <Typography variant='h1' component='h5'>
                                     Sign Up
-                                </Button>
-                                <Grid item>
-                                    <Link
-                                        to="/SignIn"
+                                </Typography>
 
-                                    >
-                                        Already have an account? Sign in
-                                    </Link>
-                                </Grid>
-                            </Box>
+                                <Box component="form" noValidate sx={{ mt: 3 }} onSubmit={handleSubmit}>
+                                    <Grid container spacing={2}>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                autoComplete='give-name'
+                                                name="firstName"
+                                                onChange={(e) => setFirstName(e.target.value)}
+                                                required
+                                                fullWidth
+                                                id="firstName"
+                                                label="First Name"
+                                                autoFocus
+                                            />
 
-                        </Grid>
-                    </Box>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                autoComplete='last-name'
+                                                name="lastName"
+                                                onChange={(e) => setLastName(e.target.value)}
+                                                required
+                                                fullWidth
+                                                id="lastName"
+                                                label="Last Name"
+                                                autoFocus
+                                            />
 
-                </Container>
-            </ThemeProvider>
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <TextField
+                                                required
+                                                fullWidth
+                                                id="email"
+                                                label="Email Address"
+                                                onChange={(e) => setEmail(e.target.value)}
+                                                name="email"
+                                                autoComplete='email'
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <TextField
+                                                required
+                                                fullWidth
+                                                name="password"
+                                                type="password"
+                                                onChange={(e) => setPassword(e.target.value)}
+                                                label="Password"
+                                                id="password"
+                                                autoComplete='new-password'
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <FormControlLabel control={<Checkbox defaultChecked />} label="I want to receive inspiration, marketing promotions and updates via email." />
+
+
+                                        </Grid>
+                                    </Grid>
+                                    <Button
+                                        type="submit"
+                                        fullWidth
+                                        variant="contained"
+                                        sx={{ mt: 3, mb: 2 }}>
+                                        Sign Up
+                                    </Button>
+                                    <Grid item>
+                                        <Link
+                                            to="/SignInLink"
+
+                                        >
+                                            Already have an account? Sign in
+                                        </Link>
+                                    </Grid>
+                                </Box>
+
+                            </Grid>
+                        </Box>
+
+                    </Container>
+                </ThemeProvider>
             </main>
             {footer}
         </div>

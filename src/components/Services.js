@@ -117,8 +117,8 @@ function Services() {
                     <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                     <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                       <ul className="submenu dropdown-menu">
-                        <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                        <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                        <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                        <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                       </ul>
                     </li>
                   </ul>

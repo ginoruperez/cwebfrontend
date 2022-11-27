@@ -3,7 +3,7 @@ import dolphinico from './images/dolphin.ico';
 import mermaid from './images/products/mermaid-small.jpg';
 import photography from './images/products/dive-photography.jpg';
 import boatdiver from './images/products/boatdiver.jpg';
-import fundive  from './images/products/fundive.jpg';
+import fundive from './images/products/fundive.jpg';
 import { footer } from './Footer';
 
 function AdvOpenWater() {
@@ -119,9 +119,10 @@ function AdvOpenWater() {
                     <div className="row ">
                         <div className="col-6 col-lg-8">
 
-                            <div className="container-openwater">
-                                <iframe className="responsive-iframe" src="https://www.youtube.com/embed/tWPGi52nkHg?autoplay=1&mute=1"
-                                    title="YouTube video player"></iframe>
+                            <div className="container-openwater" >
+                                <iframe  className="responsive-iframe" src="https://www.youtube.com/embed/4OhTteTsyIU" 
+                                title="YouTube video player" ></iframe>
+                                 
                             </div>
                         </div>
 

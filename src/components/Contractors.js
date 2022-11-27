@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 
-
+import SignInLink from './SignInLink'
 
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -60,14 +60,18 @@ export default function DataTable() {
 
     const rows = contractorData
 
+    let navigate = useNavigate();
+
     const checkAuthenticate = () => {
         let username=localStorage.getItem('username') 
-
+        
         if ( (typeof username === 'string' && username.trim().length === 0) || username==null) {
             console.log('string is empty');
             alert('Sign-In required for this page!');
-            return < Main />  
-
+           
+            // Somewhere in your code, e.g. inside a handler:
+            navigate("/SignInLink"); 
+            
           } else {
             { /* alert(username); */ }
           }
@@ -127,8 +131,8 @@ export default function DataTable() {
                                         <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                                <li><a className="dropdown-item"  href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>

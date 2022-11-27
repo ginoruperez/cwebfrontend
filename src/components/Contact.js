@@ -1,13 +1,30 @@
 import React from 'react';
 import dolphinico from './images/contractorlogo-tiny.png';
 import { footer } from './Footer';
-
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
 
-    const handleSubmit = (event) => {
-        window.alert(`Message delivered Successfully! Thank you.`)
+    const form = useRef();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        ///emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+
+        emailjs.sendForm('service_mwpry5k', 'template_63p1hng', form.current, 'CgvUGqcWoNhleQFqn')
+            .then((result) => {
+                console.log(result.text);
+                alert('MESSAGE SENT')
+            }, (error) => {
+                console.log(error.text);
+            });
     }
+    /*
+const handleSubmit = (event) => {
+    window.alert(`Message delivered Successfully! Thank you.`)
+}
+*/
 
     return (
         <div>
@@ -31,7 +48,7 @@ function Contact() {
 
                                 <li className="nav-item ">
                                     <a className="nav-link" href="/">Home</a>
-                                </li>                                
+                                </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/Services">Services</a>
                                 </li>
@@ -60,8 +77,8 @@ function Contact() {
                                         <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                                <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -118,39 +135,52 @@ function Contact() {
                     </h1>
 
 
-                    <form className="needs-validation" action="/" onSubmit={handleSubmit} method="get" >
+                    <form ref={form} className="needs-validation" action="/" onSubmit={handleSubmit}  >
 
 
                         <div className="row mt-3">
                             <div className="col-md-6">
                                 <div className="mb-2">
 
-                                    <input type="text" className="form-control" placeholder="Your Name *" required />
+                                    <input type="text" className="form-control" placeholder="Your Name *" name="user_name" required />
                                     <div className="invalid-feedback">
                                         Valid Name is required.
                                     </div>
+
                                 </div>
                                 <div className="mb-2">
+
+                                    {/*
+                                    <input type="text" className="form-control" placeholder="Services Required, comma separated *" name="service" required />
+                                    <div className="invalid-feedback">
+                                        Valid service is required.
+                                    </div>
+                                    */}
+                                     
                                     <h5>Select Services required</h5>
-                                    <select className="form-control" id="services">
-                                        <option value="dicoverscuba">Discover Scuba Diving</option>
-                                        <option value="snorkeling">Snorkeling</option>
-                                        <option value="openwater">PADI Open Water</option>
-                                        <option value="advancedopenwater">PADI Advanced Open Water</option>
-                                        <option value="rescuediver">PADI Rescue Diver</option>
-                                        <option value="rescuediver">Scuba Diving Skills Update</option>
-                                        <option value="divingequipment">Scuba Diving Equipment and Accessories</option>
-                                        <option value="divingequipment">Air Tank Refill</option>
+                                    <select className="form-control" name="service">
+                                        <option value="Roofing">Roofing</option>
+                                        <option value="Painting">Painting</option>
+                                        <option value="Heating">Heating</option>
+                                        <option value="Plumbing">Plumbing</option>
+                                        <option value="Air-condition">Air-Condition</option>
+                                        <option value="Electrical">Electrical</option>
+                                        <option value="Drywall">Drywall</option>
+                                        <option value="Carpets">Carpets</option>
+                                        <option value="Glass">Glass</option>
                                         <option value="others">Others</option>
                                     </select>
+                                    
+
                                 </div>
 
                                 <div className="mb-2">
-                                    <input type="email" className="form-control" placeholder="Your Email *" aria-label="email" required />
+                                    <input type="email" className="form-control" placeholder="Your Email *"
+                                        aria-label="email" name="email" required />
                                 </div>
                                 <div className="mb-2">
                                     <input type="text" className="form-control" placeholder="Your Phone Number *"
-                                        aria-label="phone" required />
+                                        aria-label="phone" name="phone" required />
                                 </div>
                                 <div className="mb-2">
                                     <button type="submit" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
@@ -158,10 +188,12 @@ function Contact() {
                                     </button>
 
                                 </div>
+
                             </div>
                             <div className="col-md-6">
                                 <div>
-                                    <textarea className="form-control" placeholder="Your Message *" rows="5" required></textarea>
+                                    {/*<input type="text"  className="form-control" placeholder="Your Message *" rows="5" name="message" required />*/}
+                                    <textarea className="form-control" name="message" placeholder="Your Message *" rows="5" required></textarea>
                                 </div>
                             </div>
                         </div>

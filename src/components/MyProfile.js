@@ -5,10 +5,11 @@ import { Link } from "react-router-dom"
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import PropTypes from 'prop-types';
-
+import { useNavigate } from 'react-router-dom';
 import { footer } from './Footer';
 import dolphinico from './images/contractorlogo-tiny.png';
 import Main from './Main';
+import SignInLink from './SignInLink'
 
 async function profile(credentials) {
     return fetch('http://localhost:8081/api/users/profile', {
@@ -43,45 +44,49 @@ export default function MyProfile({ setToken }) {
 
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-    const [password2,setPassword2] = useState();
-    let username=''
-
-    const checkAuthenticate = () => {
-        let username=localStorage.getItem('username') 
-
-        if ( (typeof username === 'string' && username.trim().length === 0) || username==null) {
-            console.log('string is empty');
-            alert('Sign-In required for this page!');
-            return < Main />  
-
-          } else {
-            { /* alert(username); */ }
-          }
-          
-        
-    }
+    const [password2, setPassword2] = useState();
     const handleSubmit = async e => {
         e.preventDefault();
 
-     
+
         const token = await profile({
             email,
             password,
             password2
         });
 
-        if (token === "incorrect password"){
-            console.log("incorrect password");}
+        if (token === "incorrect password") {
+            console.log("incorrect password");
+        }
 
-        else {        
-            console.log(token, "token");            
+        else {
+            console.log(token, "token");
             alert('Profile changed! The password is correct');
-            
+
 
         }
 
-        
+
     }
+    let username = ''
+    let navigate = useNavigate();
+
+    const checkAuthenticate = () => {
+        let username = localStorage.getItem('username')
+
+        if ((typeof username === 'string' && username.trim().length === 0) || username == null) {
+            console.log('string is empty');
+            alert('Sign-In required for this page!');
+            // Somewhere in your code, e.g. inside a handler:
+            navigate("/");
+
+        } else {
+            { /* alert(username); */ }
+        }
+
+
+    }
+
 
     return (
         <div>
@@ -135,8 +140,8 @@ export default function MyProfile({ setToken }) {
                                         <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                                <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -195,14 +200,14 @@ export default function MyProfile({ setToken }) {
                             <Box component="form" noValidate sx={{ mt: 1 }} onSubmit={handleSubmit}>
                                 <Grid container spacing={2}>
                                     <Grid item xs={12}>
-                                        <TextField  defaultValue={username}                                      
+                                        <TextField defaultValue={username}
                                             required
                                             fullWidth
                                             id="email"
                                             label="Email Address"
                                             name="email"
-                                            autoComplete="email"                                            
-                                            onChange={(e) => setEmail(e.target.value)}                                            
+                                            autoComplete="email"
+                                            onChange={(e) => setEmail(e.target.value)}
                                             autoFocus>
 
                                         </TextField>
@@ -250,7 +255,7 @@ export default function MyProfile({ setToken }) {
 
 
                                     <Button
-                                        type='submit'                                        
+                                        type='submit'
                                         fullWidth
                                         variant='contained'
                                         sx={{ mt: 3, mb: 2 }}>

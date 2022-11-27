@@ -73,6 +73,10 @@ body {
   background: url('./components/images/products/padi-shop.jpg') no-repeat fixed;
 }
 
+.jumbotron-heating-service {
+  background: url('./components/images/products/heatingservice.jpg') no-repeat fixed;
+}
+
 .jumbotron-detail-rescue {
   background: url('./components/images/openwater-background.jpg') no-repeat fixed;
 }

@@ -115,14 +115,14 @@ function Main() {
                             <div className="carousel-caption text-start">
                                 <h1>High Quality House Painting</h1>
                                 <p>Shop with our wide range of High Quality Products</p>
-                                <p><a className="btn btn-lg btn-primary" href="/Products" role="button">Services</a></p>
+                                <p><a className="btn btn-lg btn-primary" href="/Services" role="button">Services</a></p>
                             </div>
                         </div>
                         <div className="carousel-item welcome-carousel-image3">
                             <div className="carousel-caption text-end">
                                 <h1>Bathroom Fixtures.</h1>
                                 <p>Avail our affordable rates from wide selections of contractor!</p>
-                                <p><a className="btn btn-lg btn-primary" href="/OpenWater" role="button">Contractors</a></p>
+                                <p><a className="btn btn-lg btn-primary" href="/Contractors" role="button">Contractors</a></p>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@ function Main() {
                                     <p className="card-text">Warm your Home during the Winter cold season!</p>
                                 </div>
                                 <div className="card-footer">
-                                    <a href="/DolphinEncounter" className="btn btn-primary">View details</a>
+                                    <a href="/Heating" className="btn btn-primary">View details</a>
                                 </div>
                             </div>
                         </div>

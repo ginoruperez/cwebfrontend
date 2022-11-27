@@ -13,6 +13,7 @@ import Rescue from './components/Rescue';
 import AllCourses from './components/AllCourses';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
+import ContactUs from './components/ContactUs'
 import Order from './components/Order';
 import Testimonial from './components/Testimonial';
 import Faq from './components/Faq';
@@ -23,7 +24,7 @@ import SignInLink from './components/SignInLink';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 import SignOut from './components/SignOut';
-import DolphinEncounter from './components/DolphinEncounter';
+import Heating from './components/Heating';
 import Contractors from './components/Contractors';
 import AddContractor from './components/AddContractor';
 import SearchContractor from './components/SearchContractor';
@@ -45,6 +46,7 @@ root.render(
       <Route path="AllCourses" element={<AllCourses />} />
       <Route path="AboutUs" element={<AboutUs />} />
       <Route path="Contact" element={<Contact />} />
+      <Route path="ContactUs" element={<ContactUs />} />
       <Route path="Order" element={<Order />} />
       <Route path="Testimonial" element={<Testimonial />} />
       <Route path="Faq" element={<Faq />} />
@@ -65,7 +67,7 @@ root.render(
       <Route path="SignUp" element={<SignUp />} />
       <Route path="MyProfile" element={<MyProfile />} />
       <Route path="Login" element={<Login />} />
-      <Route path="DolphinEncounter" element={<DolphinEncounter />} />
+      <Route path="Heating" element={<Heating />} />
 
 
     </Routes>
