@@ -205,7 +205,7 @@ function Main() {
                                     <p className="card-text">We take care of your pipes at Home</p>
                                 </div>
                                 <div className="card-footer">
-                                    <a href="/OpenWater" className="btn btn-primary">View details</a>
+                                    <a href="/Plumbing" className="btn btn-primary">View details</a>
                                 </div>
                             </div>
                         </div>
@@ -218,7 +218,7 @@ function Main() {
                                     <p className="card-text">An Irish way of repairing Roof!</p>
                                 </div>
                                 <div className="card-footer">
-                                    <a href="/AdvOpenWater" className="btn btn-primary">View details</a>
+                                    <a href="/Roofing" className="btn btn-primary">View details</a>
                                 </div>
                             </div>
                         </div>

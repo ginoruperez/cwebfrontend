@@ -1,22 +1,23 @@
 import React from 'react';
-import dolphinico from './images/dolphin.ico';
+import dolphinico from './images/contractorlogo-tiny.png';
 import mermaid from './images/products/mermaid-small.jpg';
-import fundive  from './images/products/fundive.jpg';
+import fundive from './images/products/fundive.jpg';
 import photography from './images/products/dive-photography.jpg';
 import boatdiver from './images/products/boatdiver.jpg';
 import { footer } from './Footer';
 
 
-function OpenWater() {
+function Plumbing() {
 
     return (
         <div>
+
             <header>
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
-                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="Celtic Sea Dive Shop Logo" />
-                            Celtic Sea Dive Shop
+                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
+                            K 2 G Contractor Ltd.
                         </a>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -25,29 +26,20 @@ function OpenWater() {
                         </button>
 
                         <div className="collapse navbar-collapse" id="navbarCollapse">
+
+
                             <ul className="nav navbar-nav mr-auto">
+
                                 <li className="nav-item ">
-                                    <a className="nav-link" href="/">Home</a>
-                                </li>
-                                <li className="nav-item dropdown">
-
-                                    <a className="nav-link active dropdown-toggle" href="test.html" id="nav-dropdown" data-bs-toggle="dropdown"
-                                        aria-expanded="false" >
-                                        Courses
-                                    </a>
-
-                                    <ul className="dropdown-menu active" aria-labelledby="nav-dropdown">
-                                        <li><a className="dropdown-item active" href="/OpenWater">Open Water</a></li>
-                                        <li><a className="dropdown-item" href="/AdvOpenWater">Advanced Open Water</a></li>
-                                        <li><a className="dropdown-item" href="/Rescue">Rescue Diving</a></li>
-                                        <li>
-                                            <hr className="dropdown-divider" />
-                                        </li>
-                                        <li><a className="dropdown-item" href="/AllCourses">All Dive Courses</a></li>
-                                    </ul>
+                                    <a className="nav-link active" href="/">Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/Products">Shop</a>
+                                    <a className="nav-link" href="/Services">Services</a>
+                                </li>
+
+                                <li className="nav-item">
+                                    <a className="nav-link" href="/Contractors">Contractors</a>
+
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link " href="/AboutUs">About Us</a>
@@ -55,6 +47,8 @@ function OpenWater() {
                                 <li className="nav-item">
                                     <a className="nav-link" href="/Contact">Contact</a>
                                 </li>
+
+
                                 <li className="nav-item dropdown">
 
                                     <a className="nav-link dropdown-toggle" href="/" id="nav-dropdown" data-bs-toggle="dropdown"
@@ -67,19 +61,22 @@ function OpenWater() {
                                         <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                                <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
+
+
                             </ul>
+
                         </div>
                     </div>
+
                     <div className="nav-item dropdown" style={{ "width": "170px", "height": "20px" }} >
 
-                        <div className="profile-pic dropdown-toggle" data-bs-toggle="dropdown"
-                        >
+                        <div className="profile-pic dropdown-toggle" data-bs-toggle="dropdown">
                             <i className="fa fa-user" aria-hidden="true"></i>
                         </div>
 
@@ -87,20 +84,22 @@ function OpenWater() {
                         <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
                             <li><a className="dropdown-item" href="/SignInLink">Sign-In</a></li>
                             <li><a className="dropdown-item" href="/SignUp">Sign-Up</a></li>
+                            <li><a className="dropdown-item" href="/MyProfile">Profile</a></li>
                             <li>
                                 <hr className="dropdown-divider" />
                             </li>
-                            <li><a className="dropdown-item" href="/">Logout</a></li>
+                            <li><a className="dropdown-item" href="/SignOut">Logout</a></li>
                         </ul>
 
                     </div>
+
                 </nav>
 
             </header>
             <main role="main">
-                <div className="container-fluid jumbotron jumbotron-detail-open-water py-5">
+                <div className="container-fluid jumbotron jumbotron-plumbing py-5">
                     <div className="container">
-                        <h1 className="display-3 fw-bold text-white">Open Water Dive</h1>
+                        <h1 className="display-3 fw-bold text-white">Plumbing Services</h1>
                     </div>
                 </div>
 
@@ -109,12 +108,12 @@ function OpenWater() {
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><a href="/">Home</a></li>
                             <li className="breadcrumb-item"><a href="/">Courses</a></li>
-                            <li className="breadcrumb-item">Open Water</li>                            
+                            <li className="breadcrumb-item">Services</li>
                         </ol>
                     </nav>
 
-                    <h1 className="fw-bolder">Open Water Dive
-                        <small className="fw-normal fst-italic"> Most Exciting course for the beginner!</small>
+                    <h1 className="fw-bolder">Plumbing Service
+                        <small className="fw-normal fst-italic"> Affordable Service for your hone pipes</small>
                     </h1>
 
                     <div className="row ">
@@ -127,7 +126,7 @@ function OpenWater() {
                                     title="YouTube video player">
                                 </iframe>
 
-                                
+
                             </div>
 
                         </div>
@@ -175,39 +174,7 @@ function OpenWater() {
                         </p>
                     </div>
 
-                    <h3 className="display-5 my-4">Other customers also tried...</h3>
-
-                    <div className="row">
-                        <div className="col-md-3 col-sm-6 mb-3">
-                            <a href="/AllCourses">
-                                <img className="img-fluid" src={fundive} alt="dolphin" />
-                            </a>
-                            <p>Fun Dive for Kids and Adult</p>
-                        </div>
-
-                        <div className="col-md-3 col-sm-6 mb-3">
-                            <a href="/AllCourses">
-                                <img className="img-fluid" src={mermaid} alt="mermaid" />
-                            </a>
-                            <p>Discover Mermaid</p>
-                        </div>
-
-                        <div className="col-md-3 col-sm-6 mb-3">
-                            <a href="/AllCourses">
-                                <img className="img-fluid" src={photography} alt="photography" />
-                            </a>
-                            <p>Underwater Photography</p>
-                        </div>
-
-                        <div className="col-md-3 col-sm-6 mb-3">
-                            <a href="/AllCourses">
-                                <img className="img-fluid" src={boatdiver} alt="boat dive" />
-                            </a>
-                            <p>Boat Diving</p>
-
-                        </div>
-                    </div>
-
+                    
                 </div>
 
             </main>
@@ -217,4 +184,4 @@ function OpenWater() {
     );
 }
 
-export default OpenWater;
+export default Plumbing;

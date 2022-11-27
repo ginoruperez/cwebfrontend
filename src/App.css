@@ -57,8 +57,8 @@ body {
 
 /* Jumbotron */
 
-.jumbotron-detail-open-water {
-  background: url('./components/images/products/openwater.jpg') no-repeat fixed;
+.jumbotron-plumbing {
+  background: url('./components/images/products/plumbing-pipe.jpg') no-repeat fixed;
 }
 
 .jumbotron-painting {
@@ -69,8 +69,8 @@ body {
   background: url('./components/images/header-dolphin.jpg') no-repeat fixed;
 }
 
-.jumbotron-detail-adv-open-water {
-  background: url('./components/images/products/padi-shop.jpg') no-repeat fixed;
+.jumbotron-roofservice {
+  background: url('./components/images/products/roofservice.jpg') no-repeat fixed;
 }
 
 .jumbotron-heating-service {

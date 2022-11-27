@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import OpenWater from './components/OpenWater';
-import AdvOpenWater from './components/AdvOpenWater';
+import Plumbing from './components/Plumbing';
+import Roofing from './components/Roofing';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -40,8 +40,8 @@ root.render(
     <Routes>
 
       <Route path="/" element={<App />} />
-      <Route path="OpenWater" element={<OpenWater />} />
-      <Route path="AdvOpenWater" element={<AdvOpenWater />} />
+      <Route path="Plumbing" element={<Plumbing />} />
+      <Route path="Roofing" element={<Roofing />} />
       <Route path="Rescue" element={<Rescue />} />
       <Route path="AllCourses" element={<AllCourses />} />
       <Route path="AboutUs" element={<AboutUs />} />
