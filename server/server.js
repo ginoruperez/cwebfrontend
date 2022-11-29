@@ -85,6 +85,7 @@ app.post('/api/users/login', async (req, res) => {
   console.log(' /api/users/login endpoint');
   const email = req.body.email;
   const password = req.body.password;
+  
 
 
   console.log(' /api/users/login endpoint', email, password);
@@ -96,15 +97,18 @@ app.post('/api/users/login', async (req, res) => {
     if (result.length) {
       console.log(result[0].password, "result.password");
       const dbPassword = result[0].password.toString()
+      const id = result[0].id;
       bcrypt.compare(password, dbPassword, function (err, loginSuccess) {
 
         // execute code to test for access and login
         console.log('Bcrypt compare result ' + loginSuccess);
         console.log('dbPassword ' + dbPassword);
+        console.log('userid '+id);
 
         if (loginSuccess) {
           console.log('User password correct!');
-          token = result[0].id.toString(32);
+          //token = result[0].id.toString(32);
+          token = result[0].id;
           res.send(
             {
               token: token

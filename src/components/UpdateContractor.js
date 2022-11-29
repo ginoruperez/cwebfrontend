@@ -35,6 +35,7 @@ export default function UpdateContractor() {
     const handleSubmit = async e => {
         //  e.preventDefault();
 
+        
 
         if (name !== undefined && location === undefined && specialties === undefined && size === undefined &&
             rate === undefined && owner === undefined) {
@@ -91,7 +92,7 @@ export default function UpdateContractor() {
         } else if (name !== undefined && location !== undefined &&
             specialties !== undefined && size !== undefined &&
             rate === undefined && owner === undefined) {
-            alert('NAME LOCATION SPECIALTIES SIZE NOT UNDEFINED')            
+            alert('NAME LOCATION SPECIALTIES SIZE NOT UNDEFINED')
 
             let rate = contractorData.rate
             let owner = contractorData.owner
@@ -104,10 +105,10 @@ export default function UpdateContractor() {
                 rate,
                 owner
             });
-        }else if (name !== undefined && location !== undefined &&
+        } else if (name !== undefined && location !== undefined &&
             specialties !== undefined && size !== undefined &&
             rate !== undefined && owner === undefined) {
-            alert('NAME LOCATION SPECIALTIES SIZE RATE NOT UNDEFINED')                        
+            alert('NAME LOCATION SPECIALTIES SIZE RATE NOT UNDEFINED')
             let owner = contractorData.owner
             await dataUpdate({
                 id,
@@ -118,10 +119,10 @@ export default function UpdateContractor() {
                 rate,
                 owner
             });
-        }else if (name !== undefined && location !== undefined &&
+        } else if (name !== undefined && location !== undefined &&
             specialties !== undefined && size !== undefined &&
-            rate !== undefined && owner !== undefined){
-            alert('NAME LOCATION SPECIALTIES SIZE RATE OWNER NOT UNDEFINED')                                    
+            rate !== undefined && owner !== undefined) {
+            alert('NAME LOCATION SPECIALTIES SIZE RATE OWNER NOT UNDEFINED')
             await dataUpdate({
                 id,
                 name,
@@ -135,8 +136,8 @@ export default function UpdateContractor() {
         }
         else if (name === undefined && location !== undefined &&
             specialties === undefined && size === undefined &&
-            rate === undefined && owner === undefined){
-            alert('LOCATION UNDEFINED')                                    
+            rate === undefined && owner === undefined) {
+            alert('LOCATION UNDEFINED')
             let name = contractorData.name
             //let location = contractorData.location
             let specialties = contractorData.specialties
@@ -153,12 +154,12 @@ export default function UpdateContractor() {
                 owner
             });
 
-        } 
+        }
 
         else if (name === undefined && location === undefined &&
             specialties !== undefined && size === undefined &&
-            rate === undefined && owner === undefined){
-            alert('SPECIALTIES NOT UNDEFINED')                                    
+            rate === undefined && owner === undefined) {
+            alert('SPECIALTIES NOT UNDEFINED')
             let name = contractorData.name
             let location = contractorData.location
             //let specialties = contractorData.specialties
@@ -175,12 +176,12 @@ export default function UpdateContractor() {
                 owner
             });
 
-        } 
+        }
 
         else if (name === undefined && location === undefined &&
             specialties === undefined && size !== undefined &&
-            rate === undefined && owner === undefined){
-            alert('SIZE NOT UNDEFINED')                                    
+            rate === undefined && owner === undefined) {
+            alert('SIZE NOT UNDEFINED')
             let name = contractorData.name
             let location = contractorData.location
             let specialties = contractorData.specialties
@@ -197,11 +198,11 @@ export default function UpdateContractor() {
                 owner
             });
 
-        } 
+        }
         if (name === undefined && location === undefined &&
             specialties === undefined && size === undefined &&
-            rate !== undefined && owner === undefined){
-            alert('RATE NOT UNDEFINED')                                    
+            rate !== undefined && owner === undefined) {
+            alert('RATE NOT UNDEFINED')
             let name = contractorData.name
             let location = contractorData.location
             let specialties = contractorData.specialties
@@ -218,11 +219,11 @@ export default function UpdateContractor() {
                 owner
             });
 
-        } 
+        }
         if (name === undefined && location === undefined &&
             specialties === undefined && size === undefined &&
-            rate === undefined && owner !== undefined){
-            alert('OWNER NOT UNDEFINED')                                    
+            rate === undefined && owner !== undefined) {
+            alert('OWNER NOT UNDEFINED')
             let name = contractorData.name
             let location = contractorData.location
             let specialties = contractorData.specialties
@@ -239,11 +240,12 @@ export default function UpdateContractor() {
                 owner
             });
 
-        } 
-
+        }
 
 
         window.alert('Successfully updated')
+
+
     }
 
 
@@ -322,14 +324,15 @@ export default function UpdateContractor() {
 
                             </div>
 
+{/*  */ }
 
                             <div className="mb-2">
                                 <h5>Select Specialties</h5>
                                 <select className="form-control" name="specialties"
                                     defaultValue={contractorData.specialties}
                                     onChange={(e) => setSpecialties(e.target.value)}
-                                    id="specialties">
-
+                                    id="specialties" >
+                                    <option value="****Select specialties***">Select Specialties</option>
                                     <option value="Roofing">Roofing</option>
                                     <option value="Painting">Painting</option>
                                     <option value="Heating">Heating</option>

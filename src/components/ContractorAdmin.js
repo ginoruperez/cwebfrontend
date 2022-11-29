@@ -19,6 +19,7 @@ function ContractorAdmin() {
 
 
     const [contractorData, setcontractorData] = useState([])
+    const [roleData, setroleData] = useState([])
     const [isLoading, setLoading] = useState(true)
 
 
@@ -31,20 +32,56 @@ function ContractorAdmin() {
 
 
     const checkAuthenticate = () => {
-        let username=localStorage.getItem('username') 
-        
-        if ( (typeof username === 'string' && username.trim().length === 0) || username==null) {
+        let username = localStorage.getItem('username')
+        let userid = localStorage.getItem('userid')
+
+        if ((typeof username === 'string' && username.trim().length === 0) || username == null) {
             console.log('string is empty');
             alert('Sign-In required for this page!');
-           
+
             // Somewhere in your code, e.g. inside a handler:
-            navigate("/SignInLink"); 
-            
-          } else {
-            { /* alert(username); */ }
-          }
-          
-        
+            navigate("/SignInLink");
+
+        } else {
+
+            axios.get('http://localhost:8080/contractorweb/contractors/role/' + userid).then(res => {
+                setroleData(res.data);
+                console.log('userid', userid.toString());
+                console.log('role data', roleData);
+                console.log('myrole ', roleData.name);
+                console.log('RES VALUE ', res);
+
+
+            }).catch(function (error) {
+                if (error.response) {
+                    // The request was made and the server responded with a status code
+                    // that falls out of the range of 2xx
+                    console.log(error.response.data);
+                    console.log(error.response.status);
+                    console.log(error.response.headers);
+                    alert(error.response.status);
+                } else if (error.request) {
+                    // The request was made but no response was received
+                    // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+                    // http.ClientRequest in node.js
+                    console.log(error.request);
+                    alert(error.request);
+                } else {
+                    // Something happened in setting up the request that triggered an Error
+                    console.log('Error', error.message);
+                    alert(error.message);
+                }
+                console.log(error.config);
+                alert('Restricted page, for Admin only!')
+                navigate("/");
+            });
+
+
+
+
+        }
+
+
     }
 
     return (<div>
@@ -52,6 +89,8 @@ function ContractorAdmin() {
 
         { /* {refreshPage} */}
         {checkAuthenticate()}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
 
         <header>
             <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">

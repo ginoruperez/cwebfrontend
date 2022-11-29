@@ -159,6 +159,7 @@ const handleSubmit = (event) => {
                                      
                                     <h5>Select Services required</h5>
                                     <select className="form-control" name="service">
+                                        <option value="Services">***Select Service***</option>
                                         <option value="Roofing">Roofing</option>
                                         <option value="Painting">Painting</option>
                                         <option value="Heating">Heating</option>
@@ -200,9 +201,13 @@ const handleSubmit = (event) => {
                     </form>
 
                     <div className="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d33251.37800359915!2d-8.52782481229902!3d51.725289697707915!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe1763db1d99ded19!2sSouth%20West%20Technical%20Diving!5e0!3m2!1sen!2sie!4v1657224321670!5m2!1sen!2sie" width="600" height="450"
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9888.972367128525!2d-8.5153887!3d51.710295!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x73558083d696c6a2!2sGPD%20Building%20Contractors!5e0!3m2!1sen!2sie!4v1669673836518!5m2!1sen!2sie" width="600" height="450"                        
                             allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="location"></iframe>
                     </div>
+
+                    {/* src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d33251.37800359915!2d-8.52782481229902!3d51.725289697707915!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe1763db1d99ded19!2sSouth%20West%20Technical%20Diving!5e0!3m2!1sen!2sie!4v1657224321670!5m2!1sen!2sie" */}
+
+                    
                 </div>
 
             </main>

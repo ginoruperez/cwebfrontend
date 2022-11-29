@@ -43,6 +43,7 @@ export default function SignIn({ setToken }) {
 
     const handle = () => {
         localStorage.setItem('username', email);
+        
     };
 
 
@@ -50,20 +51,23 @@ export default function SignIn({ setToken }) {
 
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const [id,setId] =useState();
 
     const handleSubmit = async e => {
         e.preventDefault();
 
         const token = await loginUser({
             email,
-            password
+            password            
         });
 
         if (token) {
-            console.log(token, "token");
+            console.log(token.token, "token");
             setToken(token);
+            setId(token.token);
+            localStorage.setItem('userid',token.token);
 
-            console.log('the password is correct test atest')
+            console.log('the password is correct test atest with id : ',token.token )
 
         }
 
@@ -184,6 +188,9 @@ export default function SignIn({ setToken }) {
                                 Sign in
                             </Typography>
                             <Box component="form" noValidate sx={{ mt: 1 }} onSubmit={handleSubmit}>
+
+                                <input type="hidden" id="id" name="id" value="3487" onChange={(e) => setId(e.target.value)} />
+
                                 <Grid container spacing={2}>
                                     <Grid item xs={12}>
                                         <TextField
