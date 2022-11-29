@@ -53,23 +53,31 @@ function ContractorAdmin() {
 
 
             }).catch(function (error) {
+                navigate("/");
+                    
                 if (error.response) {
                     // The request was made and the server responded with a status code
                     // that falls out of the range of 2xx
                     console.log(error.response.data);
                     console.log(error.response.status);
                     console.log(error.response.headers);
-                    alert(error.response.status);
+                    alert('Restricted page, for Admin only!')
+                    navigate("/");
+                    
                 } else if (error.request) {
                     // The request was made but no response was received
                     // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
                     // http.ClientRequest in node.js
                     console.log(error.request);
-                    alert(error.request);
+                    alert('Restricted page, for Admin only!')
+                    navigate("/");
+                    
                 } else {
                     // Something happened in setting up the request that triggered an Error
                     console.log('Error', error.message);
-                    alert(error.message);
+                    alert('Restricted page, for Admin only!')
+                    navigate("/");
+                    
                 }
                 console.log(error.config);
                 alert('Restricted page, for Admin only!')
@@ -84,11 +92,11 @@ function ContractorAdmin() {
 
     }
 
+    checkAuthenticate();
+
     return (<div>
 
-
-        { /* {refreshPage} */}
-        {checkAuthenticate()}
+  
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
 

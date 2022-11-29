@@ -128,37 +128,33 @@ function Heating() {
 
                         <div className="col-6 col-lg-4">
                             <h3 className="my-3">About Home Heating</h3>
-                            <p className="lead text-center">Gain more skills with Advanced Open Water Dive Course!</p>
-                            <p className="user-select-none">What every diver should know before they purchase any scuba equipment will be covered in this
-                                program. If you ever have experienced equipment problems in the water or have not felt totally
-                                comfortable on a dive, then this program is for you. The emphasis of this course is on local diving
-                                including proper thermal protection, weighting, and air control. These subjects are all covered in
-                                greater depth than your open water scuba class. The diving theory far exceeds other programs used
-                                for advanced diver certification. This program is specifically designed to teach divers the proper
-                                use of the different styles of scuba equipment — Jacket vs. Back Buoyancy, Integrated vs.
-                                Conventional Weight Systems, Steel vs. Aluminum Tanks, Vented vs. Paddle Fins, and Wet vs. Dry
-                                Suits.
+                            <p className="lead text-center">Central Heating system explained</p>
+                            <p className="user-select-none">A central heating system has pipework and radiators which are connected to a boiler.
+                                The boiler provides the heat and the pump moves heated water from the boiler through the pipework to the radiators,
+                                and back to the boiler for reheating. It also provides hot water to the hot taps in your home.
                             </p>
-                            <h3>This course includes the following :</h3>
+                            <h3>There are genarally two types of boiler :</h3>
                             <ul>
-                                <li>PADI Advanced Open Water booklet</li>
-                                <li>Access to PADI eLearning course</li>
-                                <li>15 Hours Classroom Sessions</li>
-                                <li>5 Ocean Dives including night Dives</li>
-                                <li>PADI Advanced Open water Exam</li>
-
+                                <li><strong>A conventional boiler </strong> - this system has a pump, a programmer and a room thermostat.
+                                     You can control the heating and hot water separately by using the programmer. 
+                                     It heats hot water and stores it in a cylinder, usually found in your airing cupboard.</li>
+                                <li><strong>A combination (combi) boiler </strong> - this system has a programmer and a thermostat. 
+                                It only needs to control the heating, as it heats hot water on demand. Hot water is available whenever you turn on 
+                                the hot water taps and so does not need a cylinder to store it in.</li>
+                                
                             </ul>
+                            {/* 
                             <p className="user-select-none">All equipment will be provided for
-                                the length of the course.</p>
+                                the length of the course.</p> */}
 
                             <div className="row">
 
                                 <div className="col-md-4">
-                                    <strong>€ 250.00</strong>
+                                    <strong>Rate € 250.00</strong>
                                 </div>
                                 <div className="col-md-8">
                                     <a type="button" href="/Contact" className="btn btn-success float-end">
-                                        Get in touch
+                                        Get a Quote
                                     </a>
                                 </div>
                             </div>
@@ -166,13 +162,13 @@ function Heating() {
                     </div>
 
                     <div className="p-4 mb-3 mt-2 bg-light rounded border border-primary">
-                        <h4>Quote from Edmund Hillary...</h4>
-                        <p className="mb-0 fst-italic"> It’s not the depths we conquer, but ourselves.
+                        <h4>Quote from Unknown...</h4>
+                        <p className="mb-0 fst-italic"> It takes hands to build HOUSE, but only HEART can build a HOME!
 
                         </p>
                     </div>
 
-{/* 
+                    {/* 
                     <h3 className="display-5 my-4">Other customers also tried...</h3>
 
                     <div className="row">
@@ -209,7 +205,7 @@ function Heating() {
                     */}
                 </div>
 
-                
+
 
             </main>
             {footer}

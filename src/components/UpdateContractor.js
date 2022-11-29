@@ -332,7 +332,7 @@ export default function UpdateContractor() {
                                     defaultValue={contractorData.specialties}
                                     onChange={(e) => setSpecialties(e.target.value)}
                                     id="specialties" >
-                                    <option value="****Select specialties***">Select Specialties</option>
+                                    <option>Select Specialties</option>
                                     <option value="Roofing">Roofing</option>
                                     <option value="Painting">Painting</option>
                                     <option value="Heating">Heating</option>

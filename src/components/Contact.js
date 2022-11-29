@@ -159,7 +159,7 @@ const handleSubmit = (event) => {
                                      
                                     <h5>Select Services required</h5>
                                     <select className="form-control" name="service">
-                                        <option value="Services">***Select Service***</option>
+                                        <option>***Select Service***</option>
                                         <option value="Roofing">Roofing</option>
                                         <option value="Painting">Painting</option>
                                         <option value="Heating">Heating</option>

@@ -163,8 +163,8 @@ function Main() {
                             </section>
                             <br />
                             <section>
-                                Since 2010, Celtic Sea Dive shop is one of the premier dive shops in the country and it is a
-                                proud <strong><em>5 star PADI facility</em></strong> as well as sales and repairs.
+                                Since 2010, K2G is one of the premier contractor  in the country and it is a
+                                proud <strong><em>SEAI certified </em></strong>.
                             </section>
                             <br />
                         </div>
