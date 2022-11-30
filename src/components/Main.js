@@ -114,7 +114,7 @@ function Main() {
                         <div className="carousel-item welcome-carousel-image2">
                             <div className="carousel-caption text-start">
                                 <h1>High Quality House Painting</h1>
-                                <p>Shop with our wide range of High Quality Products</p>
+                                <p>Get to know our highly qulified contractors</p>
                                 <p><a className="btn btn-lg btn-primary" href="/Services" role="button">Services</a></p>
                             </div>
                         </div>

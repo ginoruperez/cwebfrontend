@@ -50,7 +50,7 @@ export default function DataTable() {
     const [contractorData, setcontractorData] = useState([])
     const [isLoading, setLoading] = useState(true)
 
-    
+
     useEffect(() => {
         axios.get('http://localhost:8080/contractorweb/contractors').then(res => {
             setcontractorData(res.data);
@@ -63,20 +63,20 @@ export default function DataTable() {
     let navigate = useNavigate();
 
     const checkAuthenticate = () => {
-        let username=localStorage.getItem('username') 
-        
-        if ( (typeof username === 'string' && username.trim().length === 0) || username==null) {
+        let username = localStorage.getItem('username')
+
+        if ((typeof username === 'string' && username.trim().length === 0) || username == null) {
             console.log('string is empty');
             alert('Sign-In required for this page!');
-           
+
             // Somewhere in your code, e.g. inside a handler:
-            navigate("/SignInLink"); 
-            
-          } else {
+            navigate("/SignInLink");
+
+        } else {
             { /* alert(username); */ }
-          }
-          
-        
+        }
+
+
     }
 
     return (
@@ -102,7 +102,7 @@ export default function DataTable() {
 
                                 <li className="nav-item ">
                                     <a className="nav-link" href="/">Home</a>
-                                </li>                                
+                                </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/Services">Services</a>
                                 </li>
@@ -132,7 +132,7 @@ export default function DataTable() {
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
                                                 <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
-                                                <li><a className="dropdown-item"  href="/ContractorAdmin" >Contractor (Admin)</a></li>
+                                                <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -177,6 +177,13 @@ export default function DataTable() {
 
                 <div className="container">
 
+                    <h1 className="fw-bolder"> Contractors
+                        <small className="fw-normal fst-italic"> Wide selections of our Contractors for your Home service requirements!</small>
+                        <a type="button" href="/Contact" className="btn btn-success float-end">
+                            Get a Quote
+                        </a>
+                    </h1>
+                   
 
 
 
@@ -189,6 +196,8 @@ export default function DataTable() {
                             checkboxSelection
                         />
                     </div>
+
+                    
 
                 </div>
             </main>
