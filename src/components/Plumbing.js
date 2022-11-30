@@ -107,13 +107,13 @@ function Plumbing() {
                     <nav className="my-3 ms-3" >
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><a href="/">Home</a></li>
-                            <li className="breadcrumb-item"><a href="/">Courses</a></li>
-                            <li className="breadcrumb-item">Services</li>
+                            <li className="breadcrumb-item"><a href="/">Services</a></li>
+                            <li className="breadcrumb-item">Plumbing</li>
                         </ol>
                     </nav>
 
                     <h1 className="fw-bolder">Plumbing Service
-                        <small className="fw-normal fst-italic"> Affordable Service for your hone pipes</small>
+                        <small className="fw-normal fst-italic"> Affordable Service for your home pipes requirements</small>
                     </h1>
 
                     <div className="row ">
@@ -134,43 +134,43 @@ function Plumbing() {
 
 
                         <div className="col-6 col-lg-4">
-                            <h3 className="my-3">About Open Water Dive Course</h3>
-                            <p className="lead text-center">Join the exciting adveture of our Open Water Course!</p>
-                            <p className="user-select-none">This program is for the individual who is seeking Scuba certification. The course is approximately
-                                30 hours of private or semi-private Scuba instruction. Private instruction enables our instructors
-                                to provide a safe and comfortable diving experience that meets your individual needs. This is a
-                                complete Scuba course that combines instruction in basic watermanship skills, diving theory, and
-                                practical diving experience. The emphasis will be on making you a safe, self-sufficient, and
-                                self-reliant diver. Certification cards will be issued upon completion.
+                            <h3 className="my-3">About Plumbing Service</h3>
+                            <p className="lead text-center">Know more about our Plumbing service!</p>
+                            <p className="user-select-none">Drain clogs, blockages, damaged sewage lines, and poor water supply can all cause plumbing 
+                            issues at your home. Pipe installation and maintenance is the most typical service for a residential. Outdoor and indoor 
+                            domestic plumbing, drainage system changes, and gas plumbing are among the several types of residential services.
                             </p>
-                            <h3>This course includes the following :</h3>
+
+
+                            <h3>Plumbing covers the following :</h3>
                             <ul>
-                                <li>PADI Open Water booklet</li>
-                                <li>Access to PADI eLearning course</li>
-                                <li>5 Classroom Sessions</li>
-                                <li>5 Pool Sessions</li>
-                                <li>4 Open Water Dives</li>
-                                <li>PADI Open Water Exam</li>
+                                <li>Proper garbage disposalt</li>
+                                <li>Maintenance of valves and pipes</li>
+                                <li>Fixing water jets</li>
+                                <li>Detecting and fixing any gas leaks</li>
+                                <li>Cleaning main pipelines</li>
+                                <li>Water filtration, softener and heater</li>
+                                <li>Sewage disposal and repair</li>
                             </ul>
-                            <p className="user-select-none">All equipment will be provided for
-                                the length of the course.</p>
+
+                            <p className="user-select-none">All equipment use are of high quality and standard</p>
 
                             <div className="row">
 
                                 <div className="col-md-4">
-                                    <strong>€ 200.00</strong>
+                                    <strong>Rate € 200.00</strong>
                                 </div>
                                 <div className="col-md-8">
                                     <a type="button" href="/Contact" className="btn btn-success float-end">
-                                        Get in touch
+                                        Get a Quote
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="p-4 mb-3 mt-2 bg-light rounded border border-primary">
-                        <h4>A quote from the Diving Team...</h4>
-                        <p className="mb-0 fst-italic"> No matter how much you travel, if you don’t dive, you cannot say you’ve seen the world.
+                        <h4>A quote from John F. Kennedy...</h4>
+                        <p className="mb-0 fst-italic"> “Modern cynics and skeptics… see no harm in paying those to whom they entrust the minds of their children a smaller wage than is paid to those to whom they entrust the care of their plumbing.”
                         </p>
                     </div>
 

@@ -106,8 +106,8 @@ function Roofing() {
                     <nav className="my-3 ms-3" >
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><a href="/">Home</a></li>
-                            <li className="breadcrumb-item"><a href="/">Courses</a></li>
-                            <li className="breadcrumb-item">Service</li>
+                            <li className="breadcrumb-item"><a href="/">Services</a></li>
+                            <li className="breadcrumb-item">Roofing</li>
                         </ol>
                     </nav>
 
@@ -128,28 +128,23 @@ function Roofing() {
 
                         <div className="col-6 col-lg-4">
                             <h3 className="my-3">About Roofing Service</h3>
-                            <p className="lead text-center">Gain more skills with Advanced Open Water Dive Course!</p>
-                            <p className="user-select-none">What every diver should know before they purchase any scuba equipment will be covered in this
-                                program. If you ever have experienced equipment problems in the water or have not felt totally
-                                comfortable on a dive, then this program is for you. The emphasis of this course is on local diving
-                                including proper thermal protection, weighting, and air control. These subjects are all covered in
-                                greater depth than your open water scuba class. The diving theory far exceeds other programs used
-                                for advanced diver certification. This program is specifically designed to teach divers the proper
-                                use of the different styles of scuba equipment — Jacket vs. Back Buoyancy, Integrated vs.
-                                Conventional Weight Systems, Steel vs. Aluminum Tanks, Vented vs. Paddle Fins, and Wet vs. Dry
-                                Suits.
+                            <p className="lead text-center">Hurry and Avail our high quality standard roofing Services!</p>
+                            <p className="user-select-none">All roofing work we carry out is of the highest standard by highly trained personnel and
+                                we always exceed your expectations. We also provide a professional guttering service that includes repairs and replacement
+                                of fascias and soffits. For high quality guttering and roofing services contact K2G contractor to discuss your requirements.
                             </p>
-                            <h3>This course includes the following :</h3>
+                            <h3>We cover all aspects of roofing including:</h3>
                             <ul>
-                                <li>PADI Advanced Open Water booklet</li>
-                                <li>Access to PADI eLearning course</li>
-                                <li>15 Hours Classroom Sessions</li>
-                                <li>5 Ocean Dives including night Dives</li>
-                                <li>PADI Advanced Open water Exam</li>
+                                <li>Slates</li>
+                                <li>Tiles</li>
+                                <li>Felting</li>
+                                <li>Lead work</li>
+                                <li>Chimney work</li>
+                                <li>Full roofs</li>
+
 
                             </ul>
-                            <p className="user-select-none">All equipment will be provided for
-                                the length of the course.</p>
+                            <p className="user-select-none">All materials are guaranteed of high quality and standard</p>
 
                             <div className="row">
 
@@ -158,7 +153,7 @@ function Roofing() {
                                 </div>
                                 <div className="col-md-8">
                                     <a type="button" href="/Contact" className="btn btn-success float-end">
-                                        Get in touch
+                                        Get a Quote
                                     </a>
                                 </div>
                             </div>
@@ -166,8 +161,8 @@ function Roofing() {
                     </div>
 
                     <div className="p-4 mb-3 mt-2 bg-light rounded border border-primary">
-                        <h4>Quote from Edmund Hillary...</h4>
-                        <p className="mb-0 fst-italic"> It’s not the depths we conquer, but ourselves.
+                        <h4>Quote from John F. Kennedy</h4>
+                        <p className="mb-0 fst-italic"> The best time to repair the Roof is when the SUN is Shining!
 
                         </p>
                     </div>

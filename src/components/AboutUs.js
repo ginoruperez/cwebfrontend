@@ -172,8 +172,8 @@ function AboutUs() {
                         </div>
                     </div>
                     <div className="p-4 mb-3 mt-2 bg-light rounded border border-primary">
-                        <h4>A quote from Celtic Diving Team</h4>
-                        <p className="mb-0 fst-italic"> We dive not to escape life, but for life not to escape us.
+                        <h4>A quote from Anonymous...</h4>
+                        <p className="mb-0 fst-italic"> We Listen to your needs, Design it to your specifications, and Built it to your DREAMS!
                         </p>
                     </div>
 
