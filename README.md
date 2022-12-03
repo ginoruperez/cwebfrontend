@@ -14,6 +14,8 @@
 This version is draft for CRUD CONTRACTORS
 
 
+dev4 branch - stable branch can be used with dev3 and dev4 branches of contractorweb
+
  
 
 
