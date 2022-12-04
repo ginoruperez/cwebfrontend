@@ -10,11 +10,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom'
 import Rescue from './components/Rescue';
-import AllCourses from './components/AllCourses';
+
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import ContactUs from './components/ContactUs'
-import Order from './components/Order';
+
 import Testimonial from './components/Testimonial';
 import Faq from './components/Faq';
 import Products from './components/Products';
@@ -43,11 +43,11 @@ root.render(
       <Route path="Plumbing" element={<Plumbing />} />
       <Route path="Roofing" element={<Roofing />} />
       <Route path="Rescue" element={<Rescue />} />
-      <Route path="AllCourses" element={<AllCourses />} />
+      
       <Route path="AboutUs" element={<AboutUs />} />
       <Route path="Contact" element={<Contact />} />
       <Route path="ContactUs" element={<ContactUs />} />
-      <Route path="Order" element={<Order />} />
+      
       <Route path="Testimonial" element={<Testimonial />} />
       <Route path="Faq" element={<Faq />} />
       <Route path="Products" element={<Products />} />

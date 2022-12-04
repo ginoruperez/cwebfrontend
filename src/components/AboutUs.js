@@ -129,43 +129,25 @@ function AboutUs() {
 
                             <div className="user-select-none">
                                 <section>
-                                    Gino Ruperez is the owner of Celtic Sea Dive Shop located in Kinsale, Southwest coast of Ireland
-                                    near Celtic Sea. It has been in operation for over 10 years in Ireland. The idea of forming a Dive Shop
-                                    is one of dreams by owner who has greatly influenced and inspired by his spectacular experiences
-                                    in doing underwater activities by his PADI professional diving instructors and diving friends
-                                    who work from Jeddah Saudi Arabia as an expat for several years. Diving in the Red Sea is a fun
-                                    filled recreational activities that helps them to alleviate the boredom and loneliness of being
-                                    thousands of miles away from their family.
+                                    Gino Ruperez is the owner of K2G Contractor located in Kinsale, Southwest coast of Ireland
+                                    near Celtic Sea. It has been in operation for over 10 years in Ireland. The idea of forming the 
+                                    company is based on his day to day experience in doing household chores, where he do an all around 
+                                    work in the house like fixing the broken cabinets, lighting, broken flush.  Those jobs takes a bit 
+                                    of a time for him to complete because he has no expertise on those kind of jobs. 
                                 </section>
                                 <br />
 
                                 <section>
-                                    The owner got an interest in pursuing a goal of learning to dive in an open water of Red Sea in
-                                    the south of Jeddah while he was working in Saudi as an expat. Fortunately, he met his
-                                    professional PADI Irish instructor David John Walker and few diving buddies.
+                                    So he came up with an idea of creating an web application that would help him to find the cheaper home services 
+                                    and that can offer a Do It Yourself video instructions or provide people that can visit their home to provide 
+                                    the required home repair services.
                                 </section>
                                 <br />
+                                
+                                
                                 <section>
-                                    After immigrating to Ireland and settled in Kinsale, he started to form a team of
-                                    professional divers along with David John Walker as the lead instructor. Kinsale has some
-                                    amazing dive locations and is the perfect place to learn to dive.
-                                </section>
-                                <br />
-                                <section>
-                                    The Celtic Sea Dive shop aims to provide training and education in a fun-filled safe environment
-                                    to people from all walks of life.
-                                </section>
-                                <br />
-                                <section>
-                                    The team helps people conquer their fear in an open water. They focus mainly in making sure
-                                    anybody visiting them has an unforgettable experience and leave with a smile. It also offers a
-                                    wide range of diving equipment and accessories with high quality brands
-
-                                </section>
-                                <br />
-                                <section>
-                                    Since 2010, Celtic Sea Dive shop is one of the premier dive shops in the country and it is a
-                                    proud <strong><em>5 star PADI facility</em></strong> as well as sales and repairs.
+                                    Since 2010, K2G Contractor is one of the premier contractor in the country and it is a
+                                    proud <strong><em>SEAI Certified!</em></strong>.
                                 </section>
                                 <br />
                             </div>
@@ -188,16 +170,15 @@ function AboutUs() {
                                     <img className="card-img-top" src={diverjohn} alt="diver" />
                                     <div className="card-body">
                                         <h5 className="card-title">David John Walker</h5>
-                                        <div className="card-text"><strong> <em>Certified PADI Instructor</em> </strong> He is qualified to teach a wide range of
-                                            diving courses:
+                                        <div className="card-text"><strong> <em>Senior Customer Sales Representative</em> </strong> He used to work as Foreman from 
+                                        a reputable construction company. Services he handles are as follows 
                                             <ul>
-                                                <li>Open Water Dive</li>
-                                                <li>Advanced Open Water Dive</li>
-                                                <li>Search and Rescue Dive</li>
-                                                <li>Drysuit Course</li>
-                                                <li>Navigation</li>
-                                                <li>Underwater Video and Photography</li>
-                                                <li>Deep Technical Diving</li>
+                                                <li>Plumbing Services</li>
+                                                <li>Roofing Services</li>
+                                                <li>House Painting</li>
+                                                <li>Heating</li>
+                                                <li>Air Conditioning</li>
+                                                
                                             </ul></div>
                                     </div>
 
@@ -209,9 +190,7 @@ function AboutUs() {
                                     <img className="card-img-top" src={divergino} alt="diver" />
                                     <div className="card-body">
                                         <h5 className="card-title">Gino Ruperez</h5>
-                                        <p className="card-text">He enjoys all diving and has a special love
-                                            of underwater Photography. He is a certified PADI open water, PADI advanced open water
-                                            and Rescue Diver. He is a qualified PADI instructor.</p>
+                                        <p className="card-text">The owner of K2G Contractor</p>
                                     </div>
 
                                 </div>
@@ -224,7 +203,7 @@ function AboutUs() {
                                         <h5 className="card-title">Jorge Madrigal</h5>
                                         <p className="card-text">joined in 2017 and qualified as Painter and Plumber
                                             since 2008.
-                                            Jorge is an integral member of our dive center and is our senior Assistant instructor.</p>
+                                            Jorge is an integral member of our company and is our Assistant CSR</p>
                                     </div>
 
                                 </div>
