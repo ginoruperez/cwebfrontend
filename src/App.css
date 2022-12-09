@@ -34,7 +34,7 @@ body {
   .welcome-carousel-image1{
     box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
     /** background-image:url('./components/images/carousel1.jpg');**/
-    background-image:url('./components/images/products/living-room.jpeg');
+    background-image:url('./components/images/products/living-room.jpg');
   }
 
   .welcome-carousel-image2{

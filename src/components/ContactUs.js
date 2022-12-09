@@ -8,7 +8,7 @@ function ContactUs()  {
 
   const sendEmail = (e) => {
     e.preventDefault();
-///emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    ///emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
 
     emailjs.sendForm('service_mwpry5k', 'template_63p1hng', form.current, 'CgvUGqcWoNhleQFqn')
       .then((result) => {
@@ -18,18 +18,15 @@ function ContactUs()  {
           console.log(error.text);
       });
 
-
       //emailjs.send("service_mwpry5k","template_63p1hng",{
-       // from_name: "grsharedemail@gmail.com",
-       // to_name: "ginoruperez@gmail.com",
-       // message: "test",
-       // reply_to: "test"
-       // });
+      // from_name: "grsharedemail@gmail.com",
+      // to_name: "ginoruperez@gmail.com",
+      // message: "test",
+      // reply_to: "test"
+      // });
     
 
   };
-
-
   
   return (
     <form ref={form} onSubmit={sendEmail}>

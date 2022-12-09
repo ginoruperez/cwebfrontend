@@ -1,8 +1,8 @@
-import dolphinico from './images/contractorlogo-tiny.png';
-import dolphinsmall from './images/products/heating.jpg';
-import servicesadvancedopen from './images/products/roofrepair.jpg';
-import servicesopensmall from './images/products/plumbing.jpg';
-import padi5star from './images/products/seai-approved-2.jpg';
+import contractorico from './images/contractorlogo-tiny.png';
+import heatingsmall from './images/products/heating.jpg';
+import roofrepairsmall from './images/products/roofrepair.jpg';
+import plumbingsmall from './images/products/plumbing.jpg';
+import seaiapproved from './images/products/seai-approved-2.jpg';
 import { footer } from './Footer';
 
 function Main() {
@@ -13,7 +13,7 @@ function Main() {
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
-                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
+                            <img src={contractorico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
                             K 2 G Contractor Ltd.
                         </a>
 
@@ -172,10 +172,10 @@ function Main() {
                         <aside className="col-lg-4">
                             <div className="p-4 mb-3 mt-2 bg-light rounded">
                                 <h4>Thank You for Joining Us !</h4>
-                                <p className="mb-0 fst-italic">We are a proud SEAI certified <a target="_blank" href="https://www.padi.com/" rel="noreferrer">SEAI</a>facility incorporating our own company
+                                <p className="mb-0 fst-italic">We are a proud SEAI certified <a target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI</a>  facility incorporating our own company
                                     and Services, we thrive on quality service for home improvement!</p>
 
-                                <img className="card-img-top" src={padi5star} alt="padi 5 star" />
+                                <img className="card-img-top" src={seaiapproved} alt="padi 5 star" />
                             </div>
 
                         </aside>
@@ -186,7 +186,7 @@ function Main() {
                     <div className="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4">
                         <div className="col">
                             <div className="card rounded mb-4 shadow-sm">
-                                <img className="card-img-top" src={dolphinsmall} alt="dolphinsmall" />
+                                <img className="card-img-top" src={heatingsmall} alt="dolphinsmall" />
                                 <div className="card-body">
                                     <h5 className="card-title">Taking care of your Heating</h5>
                                     <p className="card-text">Warm your Home during the Winter cold season!</p>
@@ -199,7 +199,7 @@ function Main() {
 
                         <div className="col">
                             <div className="card rounded mb-4 shadow-sm">
-                                <img className="card-img-top" src={servicesopensmall} alt="services open water" />
+                                <img className="card-img-top" src={plumbingsmall} alt="services open water" />
                                 <div className="card-body">
                                     <h5 className="card-title">Unclog your pipes!</h5>
                                     <p className="card-text">We take care of your pipes at Home</p>
@@ -212,7 +212,7 @@ function Main() {
 
                         <div className="col">
                             <div className="card rounded mb-4 shadow-sm">
-                                <img className="card-img-top" src={servicesadvancedopen} alt="services advanced open water" />
+                                <img className="card-img-top" src={roofrepairsmall} alt="services advanced open water" />
                                 <div className="card-body">
                                     <h5 className="card-title">Roof Repair</h5>
                                     <p className="card-text">An Irish way of repairing Roof!</p>

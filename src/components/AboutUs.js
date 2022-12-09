@@ -1,11 +1,10 @@
 import React from 'react';
-import dolphinico from './images/contractorlogo-tiny.png';
-import aboutdiveteam from './images/products/about-us.jpg';
+import contractorlogo from './images/contractorlogo-tiny.png';
+import aboutus from './images/products/about-us.jpg';
 import divergino from './images/diver-gino1.jpg';
-import diverjohn from './images/foreman.jpg';
-import diverfiona from './images/foreman2.jpg';
+import foreman from './images/foreman.jpg';
+import foreman2 from './images/foreman2.jpg';
 import { footer } from './Footer';
-
 
 
 function AboutUs() {
@@ -16,7 +15,7 @@ function AboutUs() {
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
-                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
+                            <img src={contractorlogo} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
                             K 2 G Contractor Ltd.
                         </a>
 
@@ -120,7 +119,7 @@ function AboutUs() {
 
                         <div className="col-6 col-lg-8">
 
-                            <img src={aboutdiveteam} className="img-fluid rounded-1" alt="test" />
+                            <img src={aboutus} className="img-fluid rounded-1" alt="test" />
 
                         </div>
 
@@ -167,7 +166,7 @@ function AboutUs() {
 
                             <div className="col">
                                 <div className="card rounded mb-4 shadow-sm">
-                                    <img className="card-img-top" src={diverjohn} alt="diver" />
+                                    <img className="card-img-top" src={foreman} alt="diver" />
                                     <div className="card-body">
                                         <h5 className="card-title">David John Walker</h5>
                                         <div className="card-text"><strong> <em>Senior Customer Sales Representative</em> </strong> He used to work as Foreman from 
@@ -198,7 +197,7 @@ function AboutUs() {
 
                             <div className="col">
                                 <div className="card rounded mb-4 shadow-sm">
-                                    <img className="card-img-top" src={diverfiona} alt="diver" />
+                                    <img className="card-img-top" src={foreman2} alt="diver" />
                                     <div className="card-body">
                                         <h5 className="card-title">Jorge Madrigal</h5>
                                         <p className="card-text">joined in 2017 and qualified as Painter and Plumber

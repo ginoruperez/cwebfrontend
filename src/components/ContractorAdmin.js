@@ -2,11 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
-
 import { useNavigate } from "react-router-dom";
-
-import dolphinico from './images/contractorlogo-tiny.png';
+import contractorlogo from './images/contractorlogo-tiny.png';
 
 function ContractorAdmin() {
 
@@ -104,7 +101,7 @@ function ContractorAdmin() {
             <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                 <div className="container">
                     <a className="navbar-brand" href="/">
-                        <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
+                        <img src={contractorlogo} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
                         K 2 G Contractor Ltd.
                     </a>
 

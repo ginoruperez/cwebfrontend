@@ -1,5 +1,5 @@
 import React from 'react';
-import dolphinico from './images/contractorlogo-tiny.png';
+import contractorlog from './images/contractorlogo-tiny.png';
 import { footer } from './Footer';
 
 function Faq() {
@@ -10,7 +10,7 @@ function Faq() {
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
-                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
+                            <img src={contractorlog} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
                             K 2 G Contractor Ltd.
                         </a>
 
@@ -55,8 +55,8 @@ function Faq() {
                                         <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                                <li><a className="dropdown-item"  href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>

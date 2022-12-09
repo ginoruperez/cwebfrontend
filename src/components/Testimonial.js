@@ -1,6 +1,6 @@
 import React from 'react';
 
-import dolphinico from './images/contractorlogo-tiny.png';
+import contractorlog from './images/contractorlogo-tiny.png';
 import { footer } from './Footer';
 
 function Testimonial() {
@@ -11,7 +11,7 @@ function Testimonial() {
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
-                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
+                            <img src={contractorlog} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
                             K 2 G Contractor Ltd.
                         </a>
 
@@ -56,8 +56,8 @@ function Testimonial() {
                                         <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                                <li><a className="dropdown-item"  href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -133,9 +133,8 @@ function Testimonial() {
                                         <p>Photographer</p>
                                         <p className="text-muted">
                                             <i className="fas fa-quote-left pe-2"></i>
-                                            Just to say, I had an absolute FANTASTIC evening on Tuesday.
-                                            I haven't stopped taking about it since and convincing everyone to take up scuba!
-                                            It really was brilliant and I cant wait til next week!
+                                            I would like to thank K2G Contractor for providing the right builder for my home studio.
+                                            The staff are very professional and completed the works as per the schedule. 
                                         </p>
                                     </div>
                                     <ul className="list-unstyled d-flex justify-content-center text-warning mb-0">
@@ -159,9 +158,7 @@ function Testimonial() {
                                         <p>Web Developer</p>
                                         <p className="text-muted">
                                             <i className="fas fa-quote-left pe-2"></i>
-                                            My advanced open water course was great, thanks to my instructor and Divemaster, I had a great experience.
-                                            I would not have done it with any other instructor. Overall Celtic Diving Team and its crew are amazing when it comes to diving,
-                                            huge experience and knowledge between them.
+                                            I'm satisfied with work done for me on my apartment by K2G Contractor! Kudos to all its Staff, i ha
                                         </p>
                                     </div>
                                     <ul className="list-unstyled d-flex justify-content-center text-warning mb-0">
@@ -185,10 +182,8 @@ function Testimonial() {
                                         <p>Registered Nurse</p>
                                         <p className="text-muted">
                                             <i className="fas fa-quote-left pe-2"></i>
-                                            Thank you for all your help, I think the course was fantastic and I really enjoy it.
-                                            All the instructors very professional and the approach to the candidates was very individual,
-                                            I felt like it was a course just for me. We will definitely see you soon!
-                                        </p>
+                                            I'm a single mum and have 2 kids at home. K2G provided me my needed service for home repair like the bursting pipes 
+                                            The contractor provided for me repaired it well                 </p>
                                     </div>
                                     <ul className="list-unstyled d-flex justify-content-center text-warning mb-0">
                                         <li><i className="fas fa-star fa-sm"></i></li>

@@ -9,16 +9,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom'
-import Rescue from './components/Rescue';
-
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import ContactUs from './components/ContactUs'
-
 import Testimonial from './components/Testimonial';
 import Faq from './components/Faq';
-import Products from './components/Products';
-import CreateProduct from './components/CreateProduct';
 import SignInlocal from './components/SignIn-localstorage';
 import SignInLink from './components/SignInLink';
 import SignUp from './components/SignUp';
@@ -27,7 +22,7 @@ import SignOut from './components/SignOut';
 import Heating from './components/Heating';
 import Contractors from './components/Contractors';
 import AddContractor from './components/AddContractor';
-import SearchContractor from './components/SearchContractor';
+
 import Services from './components/Services';
 import MyProfile from './components/MyProfile';
 import ContractorAdmin from './components/ContractorAdmin';
@@ -41,26 +36,19 @@ root.render(
 
       <Route path="/" element={<App />} />
       <Route path="Plumbing" element={<Plumbing />} />
-      <Route path="Roofing" element={<Roofing />} />
-      <Route path="Rescue" element={<Rescue />} />
-      
+      <Route path="Roofing" element={<Roofing />} />      
       <Route path="AboutUs" element={<AboutUs />} />
       <Route path="Contact" element={<Contact />} />
-      <Route path="ContactUs" element={<ContactUs />} />
-      
+      <Route path="ContactUs" element={<ContactUs />} />      
       <Route path="Testimonial" element={<Testimonial />} />
       <Route path="Faq" element={<Faq />} />
-      <Route path="Products" element={<Products />} />
-      <Route path="Contractors" element={<Contractors />} />
-    
-      <Route path="Services" element={<Services />} />
-      <Route path="CreateProduct" element={<CreateProduct />} />
+      <Route path="Contractors" element={<Contractors />} />    
+      <Route path="Services" element={<Services />} />      
       <Route path="ContractorAdmin" element={<ContractorAdmin />} />
       <Route path="AddContractor" element={<AddContractor />} />
       <Route path="/updatecontractor/:id" element={<UpdateContractor />} />
       <Route path="/deletecontractor/:id" element={<DeleteContractor />} />
-
-      <Route path="SearchContractor" element={<SearchContractor />} />
+ 
       <Route path="SignIn" element={<SignInlocal />} />
       <Route path="SignOut" element={<SignOut />} />
       <Route path="SignInLink" element={<SignInLink />} />
@@ -68,8 +56,6 @@ root.render(
       <Route path="MyProfile" element={<MyProfile />} />
       <Route path="Login" element={<Login />} />
       <Route path="Heating" element={<Heating />} />
-
-
     </Routes>
   </BrowserRouter>
 );

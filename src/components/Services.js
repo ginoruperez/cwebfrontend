@@ -5,9 +5,9 @@ import { data } from './data';
 
 import React, { useState } from 'react';
 
-import dolphinico from './images/contractorlogo-tiny.png';
+import contractorico from './images/contractorlogo-tiny.png';
 
-import dolphin3 from './images/contractorlogo.png';
+import contractorlogo from './images/contractorlogo.png';
 
 
 function Services() {
@@ -28,13 +28,7 @@ function Services() {
 
     }
 
-
-
-
-
-
   };
-
 
 
   const [cartItems, setCartItems] = useState([]);
@@ -72,7 +66,7 @@ function Services() {
         <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
           <div className="container">
             <a className="navbar-brand" href="/">
-              <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
+              <img src={contractorico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
               K 2 G Contractor Ltd.
             </a>
 
@@ -178,7 +172,7 @@ function Services() {
             <div className="row mt-4">
               <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
 
-                <img src={dolphin3} width="180" height="180" className="d-inline-block align-top"
+                <img src={contractorlogo} width="180" height="180" className="d-inline-block align-top"
                   alt="Celtic Sea Dive Shop Logo" />
 
               </div>
