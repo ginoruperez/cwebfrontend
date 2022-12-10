@@ -36,6 +36,7 @@ export default function SignUp() {
     const [lastName, setLastName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const [chkpassword, setchkPassword] = useState();
 
 
 
@@ -43,15 +44,24 @@ export default function SignUp() {
     const handleSubmit = async e => {
         e.preventDefault();
         console.log(password, email);
-        const token = await signUp({
-            firstName,
-            lastName,
-            email,
-            password
-        });
+        if (chkpassword === password) {
+            alert("Confirmed password matched!")
 
-        console.log(token, "token");
-        window.alert('Successfully added')
+            const token = await signUp({
+                firstName,
+                lastName,
+                email,
+                password
+            });
+
+            console.log(token, "token");
+            window.alert('Successfully added')
+
+        } else {
+
+            alert("Confirmed passwword does not match!")
+        }
+
         //setToken(token);
     }
 
@@ -160,9 +170,10 @@ export default function SignUp() {
 
                                 <Box component="form" noValidate sx={{ mt: 3 }} onSubmit={handleSubmit}>
                                     <Grid container spacing={2}>
+
                                         <Grid item xs={12} sm={6}>
                                             <TextField
-                                                autoComplete='give-name'
+                                                autoComplete='first-name'
                                                 name="firstName"
                                                 onChange={(e) => setFirstName(e.target.value)}
                                                 required
@@ -209,6 +220,22 @@ export default function SignUp() {
                                                 autoComplete='new-password'
                                             />
                                         </Grid>
+
+                                        <Grid item xs={12}>
+                                            <TextField
+                                                required
+                                                fullWidth
+                                                name="chkpassword"
+                                                type="password"
+                                                onChange={(e) => setchkPassword(e.target.value)}
+                                                label="Confirm Password"
+                                                id="chkpassword"
+                                                autoComplete='chk-password'
+                                            />
+                                        </Grid>
+
+
+
                                         <Grid item xs={12}>
                                             <FormControlLabel control={<Checkbox defaultChecked />} label="I want to receive inspiration, marketing promotions and updates via email." />
 
