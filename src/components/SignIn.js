@@ -1,28 +1,47 @@
 import React, { useState } from 'react'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { Avatar, Container, CssBaseline, Box, Typography, TextField, Grid, FormControlLabel, Checkbox, Button } from '@mui/material';
+import { Link } from "react-router-dom"
+import PropTypes from 'prop-types';
+
 import { footer } from './Footer';
 import dolphinico from './images/dolphin.ico';
 
-
 async function loginUser(credentials) {
-    return fetch('http://localhost:8080/contractorweb/loginResult?email=tien&password=123', {
+    return fetch('http://localhost:8081/api/users/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(credentials)
     })
-        .then(data => data.json())
+        .then(res => {
+
+            if (res.ok)
+                return res.json()
+            else {
+                alert("Incorrect Password/Email!, Try Again" + res.status);
+                console.log(res.status)
+            }
+
+        })
+        .catch(err => {
+            console.log('err', err);
+
+
+        })
+
 }
 
+
+
 export default function SignIn({ setToken, setAdmin }) {
+    const mytheme = createTheme();
 
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
     const handleSubmit = async e => {
-        console.log("navigate");
-        
-
         e.preventDefault();
 
         const token = await loginUser({
@@ -30,24 +49,26 @@ export default function SignIn({ setToken, setAdmin }) {
             password
         });
 
-        console.log(token);
-
-        setToken(token);
-
-        if (password === 'lab-password') {
+        if (token) {
+            console.log(token, "token");
+            setToken(token);
             setAdmin(true);
-
-        } else {
-            window.alert('Incorrect Login Password!')
+            console.log('the password is correct test atest')
+            
         }
+
+        else if (token === "User does not exist")
+            console.log("User does not exist");
+
+        else if (token === "Incorrect Password!, Try Again")
+            console.log("User does not exist");
 
     }
 
     return (
         <div>
-
             <header>
-                
+
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
@@ -133,47 +154,105 @@ export default function SignIn({ setToken, setAdmin }) {
                 </nav>
 
             </header>
-
             <main role="main">
-                <div className="container-fluid jumbotron jumbotron-team py-5">
-                    <div className="container">
-                        <h1 className="display-3 fw-bold text-white">Login Page</h1>
-                    </div>
-                </div>
+                <ThemeProvider theme={mytheme}>
+                    <Container component="main" maxWidth="xs">
+                        <CssBaseline />
+                        <Box
+                            sx={{
+                                marginTop: 8,
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center'
 
-                <div className="container py-5 h-100">
-                    <div className="row d-flex justify-content-center align-items-center h-100">
-                        <div className="col-12 col-md-8 col-lg-6 col-xl-5">
-                            <div className="card shadow-2-strong" style={{ "borderRadius": "1rem" }}>
-                                <div className="card-body p-5 text-center">
 
-                                    <h3 className="mb-5">Sign in</h3>
+                            }}>
 
-                                    <div className="form-outline mb-4">
-                                        <input type="email" id="typeEmailX-2" className="form-control form-control-lg" required
-                                            onChange={(e) => setEmail(e.target.value)}  />
-                                        <label className="form-label" htmlFor="typeEmailX-2">Email</label>
-                                    </div>
+                            <Avatar sx={{
+                                m: 1, bgcolor: 'secondery.main'
+                            }}>
 
-                                    <div className="form-outline mb-4">
-                                        <input type="password" id="typePasswordX-2" className="form-control form-control-lg"
-                                            onChange={(e) => setPassword(e.target.value)} required />
-                                        <label className="form-label" htmlFor="typePasswordX-2">Password</label>
-                                    </div>
+                            </Avatar>
+                            <Typography component="h1" variant='h5'>
+                                Sign in
+                            </Typography>
+                            <Box component="form" noValidate sx={{ mt: 1 }} onSubmit={handleSubmit}>
+                                <Grid container spacing={2}>
+                                    <Grid item xs={12}>
+                                        <TextField
+                                            required
+                                            fullWidth
+                                            id="email"
+                                            label="Email Address"
+                                            name="email"
+                                            autoComplete="email"
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            autoFocus>
 
-                                    <div className="form-check d-flex justify-content-start mb-4">
-                                        <input className="form-check-input" type="checkbox" value="" id="form1Example3" />
-                                        <label className="form-check-label" htmlFor="form1Example3"> Remember password </label>
-                                    </div>
-                                    <button className="btn btn-primary btn-lg btn-block" type="submit" onClick={handleSubmit} >Login</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                        </TextField>
+
+
+                                    </Grid>
+
+                                    <Grid item xs={12}>
+
+                                        <TextField
+                                            required
+                                            fullWidth
+                                            name="password"
+                                            id="password"
+                                            label="Password"
+                                            type="password"
+                                            autoComplete="current-password"
+                                            onChange={(e) => setPassword(e.target.value)}
+
+                                            autoFocus>
+                                        </TextField>
+
+                                    </Grid>
+                                    <FormControlLabel
+                                        control={<Checkbox value="remmber" color="secondary" />}
+                                        label="Remember me" />
+
+
+
+                                    <Button
+                                        type='submit'
+                                        fullWidth
+                                        variant='contained'
+                                        sx={{ mt: 3, mb: 2 }}>
+                                        Sign in
+                                    </Button>
+                                    <Grid item>
+                                        <Link to="/SignUp">
+                                            {"Don't have an account ? Sign up"}
+                                        </Link>
+                                    </Grid>
+
+                                </Grid>
+
+
+
+
+
+                            </Box>
+
+                        </Box>
+
+
+
+
+                    </Container>
+
+
+
+                </ThemeProvider>
+
             </main>
             {footer}
-            
         </div>
     )
 }
+SignIn.propTypes = {
+    setToken: PropTypes.func.isRequired
+};

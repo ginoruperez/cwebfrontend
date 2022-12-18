@@ -1,26 +1,10 @@
-import React from 'react'
-import Grid from '@mui/material/Grid'
-import { Typography } from '@mui/material';
-import { Container } from '@mui/material';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import Checkbox from '@mui/material/Checkbox';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import { useState } from 'react';
-
+import React, { useState } from 'react'
 import { footer } from './Footer';
 import dolphinico from './images/dolphin.ico';
 
 
-const theme = createTheme();
-
-async function signUp(credentials) {
-
-    return fetch('http://localhost:8081/api/users/register', {
+async function loginUser(credentials) {
+    return fetch('http://localhost:8080/contractorweb/loginResult?email=tien&password=123', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -30,35 +14,40 @@ async function signUp(credentials) {
         .then(data => data.json())
 }
 
+export default function SignIn({ setToken, setAdmin }) {
 
-export default function SignUp() {
-    const [firstName, setFirstName] = useState();
-    const [lastName, setLastName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
-
-
-
     const handleSubmit = async e => {
+        console.log("navigate");
+        
+
         e.preventDefault();
-        console.log(password, email);
-        const token = await signUp({
-            firstName,
-            lastName,
+
+        const token = await loginUser({
             email,
             password
         });
 
-        console.log(token, "token");
-        window.alert('Successfully added')
-        //setToken(token);
+        console.log(token);
+
+        setToken(token);
+
+        if (password === 'lab-password') {
+            setAdmin(true);
+
+        } else {
+            window.alert('Incorrect Login Password!')
+        }
+
     }
 
     return (
         <div>
-            <header>
 
+            <header>
+                
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
@@ -144,105 +133,47 @@ export default function SignUp() {
                 </nav>
 
             </header>
+
             <main role="main">
-            <ThemeProvider theme={theme}>
-                <Container component="main" maxWidth='xs'>
-                    <CssBaseline />
-                    <Box
-                        sx={{
-                            marginTop: 8,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                        }}
-                    >
-                        <Grid container spacing={2}>
-                            <Typography variant='h1' component='h5'>
-                                Sign Up
-                            </Typography>
+                <div className="container-fluid jumbotron jumbotron-team py-5">
+                    <div className="container">
+                        <h1 className="display-3 fw-bold text-white">Login Page</h1>
+                    </div>
+                </div>
 
-                            <Box component="form" noValidate sx={{ mt: 3 }} onSubmit={handleSubmit}>
-                                <Grid container spacing={2}>
-                                    <Grid item xs={12} sm={6}>
-                                        <TextField
-                                            autoComplete='give-name'
-                                            name="firstName"
-                                            onChange={(e) => setFirstName(e.target.value)}
-                                            required
-                                            fullWidth
-                                            id="firstName"
-                                            label="First Name"
-                                            autoFocus
-                                        />
+                <div className="container py-5 h-100">
+                    <div className="row d-flex justify-content-center align-items-center h-100">
+                        <div className="col-12 col-md-8 col-lg-6 col-xl-5">
+                            <div className="card shadow-2-strong" style={{ "borderRadius": "1rem" }}>
+                                <div className="card-body p-5 text-center">
 
-                                    </Grid>
-                                    <Grid item xs={12} sm={6}>
-                                        <TextField
-                                            autoComplete='last-name'
-                                            name="lastName"
-                                            onChange={(e) => setLastName(e.target.value)}
-                                            required
-                                            fullWidth
-                                            id="lastName"
-                                            label="Last Name"
-                                            autoFocus
-                                        />
+                                    <h3 className="mb-5">Sign in</h3>
 
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <TextField
-                                            required
-                                            fullWidth
-                                            id="email"
-                                            label="Email Address"
-                                            onChange={(e) => setEmail(e.target.value)}
-                                            name="email"
-                                            autoComplete='email'
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <TextField
-                                            required
-                                            fullWidth
-                                            name="password"
-                                            type="password"
-                                            onChange={(e) => setPassword(e.target.value)}
-                                            label="Password"
-                                            id="password"
-                                            autoComplete='new-password'
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <FormControlLabel control={<Checkbox defaultChecked />} label="I want to receive inspiration, marketing promotions and updates via email." />
+                                    <div className="form-outline mb-4">
+                                        <input type="email" id="typeEmailX-2" className="form-control form-control-lg" required
+                                            onChange={(e) => setEmail(e.target.value)}  />
+                                        <label className="form-label" htmlFor="typeEmailX-2">Email</label>
+                                    </div>
 
+                                    <div className="form-outline mb-4">
+                                        <input type="password" id="typePasswordX-2" className="form-control form-control-lg"
+                                            onChange={(e) => setPassword(e.target.value)} required />
+                                        <label className="form-label" htmlFor="typePasswordX-2">Password</label>
+                                    </div>
 
-                                    </Grid>
-                                </Grid>
-                                <Button
-                                    type="submit"
-                                    fullWidth
-                                    variant="contained"
-                                    sx={{ mt: 3, mb: 2 }}>
-                                    Sign Up
-                                </Button>
-                                <Grid item>
-                                    <Link
-                                        to="/SignIn"
-
-                                    >
-                                        Already have an account? Sign in
-                                    </Link>
-                                </Grid>
-                            </Box>
-
-                        </Grid>
-                    </Box>
-
-                </Container>
-            </ThemeProvider>
+                                    <div className="form-check d-flex justify-content-start mb-4">
+                                        <input className="form-check-input" type="checkbox" value="" id="form1Example3" />
+                                        <label className="form-check-label" htmlFor="form1Example3"> Remember password </label>
+                                    </div>
+                                    <button className="btn btn-primary btn-lg btn-block" type="submit" onClick={handleSubmit} >Login</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
             {footer}
+            
         </div>
-
     )
 }

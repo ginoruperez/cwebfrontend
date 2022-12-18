@@ -24,6 +24,10 @@ import SignUp from './components/SignUp';
 import Login from './components/Login';
 import DolphinEncounter from './components/DolphinEncounter';
 import Contractors from './components/Contractors';
+import AddContractor from './components/AddContractor';
+import SearchContractor from './components/SearchContractor';
+import Services from './components/Services';
+import ContractorsList from './components/ContractorsList';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -43,7 +47,11 @@ root.render(
       <Route path="Faq" element={<Faq />} />
       <Route path="Products" element={<Products />} />
       <Route path="Contractors" element={<Contractors />} />
+      <Route path="ContractorsList" element={<ContractorsList />} />
+      <Route path="Services" element={<Services />} />
       <Route path="CreateProduct" element={<CreateProduct />} />
+      <Route path="AddContractor" element={<AddContractor />} />
+      <Route path="SearchContractor" element={<SearchContractor />} />
       <Route path="SignIn" element={<SignIn />} />
       <Route path="SignInLink" element={<SignInLink />} />
       <Route path="SignUp" element={<SignUp />} />

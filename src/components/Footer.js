@@ -1,4 +1,4 @@
-import dolphin3 from './images/dolphin3.png';
+import dolphin3 from './images/contractorlogo.png';
 
 export const footer =
     <div>
@@ -11,7 +11,7 @@ export const footer =
                 <div className="row mt-4">
                     <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
 
-                        <img src={dolphin3} width="180" height="180" className="d-inline-block align-top"
+                        <img src={dolphin3} width="200" height="150" className="d-inline-block align-top"
                             alt="Celtic Sea Dive Shop Logo" />
 
                     </div>
@@ -34,7 +34,7 @@ export const footer =
                             </li>
                             <li className="mb-3">
                                 <span className="fa-li"><i className="fas fa-envelope"></i></span><span className="ms-1">
-                                    <a href="mailto:info@celticdiveshop.ie">info@celticdiveshop.com </a> </span>
+                                    <a href="mailto:info@celticdiveshop.ie">info@k2gcontractor.com </a> </span>
                             </li>
                             <li className="mb-3">
                                 <span className="fa-li"><i className="fas fa-phone"></i></span><span className="ms-1">+ 353 234 567 88</span>
@@ -70,7 +70,7 @@ export const footer =
 
             </div>
 
-            <div className="copyright text-center py-3">Copyright © 2022 Celtic Sea Dive Shop. All Rights Reserved.</div>
+            <div className="copyright text-center py-3">Copyright © 2022 K2G Contractor Ltd. All Rights Reserved.</div>
 
 
         </footer>
