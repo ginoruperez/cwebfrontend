@@ -5,9 +5,9 @@ import { data } from './data';
 
 import React, { useState } from 'react';
 
-import dolphinico from './images/contractorlogo-tiny.png';
+import contractorico from './images/contractorlogo-tiny.png';
 
-import dolphin3 from './images/contractorlogo.png';
+import contractorlogo from './images/contractorlogo.png';
 
 
 function Services() {
@@ -28,13 +28,7 @@ function Services() {
 
     }
 
-
-
-
-
-
   };
-
 
 
   const [cartItems, setCartItems] = useState([]);
@@ -66,13 +60,13 @@ function Services() {
 
   return (
     <div>
-
-
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
       <header>
         <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
           <div className="container">
             <a className="navbar-brand" href="/">
-              <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
+              <img src={contractorico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
               K 2 G Contractor Ltd.
             </a>
 
@@ -94,7 +88,7 @@ function Services() {
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link" href="/ContractorsList">Contractors</a>
+                  <a className="nav-link" href="/Contractors">Contractors</a>
 
                 </li>
                 <li className="nav-item">
@@ -117,8 +111,8 @@ function Services() {
                     <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                     <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                       <ul className="submenu dropdown-menu">
-                        <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                        <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                        <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                        <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -140,10 +134,11 @@ function Services() {
             <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
               <li><a className="dropdown-item" href="/SignInLink">Sign-In</a></li>
               <li><a className="dropdown-item" href="/SignUp">Sign-Up</a></li>
+              <li><a className="dropdown-item" href="/MyProfile">Profile</a></li>
               <li>
                 <hr className="dropdown-divider" />
               </li>
-              <li><a className="dropdown-item" href="/">Logout</a></li>
+              <li><a className="dropdown-item" href="/SignOut">Logout</a></li>
             </ul>
 
           </div>
@@ -166,7 +161,7 @@ function Services() {
 
       {/*End of Shopping Cart*/}
 
-    
+
 
       <div className='footer-shop'>
 
@@ -177,7 +172,7 @@ function Services() {
             <div className="row mt-4">
               <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
 
-                <img src={dolphin3} width="180" height="180" className="d-inline-block align-top"
+                <img src={contractorlogo} width="180" height="180" className="d-inline-block align-top"
                   alt="Celtic Sea Dive Shop Logo" />
 
               </div>

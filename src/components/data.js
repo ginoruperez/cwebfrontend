@@ -47,7 +47,7 @@ export const data =  [
     title: "Heating",
     type: "Heating",
     name: "Heating",
-    image: "https://images.pexels.com/photos/6530551/pexels-photo-6530551.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    image: "https://www.doctorflue.com/blog/wp-content/uploads/2017/12/doctor-flue-heating-your-home-with-a-fireplace.jpg",
     price: 27.35,
     
   },

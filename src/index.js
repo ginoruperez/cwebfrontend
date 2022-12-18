@@ -2,33 +2,32 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import OpenWater from './components/OpenWater';
-import AdvOpenWater from './components/AdvOpenWater';
+import Plumbing from './components/Plumbing';
+import Roofing from './components/Roofing';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom'
-import Rescue from './components/Rescue';
-import AllCourses from './components/AllCourses';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
-import Order from './components/Order';
+import ContactUs from './components/ContactUs'
 import Testimonial from './components/Testimonial';
 import Faq from './components/Faq';
-import Products from './components/Products';
-import CreateProduct from './components/CreateProduct';
-import SignIn from './components/SignIn';
+import SignInlocal from './components/SignIn-localstorage';
 import SignInLink from './components/SignInLink';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
-import DolphinEncounter from './components/DolphinEncounter';
+import SignOut from './components/SignOut';
+import Heating from './components/Heating';
 import Contractors from './components/Contractors';
 import AddContractor from './components/AddContractor';
-import SearchContractor from './components/SearchContractor';
-import Services from './components/Services';
-import ContractorsList from './components/ContractorsList';
 
+import Services from './components/Services';
+import MyProfile from './components/MyProfile';
+import ContractorAdmin from './components/ContractorAdmin';
+import UpdateContractor from './components/UpdateContractor';
+import DeleteContractor from './components/DeleteContractor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -36,29 +35,27 @@ root.render(
     <Routes>
 
       <Route path="/" element={<App />} />
-      <Route path="OpenWater" element={<OpenWater />} />
-      <Route path="AdvOpenWater" element={<AdvOpenWater />} />
-      <Route path="Rescue" element={<Rescue />} />
-      <Route path="AllCourses" element={<AllCourses />} />
+      <Route path="Plumbing" element={<Plumbing />} />
+      <Route path="Roofing" element={<Roofing />} />      
       <Route path="AboutUs" element={<AboutUs />} />
       <Route path="Contact" element={<Contact />} />
-      <Route path="Order" element={<Order />} />
+      <Route path="ContactUs" element={<ContactUs />} />      
       <Route path="Testimonial" element={<Testimonial />} />
       <Route path="Faq" element={<Faq />} />
-      <Route path="Products" element={<Products />} />
-      <Route path="Contractors" element={<Contractors />} />
-      <Route path="ContractorsList" element={<ContractorsList />} />
-      <Route path="Services" element={<Services />} />
-      <Route path="CreateProduct" element={<CreateProduct />} />
+      <Route path="Contractors" element={<Contractors />} />    
+      <Route path="Services" element={<Services />} />      
+      <Route path="ContractorAdmin" element={<ContractorAdmin />} />
       <Route path="AddContractor" element={<AddContractor />} />
-      <Route path="SearchContractor" element={<SearchContractor />} />
-      <Route path="SignIn" element={<SignIn />} />
+      <Route path="/updatecontractor/:id" element={<UpdateContractor />} />
+      <Route path="/deletecontractor/:id" element={<DeleteContractor />} />
+ 
+      <Route path="SignIn" element={<SignInlocal />} />
+      <Route path="SignOut" element={<SignOut />} />
       <Route path="SignInLink" element={<SignInLink />} />
       <Route path="SignUp" element={<SignUp />} />
+      <Route path="MyProfile" element={<MyProfile />} />
       <Route path="Login" element={<Login />} />
-      <Route path="DolphinEncounter" element={<DolphinEncounter />} />
-
-
+      <Route path="Heating" element={<Heating />} />
     </Routes>
   </BrowserRouter>
 );

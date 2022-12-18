@@ -1,8 +1,8 @@
-import dolphinico from './images/contractorlogo-tiny.png';
-import dolphinsmall from './images/products/dolphin-small.jpg';
-import servicesadvancedopen from './images/products/services-advancedopen-small.jpg';
-import servicesopensmall from './images/products/services-discoverscuba.jpg';
-import padi5star from './images/products/seai-approved-2.jpg';
+import contractorico from './images/contractorlogo-tiny.png';
+import heatingsmall from './images/products/heating.jpg';
+import roofrepairsmall from './images/products/roofrepair.jpg';
+import plumbingsmall from './images/products/plumbing.jpg';
+import seaiapproved from './images/products/seai-approved-2.jpg';
 import { footer } from './Footer';
 
 function Main() {
@@ -13,7 +13,7 @@ function Main() {
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
-                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
+                            <img src={contractorico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
                             K 2 G Contractor Ltd.
                         </a>
 
@@ -35,7 +35,7 @@ function Main() {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/ContractorsList">Contractors</a>
+                                    <a className="nav-link" href="/Contractors">Contractors</a>
 
                                 </li>
                                 <li className="nav-item">
@@ -58,8 +58,8 @@ function Main() {
                                         <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                                <li><a className="dropdown-item"  href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -81,10 +81,11 @@ function Main() {
                         <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
                             <li><a className="dropdown-item" href="/SignInLink">Sign-In</a></li>
                             <li><a className="dropdown-item" href="/SignUp">Sign-Up</a></li>
+                            <li><a className="dropdown-item" href="/MyProfile">Profile</a></li>
                             <li>
                                 <hr className="dropdown-divider" />
                             </li>
-                            <li><a className="dropdown-item" href="/">Logout</a></li>
+                            <li><a className="dropdown-item" href="/SignOut">Logout</a></li>
                         </ul>
 
                     </div>
@@ -113,15 +114,15 @@ function Main() {
                         <div className="carousel-item welcome-carousel-image2">
                             <div className="carousel-caption text-start">
                                 <h1>High Quality House Painting</h1>
-                                <p>Shop with our wide range of High Quality Products</p>
-                                <p><a className="btn btn-lg btn-primary" href="/Products" role="button">Services</a></p>
+                                <p>Get to know our highly qulified contractors</p>
+                                <p><a className="btn btn-lg btn-primary" href="/Services" role="button">Services</a></p>
                             </div>
                         </div>
                         <div className="carousel-item welcome-carousel-image3">
                             <div className="carousel-caption text-end">
                                 <h1>Bathroom Fixtures.</h1>
                                 <p>Avail our affordable rates from wide selections of contractor!</p>
-                                <p><a className="btn btn-lg btn-primary" href="/OpenWater" role="button">Contractors</a></p>
+                                <p><a className="btn btn-lg btn-primary" href="/Contractors" role="button">Contractors</a></p>
                             </div>
                         </div>
                     </div>
@@ -142,39 +143,28 @@ function Main() {
                                 Our Company
                             </h2>
                             <section>
-                                Our Dive Shop is located in Kinsale, Southwest coast of Ireland near Celtic Sea. We stock a wide range of
-                                Scubapro, Mares, Apeks and Aqualung dive equipment.
-
-                                For convenience, customers may also order from our on line shop.
-                                We are PADI accredited servicing and our test centre is also located within our shop
-
-                                With exclusive deals in Malta and Gozo and other fantastic dive locations around Ireland,
-                                we guarantee you the best diving all around.
-
+                                Our Company is located in Kinsale, Southwest coast of Ireland near Celtic Sea. 
+                                
                                 With over 10 years of experience, we guarantee the highest standards of quality in
-                                terms of teaching, safety, and services.
+                                terms of home improvement and services.
 
-                                All our equipment is renewed every 2 years, to guarantee your comfort and safety.
-                                So start your PADI Adventure with us today, get diving and change your life.
-                                Our team is here to assist you to step by step.
+                                
                             </section>
                             <br />
 
                             <section>
-                                The Celtic Sea Dive shop aims to provide training and education in a fun-filled safe environment
-                                to people from all walks of life.
+                                The K2G Contractor Company aims to provide you the highest quality services you need 
+                                for your home improvement and services.
                             </section>
                             <br />
                             <section>
-                                The team helps people conquer their fear in an open water. They focus mainly in making sure
-                                anybody visiting them has an unforgettable experience and leave with a smile. It also offers a
-                                wide range of diving equipment and accessories with high quality brands
+                                
 
                             </section>
                             <br />
                             <section>
-                                Since 2010, Celtic Sea Dive shop is one of the premier dive shops in the country and it is a
-                                proud <strong><em>5 star PADI facility</em></strong> as well as sales and repairs.
+                                Since 2010, K2G is one of the premier contractor  in the country and it is a
+                                proud <strong><em>SEAI certified </em></strong>.
                             </section>
                             <br />
                         </div>
@@ -182,54 +172,53 @@ function Main() {
                         <aside className="col-lg-4">
                             <div className="p-4 mb-3 mt-2 bg-light rounded">
                                 <h4>Thank You for Joining Us !</h4>
-                                <p className="mb-0 fst-italic">We are a proud 5 star <a target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI</a> facility incorporating our own Dive Shop
-                                    and Servicing
-                                    Centre, we thrive on quality service, safety and of course a lot of fun!</p>
+                                <p className="mb-0 fst-italic">We are a proud SEAI certified <a target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI</a>  facility incorporating our own company
+                                    and Services, we thrive on quality service for home improvement!</p>
 
-                                <img className="card-img-top" src={padi5star} alt="padi 5 star" />
+                                <img className="card-img-top" src={seaiapproved} alt="padi 5 star" />
                             </div>
 
                         </aside>
                     </div>
                 </div>
                 <div className="container history">
-                    <h2 className="pb-4 mb-2 mt-5">Exciting Dive Adventure for the Season!</h2>
+                    <h2 className="pb-4 mb-2 mt-5">Available Services Most In-demand!</h2>
                     <div className="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4">
                         <div className="col">
                             <div className="card rounded mb-4 shadow-sm">
-                                <img className="card-img-top" src={dolphinsmall} alt="dolphinsmall" />
+                                <img className="card-img-top" src={heatingsmall} alt="dolphinsmall" />
                                 <div className="card-body">
-                                    <h5 className="card-title">Diving with Dolphin</h5>
-                                    <p className="card-text">Feels Great to swim with our Dolphin!</p>
+                                    <h5 className="card-title">Taking care of your Heating</h5>
+                                    <p className="card-text">Warm your Home during the Winter cold season!</p>
                                 </div>
                                 <div className="card-footer">
-                                    <a href="/DolphinEncounter" className="btn btn-primary">View details</a>
+                                    <a href="/Heating" className="btn btn-primary">View details</a>
                                 </div>
                             </div>
                         </div>
 
                         <div className="col">
                             <div className="card rounded mb-4 shadow-sm">
-                                <img className="card-img-top" src={servicesopensmall} alt="services open water" />
+                                <img className="card-img-top" src={plumbingsmall} alt="services open water" />
                                 <div className="card-body">
-                                    <h5 className="card-title">Open Water Diving</h5>
-                                    <p className="card-text">My God, this is awesome!</p>
+                                    <h5 className="card-title">Unclog your pipes!</h5>
+                                    <p className="card-text">We take care of your pipes at Home</p>
                                 </div>
                                 <div className="card-footer">
-                                    <a href="/OpenWater" className="btn btn-primary">View details</a>
+                                    <a href="/Plumbing" className="btn btn-primary">View details</a>
                                 </div>
                             </div>
                         </div>
 
                         <div className="col">
                             <div className="card rounded mb-4 shadow-sm">
-                                <img className="card-img-top" src={servicesadvancedopen} alt="services advanced open water" />
+                                <img className="card-img-top" src={roofrepairsmall} alt="services advanced open water" />
                                 <div className="card-body">
-                                    <h5 className="card-title">Advanced Open Water</h5>
-                                    <p className="card-text">This is sooooo cool and exhilarating!</p>
+                                    <h5 className="card-title">Roof Repair</h5>
+                                    <p className="card-text">An Irish way of repairing Roof!</p>
                                 </div>
                                 <div className="card-footer">
-                                    <a href="/AdvOpenWater" className="btn btn-primary">View details</a>
+                                    <a href="/Roofing" className="btn btn-primary">View details</a>
                                 </div>
                             </div>
                         </div>

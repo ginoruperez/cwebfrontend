@@ -1,11 +1,10 @@
 import React from 'react';
-import dolphinico from './images/dolphin.ico';
-import aboutdiveteam from './images/products/about-diveteam.jpg';
+import contractorlogo from './images/contractorlogo-tiny.png';
+import aboutus from './images/products/about-us.jpg';
 import divergino from './images/diver-gino1.jpg';
-import diverjohn from './images/diver-john.jpg';
-import diverfiona from './images/diver-fiona.jpg';
+import foreman from './images/foreman.jpg';
+import foreman2 from './images/foreman2.jpg';
 import { footer } from './Footer';
-
 
 
 function AboutUs() {
@@ -16,8 +15,8 @@ function AboutUs() {
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
-                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="Celtic Sea Dive Shop Logo" />
-                            Celtic Sea Dive Shop
+                            <img src={contractorlogo} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
+                            K 2 G Contractor Ltd.
                         </a>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -26,36 +25,29 @@ function AboutUs() {
                         </button>
 
                         <div className="collapse navbar-collapse" id="navbarCollapse">
+
+
                             <ul className="nav navbar-nav mr-auto">
+
                                 <li className="nav-item ">
                                     <a className="nav-link" href="/">Home</a>
                                 </li>
-                                <li className="nav-item dropdown">
+                                <li className="nav-item">
+                                    <a className="nav-link" href="/Services">Services</a>
+                                </li>
 
-                                    <a className="nav-link dropdown-toggle" href="test.html" id="nav-dropdown" data-bs-toggle="dropdown"
-                                        aria-expanded="false" >
-                                        Courses
-                                    </a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="/Contractors">Contractors</a>
 
-                                    <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
-                                        <li><a className="dropdown-item active" href="/OpenWater">Open Water</a></li>
-                                        <li><a className="dropdown-item" href="/AdvOpenWater">Advanced Open Water</a></li>
-                                        <li><a className="dropdown-item" href="/Rescue">Rescue Diving</a></li>
-                                        <li>
-                                            <hr className="dropdown-divider" />
-                                        </li>
-                                        <li><a className="dropdown-item" href="/AllCourses">All Dive Courses</a></li>
-                                    </ul>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/Products">Shop</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link active " href="/AboutUs">About Us</a>
+                                    <a className="nav-link active" href="/AboutUs">About Us</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/Contact">Contact</a>
                                 </li>
+
+
                                 <li className="nav-item dropdown">
 
                                     <a className="nav-link dropdown-toggle" href="/" id="nav-dropdown" data-bs-toggle="dropdown"
@@ -68,19 +60,22 @@ function AboutUs() {
                                         <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                                <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
+
+
                             </ul>
+
                         </div>
                     </div>
+
                     <div className="nav-item dropdown" style={{ "width": "170px", "height": "20px" }} >
 
-                        <div className="profile-pic dropdown-toggle" data-bs-toggle="dropdown"
-                        >
+                        <div className="profile-pic dropdown-toggle" data-bs-toggle="dropdown">
                             <i className="fa fa-user" aria-hidden="true"></i>
                         </div>
 
@@ -88,18 +83,20 @@ function AboutUs() {
                         <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
                             <li><a className="dropdown-item" href="/SignInLink">Sign-In</a></li>
                             <li><a className="dropdown-item" href="/SignUp">Sign-Up</a></li>
+                            <li><a className="dropdown-item" href="/MyProfile">Profile</a></li>
                             <li>
                                 <hr className="dropdown-divider" />
                             </li>
-                            <li><a className="dropdown-item" href="/">Logout</a></li>
+                            <li><a className="dropdown-item" href="/SignOut">Logout</a></li>
                         </ul>
 
                     </div>
+
                 </nav>
 
             </header>
             <main role="main">
-                <div className="container-fluid jumbotron jumbotron-team py-5">
+                <div className="container-fluid jumbotron jumbotron-painting py-5">
                     <div className="container">
                         <h1 className="display-3 fw-bold text-white">About Us</h1>
                     </div>
@@ -122,7 +119,7 @@ function AboutUs() {
 
                         <div className="col-6 col-lg-8">
 
-                            <img src={aboutdiveteam} className="img-fluid rounded-1" alt="test" />
+                            <img src={aboutus} className="img-fluid rounded-1" alt="test" />
 
                         </div>
 
@@ -131,51 +128,33 @@ function AboutUs() {
 
                             <div className="user-select-none">
                                 <section>
-                                    Gino Ruperez is the owner of Celtic Sea Dive Shop located in Kinsale, Southwest coast of Ireland
-                                    near Celtic Sea. It has been in operation for over 10 years in Ireland. The idea of forming a Dive Shop
-                                    is one of dreams by owner who has greatly influenced and inspired by his spectacular experiences
-                                    in doing underwater activities by his PADI professional diving instructors and diving friends
-                                    who work from Jeddah Saudi Arabia as an expat for several years. Diving in the Red Sea is a fun
-                                    filled recreational activities that helps them to alleviate the boredom and loneliness of being
-                                    thousands of miles away from their family.
+                                    Gino Ruperez is the owner of K2G Contractor located in Kinsale, Southwest coast of Ireland
+                                    near Celtic Sea. It has been in operation for over 10 years in Ireland. The idea of forming the 
+                                    company is based on his day to day experience in doing household chores, where he do an all around 
+                                    work in the house like fixing the broken cabinets, lighting, broken flush.  Those jobs takes a bit 
+                                    of a time for him to complete because he has no expertise on those kind of jobs. 
                                 </section>
                                 <br />
 
                                 <section>
-                                    The owner got an interest in pursuing a goal of learning to dive in an open water of Red Sea in
-                                    the south of Jeddah while he was working in Saudi as an expat. Fortunately, he met his
-                                    professional PADI Irish instructor David John Walker and few diving buddies.
+                                    So he came up with an idea of creating an web application that would help him to find the cheaper home services 
+                                    and that can offer a Do It Yourself video instructions or provide people that can visit their home to provide 
+                                    the required home repair services.
                                 </section>
                                 <br />
+                                
+                                
                                 <section>
-                                    After immigrating to Ireland and settled in Kinsale, he started to form a team of
-                                    professional divers along with David John Walker as the lead instructor. Kinsale has some
-                                    amazing dive locations and is the perfect place to learn to dive.
-                                </section>
-                                <br />
-                                <section>
-                                    The Celtic Sea Dive shop aims to provide training and education in a fun-filled safe environment
-                                    to people from all walks of life.
-                                </section>
-                                <br />
-                                <section>
-                                    The team helps people conquer their fear in an open water. They focus mainly in making sure
-                                    anybody visiting them has an unforgettable experience and leave with a smile. It also offers a
-                                    wide range of diving equipment and accessories with high quality brands
-
-                                </section>
-                                <br />
-                                <section>
-                                    Since 2010, Celtic Sea Dive shop is one of the premier dive shops in the country and it is a
-                                    proud <strong><em>5 star PADI facility</em></strong> as well as sales and repairs.
+                                    Since 2010, K2G Contractor is one of the premier contractor in the country and it is a
+                                    proud <strong><em>SEAI Certified!</em></strong>.
                                 </section>
                                 <br />
                             </div>
                         </div>
                     </div>
                     <div className="p-4 mb-3 mt-2 bg-light rounded border border-primary">
-                        <h4>A quote from Celtic Diving Team</h4>
-                        <p className="mb-0 fst-italic"> We dive not to escape life, but for life not to escape us.
+                        <h4>A quote from Anonymous...</h4>
+                        <p className="mb-0 fst-italic"> We Listen to your needs, Design it to your specifications, and Built it to your DREAMS!
                         </p>
                     </div>
 
@@ -187,19 +166,18 @@ function AboutUs() {
 
                             <div className="col">
                                 <div className="card rounded mb-4 shadow-sm">
-                                    <img className="card-img-top" src={diverjohn} alt="diver" />
+                                    <img className="card-img-top" src={foreman} alt="diver" />
                                     <div className="card-body">
                                         <h5 className="card-title">David John Walker</h5>
-                                        <div className="card-text"><strong> <em>Certified PADI Instructor</em> </strong> He is qualified to teach a wide range of
-                                            diving courses:
+                                        <div className="card-text"><strong> <em>Senior Customer Sales Representative</em> </strong> He used to work as Foreman from 
+                                        a reputable construction company. Services he handles are as follows 
                                             <ul>
-                                                <li>Open Water Dive</li>
-                                                <li>Advanced Open Water Dive</li>
-                                                <li>Search and Rescue Dive</li>
-                                                <li>Drysuit Course</li>
-                                                <li>Navigation</li>
-                                                <li>Underwater Video and Photography</li>
-                                                <li>Deep Technical Diving</li>
+                                                <li>Plumbing Services</li>
+                                                <li>Roofing Services</li>
+                                                <li>House Painting</li>
+                                                <li>Heating</li>
+                                                <li>Air Conditioning</li>
+                                                
                                             </ul></div>
                                     </div>
 
@@ -211,9 +189,7 @@ function AboutUs() {
                                     <img className="card-img-top" src={divergino} alt="diver" />
                                     <div className="card-body">
                                         <h5 className="card-title">Gino Ruperez</h5>
-                                        <p className="card-text">He enjoys all diving and has a special love
-                                            of underwater Photography. He is a certified PADI open water, PADI advanced open water
-                                            and Rescue Diver. He is a qualified PADI instructor.</p>
+                                        <p className="card-text">The owner of K2G Contractor</p>
                                     </div>
 
                                 </div>
@@ -221,12 +197,12 @@ function AboutUs() {
 
                             <div className="col">
                                 <div className="card rounded mb-4 shadow-sm">
-                                    <img className="card-img-top" src={diverfiona} alt="diver" />
+                                    <img className="card-img-top" src={foreman2} alt="diver" />
                                     <div className="card-body">
-                                        <h5 className="card-title">Fiona Madrigal</h5>
-                                        <p className="card-text">joined in 2017 and qualified as Dive Master
+                                        <h5 className="card-title">Jorge Madrigal</h5>
+                                        <p className="card-text">joined in 2017 and qualified as Painter and Plumber
                                             since 2008.
-                                            Fiona is an integral member of our dive center and is our senior Assistant instructor.</p>
+                                            Jorge is an integral member of our company and is our Assistant CSR</p>
                                     </div>
 
                                 </div>
