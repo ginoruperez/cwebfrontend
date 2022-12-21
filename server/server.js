@@ -79,6 +79,19 @@ app.post('/api/users/register', async (req, res) => {
   
 });
 
+
+//contractors list 
+app.get('/api/contractors', async (req, res) => {
+  console.log(' /api/contractors endpoint');
+  Connection.query('Select id,name,location,specialties,size,rate,owner from contractor ', (err, result) => {    
+          res.send(result        
+          )
+        })       
+});
+
+
+
+
 app.post('/api/users/login', async (req, res) => {
   console.log(' /api/users/login endpoint');
   const email = req.body.email;
