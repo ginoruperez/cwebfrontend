@@ -4,8 +4,8 @@ export const data =  [
     title: "Electrical",
     type: "Electrical",
     name: "Electrical",
-    image: "https://images.pexels.com/photos/2898199/pexels-photo-2898199.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    price: 14.18,
+    image: "https://as2.ftcdn.net/v2/jpg/02/20/70/53/1000_F_220705393_h2fWrmo9cO3e6zh4PBkFKg1s1KRhUap1.jpg",
+    price: 60,
     
   },  
     
@@ -13,16 +13,16 @@ export const data =  [
     id : '2',
     title: "Roofing",
     name: "Roofing",
-    price: 100.00,
-    image: "https://www.christianbrothersroofingllc.com/wp-content/uploads/2020/04/Local-Roofing-Contractor-01-375x250@2x.jpg.webp"        
+    price: 150.00,
+    image: "https://novashield.ca/wp-content/uploads/2021/10/emergency-roof-repair-banff.jpg"
   }, 
 
   {
     id : '3',
     title: "Plumbing",
     name: "Plumbing",
-    image: "https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    price: 18.95
+    image: "https://adabgmwwup.cloudimg.io/v7/_queerty-prodweb_/2018/10/reasonstodateaplumber.jpg?&auto=format&auto=compress&w=550",
+    price: 60.00
     
   },
   {
@@ -31,7 +31,7 @@ export const data =  [
     type: "Carpets",
     name: "Carpets",
     image : "https://images.pexels.com/photos/164446/pexels-photo-164446.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    price: 17.68        
+    price: 40        
   },
   {
     id : 5,
