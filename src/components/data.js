@@ -39,7 +39,7 @@ export const data =  [
     type: "Drywall",
     name: "Drywall",
     image: "https://media.gettyimages.com/id/97561605/photo/man-working-on-drywall.jpg?s=612x612&w=0&k=20&c=eAeiQczZZeHAE9DT1PSj8cCh7Aw-ELLdH41amgaSVFE=",
-    price: 11.14
+    price: 130
     
   },
   {
@@ -48,7 +48,7 @@ export const data =  [
     type: "Heating",
     name: "Heating",
     image: "https://www.doctorflue.com/blog/wp-content/uploads/2017/12/doctor-flue-heating-your-home-with-a-fireplace.jpg",
-    price: 27.35,
+    price: 80
     
   },
   {
@@ -56,16 +56,24 @@ export const data =  [
     title: "Air Conditioning Maintenance",
     name: "Air Conditioning",
     price: 50.00,
-    image: "https://images.pexels.com/photos/7347538/pexels-photo-7347538.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://iceblast.com.au/wp-content/uploads/2021/07/male-air-conditioner-technician.jpg"
   },
   {
     id : 8,
     title: "Glass",
     type: "Glass",
     name: "Glass",
-    image: "https://images.pexels.com/photos/8292802/pexels-photo-8292802.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    image: "https://tampabaywindowclean.com/wp-content/uploads/2022/03/Mask-group.png",
     price: 28.59,
     
+  },
+  {
+    title: "Washing Machine Repair",
+    type: "Repair",
+    name: "Washing Machine Repair",
+    price: 50,
+    image: "https://www.friscorepair.com/uploads/1/2/9/6/129603690/frisco-appliance-repair-washer-and-dryer-repair_orig.jpg",
+    id: 9
   },  
 ];
 
