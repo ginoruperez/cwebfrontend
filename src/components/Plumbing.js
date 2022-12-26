@@ -1,9 +1,5 @@
 import React from 'react';
 import dolphinico from './images/contractorlogo-tiny.png';
-import mermaid from './images/products/mermaid-small.jpg';
-import fundive from './images/products/fundive.jpg';
-import photography from './images/products/dive-photography.jpg';
-import boatdiver from './images/products/boatdiver.jpg';
 import { footer } from './Footer';
 
 
@@ -107,7 +103,7 @@ function Plumbing() {
                     <nav className="my-3 ms-3" >
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><a href="/">Home</a></li>
-                            <li className="breadcrumb-item"><a href="/">Services</a></li>
+                            <li className="breadcrumb-item"><a href="/Services">Services</a></li>
                             <li className="breadcrumb-item">Plumbing</li>
                         </ol>
                     </nav>
@@ -119,10 +115,11 @@ function Plumbing() {
                     <div className="row ">
 
                         <div className="col-6 col-lg-8">
+                            {/*src="https://www.youtube.com/embed/hlJUezuNFuI" */}
 
                             <div className="container-openwater">
-                                <iframe className="responsive-iframe"
-                                    src="https://www.youtube.com/embed/hlJUezuNFuI"
+                                <iframe className="responsive-iframe"                                    
+                                    src="https://www.youtube.com/embed/haCIPCfgT30" 
                                     title="YouTube video player">
                                 </iframe>
 
@@ -158,7 +155,7 @@ function Plumbing() {
                             <div className="row">
 
                                 <div className="col-md-4">
-                                    <strong>Rate € 200.00</strong>
+                                    <strong>Rate € 60.00</strong>
                                 </div>
                                 <div className="col-md-8">
                                     <a type="button" href="/Contact" className="btn btn-success float-end">

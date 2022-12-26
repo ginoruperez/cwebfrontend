@@ -3,7 +3,7 @@ import ServicesMain from './ServicesMain';
 import Basket from './Basket';
 import { data } from './data';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import contractorico from './images/contractorlogo-tiny.png';
 
@@ -12,7 +12,20 @@ import contractorlogo from './images/contractorlogo.png';
 
 function Services() {
 
+  //This uses the data.js  initially
   const [products, setProducts] = React.useState(data);
+
+  //This fetches the data from data.json file 
+  useEffect(() => {
+    fetch('http://localhost:8000/products')
+      .then(res => res.json())
+      .then(data => {
+        setProducts(data);
+      })
+
+  })
+
+
   console.log(products);
 
   const removeItem = async (id) => {
@@ -22,17 +35,35 @@ function Services() {
     )
 
     if (confirmBox === true) {
+
+      //this uses the data.js and can be removed
       let newProducts = products.filter((item) => item.id !== id);
       console.log(newProducts);
       setProducts(newProducts);
+
+      //this uses the data.json 
+      await fetch('http://localhost:8000/products/' + id, {
+          method: 'DELETE'
+        }).then(() => {
+          const newProducts = products.filter(product => product.id !== id);
+          setProducts(newProducts);
+          console.log("New prod" + newProducts);
+
+        })
+
+
 
     }
 
   };
 
 
+ 
+
   const [cartItems, setCartItems] = useState([]);
+
   const onAdd = (product) => {
+    
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist) {
       setCartItems(
@@ -44,6 +75,7 @@ function Services() {
       setCartItems([...cartItems, { ...product, qty: 1 }]);
     }
   };
+
   const onRemove = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist.qty === 1) {
@@ -112,6 +144,7 @@ function Services() {
                     <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                       <ul className="submenu dropdown-menu">
                         <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                        <li><a className="dropdown-item" href="/CreateService" >Create Service</a></li>
                         <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                       </ul>
                     </li>

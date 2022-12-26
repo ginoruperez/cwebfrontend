@@ -37,13 +37,13 @@ const columns: GridColDef[] = [
 export default function DataTable() {
 
     const [contractorData, setcontractorData] = useState([])
-    const [isLoading, setLoading] = useState(true)
+    //const [isLoading, setLoading] = useState(true)
 
 
     useEffect(() => {
         axios.get('http://localhost:8080/contractorweb/contractors').then(res => {
             setcontractorData(res.data);
-            setLoading(false)
+           // setLoading(false)
         })
     }, [])
 
@@ -61,10 +61,7 @@ export default function DataTable() {
             // Somewhere in your code, e.g. inside a handler:
             navigate("/SignInLink");
 
-        } else {
-            { /* alert(username); */ }
-        }
-
+        } 
 
     }
 
@@ -121,7 +118,8 @@ export default function DataTable() {
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
                                                 <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
-                                                <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
+                                                <li><a className="dropdown-item"  href="/CreateService" >Create Service</a></li>
+                                                <li><a className="dropdown-item"  href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>

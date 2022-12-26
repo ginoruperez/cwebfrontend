@@ -2,160 +2,73 @@
   "products": [
     {
       "id": 1,
-      "title": "Wet Suit",
-      "type": "Dive Suit",
-      "description": "Scuabpro EVERDRY 4.0 WN L",
-      "filename": "https://scubapro.johnsonoutdoors.eu/sites/eu_johnsonoutdoors-store/files/assets/images/10/1/1098365_primary/1098365_primary.jpg",
-      "height": 600,
-      "width": 400,
-      "price": 28.1,
-      "rating": 4
+      "title": "Electrical",
+      "type": "Electrical",
+      "name": "Electrical",
+      "image": "https://as2.ftcdn.net/v2/jpg/02/20/70/53/1000_F_220705393_h2fWrmo9cO3e6zh4PBkFKg1s1KRhUap1.jpg",
+      "price": 60
     },
     {
       "id": 2,
-      "title": "Hats",
-      "type": "Accessories",
-      "description": "PADI Cap",
-      "filename": "https://cdn.shopify.com/s/files/1/0214/3620/3072/products/PADI-Merchant-Tailor-Hats-Blue-Camo-Trucker-3_460x460@2x.jpg?v=1603398534",
-      "height": 450,
-      "width": 299,
-      "price": 29.45,
-      "rating": 4
+      "title": "Roofing",
+      "name": "Roofing",
+      "price": 150,
+      "image": "https://novashield.ca/wp-content/uploads/2021/10/emergency-roof-repair-banff.jpg"
     },
     {
       "id": 3,
-      "title": "Diving Boots",
-      "type": "Boots",
-      "description": "Scuabpro DELTA BOOT 6.5 BLK 4XL",
-      "filename": "https://files.evediving.com/store/7716/StoreFiles/ProductImages/Scubpro/Dive%20Wear/500x500/Boots_Delta1.jpg",
-      "height": 450,
-      "width": 299,
-      "price": 18.95,
-      "rating": 3
+      "title": "Plumbing",
+      "name": "Plumbing",
+      "image": "https://adabgmwwup.cloudimg.io/v7/_queerty-prodweb_/2018/10/reasonstodateaplumber.jpg?&auto=format&auto=compress&w=550",
+      "price": 60
     },
     {
       "id": 4,
-      "title": "Regulator",
-      "type": "Diving Equipment",
-      "description": "Scubapro MK17 DIN / C370 / R095 Octopus",
-      "filename": "https://files.evediving.com/store/7716/StoreFiles/ProductImages/Scubpro/Regulator%20Set/500x500/C370_Reg_Left_LR1.jpg",
-      "height": 600,
-      "width": 399,
-      "price": 17.68,
-      "rating": 4
+      "title": "Carpets",
+      "type": "Carpets",
+      "name": "Carpets",
+      "image": "https://images.pexels.com/photos/164446/pexels-photo-164446.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "price": 40
     },
     {
       "id": 5,
-      "title": "Buoyancy Control Device",
-      "type": "Diving Equipment",
-      "description": "Scubapro Equator BCD",
-      "filename": "https://files.evediving.com/store/7716/StoreFiles/ProductImages/Scubpro/BCDs/500x500/Equator.jpg",
-      "height": 450,
-      "width": 675,
-      "price": 11.14,
-      "rating": 4
+      "title": "Drywall",
+      "type": "Drywall",
+      "name": "Drywall",
+      "image": "https://media.gettyimages.com/id/97561605/photo/man-working-on-drywall.jpg?s=612x612&w=0&k=20&c=eAeiQczZZeHAE9DT1PSj8cCh7Aw-ELLdH41amgaSVFE=",
+      "price": 130
     },
     {
       "id": 6,
-      "title": "Dive Mask",
-      "type": "Mask",
-      "description": "SUUNTO Spectra Mask",
-      "filename": "https://files.evediving.com/store/7716/StoreFiles/ProductImages/Scubpro/Mask/500x500/SPECTRA_rd_24847320_S.jpg",
-      "height": 450,
-      "width": 301,
-      "price": 27.35,
-      "rating": 0
+      "title": "Heating",
+      "type": "Heating",
+      "name": "Heating",
+      "image": "https://www.doctorflue.com/blog/wp-content/uploads/2017/12/doctor-flue-heating-your-home-with-a-fireplace.jpg",
+      "price": 80
     },
     {
       "id": 7,
-      "title": "Dive Lights",
-      "type": "Dive Accessories",
-      "description": "Anchor Dive Lights ARRON - Series 1K Spot ( Blue)",
-      "filename": "https://anchordivelights.com/wp-content/uploads/2019/12/Arran_01_300x300-1.png",
-      "height": 600,
-      "width": 399,
-      "price": 28.59,
-      "rating": 4
+      "title": "Air Conditioning Maintenance",
+      "name": "Air Conditioning",
+      "price": 50,
+      "image": "https://iceblast.com.au/wp-content/uploads/2021/07/male-air-conditioner-technician.jpg"
     },
     {
       "id": 8,
-      "title": "Fins",
-      "type": "Diving Equipment",
-      "description": "Scuabpro JET SPORT FIN, yellow, Size L",
-      "filename": "https://tauchen.johnsonoutdoors.com/Catalog/Media/Images/609256-003-0005687_m.jpg",
-      "height": 400,
-      "width": 600,
-      "price": 14.18,
-      "rating": 1
+      "title": "Glass",
+      "type": "Glass",
+      "name": "Glass",
+      "image": "https://tampabaywindowclean.com/wp-content/uploads/2022/03/Mask-group.png",
+      "price": 70
     },
     {
-      "id": 10,
-      "title": "Scuba Tank",
-      "type": "Cylinder",
-      "description": "Colored Scuba Cylinder",
-      "filename": "https://www.americandivers.net/assets/imgPageThumb/Tanks.jpg",
-      "height": 600,
-      "width": 400,
-      "price": 28.86,
-      "rating": 2
-    },
-    {
-      "id": 11,
-      "title": "Dive Gloves",
-      "type": "Gloves",
-      "description": "Aqualung Gloves, Admiral Wmn's",
-      "filename": "https://usfiles.evediving.com/store/5415/StoreFiles/ProductImages/Aqualung/Gloves/500x500/admiral%20purp4.jpg",
-      "height": 600,
-      "width": 400,
-      "price": 25.62,
-      "rating": 3
-    },
-    {
-      "id": 12,
-      "title": "Dive Knives",
-      "type": "Knife",
-      "description": "Innovative Scuba Knife w/Line Cutter",
-      "filename": "https://usfiles.evediving.com/store/5415/StoreFiles/ProductImages/Innovative%20Scuba/Knives/500x500/gumgna_1200_900.jpg",
-      "height": 600,
-      "width": 401,
-      "price": 18.18,
-      "rating": 1
-    },
-    {
-      "title": "Adults’ snorkel ",
-      "type": "fins goggles",
-      "description": "Adults’ snorkel snk 520",
-      "rating": 3,
-      "price": 20.5,
-      "filename": "https://www.sportsdirect.com/images/products/88200013_l.jpg",
-      "id": 13
-    },
-    {
-      "title": "Dive hoods",
-      "type": "dive suit",
-      "description": "Scd scuba diving 3.5 mm neoprene hood",
-      "rating": 3,
-      "price": 21.25,
-      "filename": "https://img.nauticexpo.com/images_ne/photo-g/33351-9516313.jpg",
-      "id": 14
-    },
-    {
-      "title": "Scuba Dive Bag",
-      "type": "others",
-      "description": "Scuba diving bag scd 100 litres - black/grey",
+      "title": "Washing Machine Repair",
+      "type": "Repair",
+      "description": "washing ",
       "rating": 4,
-      "price": 40.5,
-      "filename": "https://contents.mediadecathlon.com/p2203647/k$831e4acdbb3bd093fee684a9c5684375/scuba-diving-bag-scd-100-litres-blackslashgrey.jpg?&f=800x800",
-      "id": 15
-    },
-    {
-      "title": "Dive watch",
-      "type": "others",
-      "description": "Spearfishing and freediving wrist-mount dive computer watch partner",
-      "rating": 4,
-      "price": 95.5,
-      "filename": "https://contents.mediadecathlon.com/p2203687/k$059bf476143255442ee4f0bb4ace9aa5/spearfishing-and-freediving-wrist-mount-dive-computer-watch-partner.jpg?&f=800x800",
-      "id": 16
+      "price": 50,
+      "image": "https://www.friscorepair.com/uploads/1/2/9/6/129603690/frisco-appliance-repair-washer-and-dryer-repair_orig.jpg",
+      "id": 9
     }
   ]
 }

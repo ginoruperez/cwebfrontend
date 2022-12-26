@@ -10,6 +10,13 @@ export default function Product(props) {
         navigate("/Contact"); 
     }
 
+    const onCreate = (e) => {
+        navigate('/CreateService');
+    }
+  
+
+
+
     return (
         <div>
 
@@ -38,6 +45,7 @@ export default function Product(props) {
                             </a>
 
                             <button className="btn" onClick={() => removeItem(id)} ><i class="fa fa-trash"></i></button>
+                            <button className="btn" onClick={() => onCreate()}><i class="fa fa-plus"></i></button>
 
                             { /* <button className="btn"><i class="fa fa-plus"></i></button> */}
 

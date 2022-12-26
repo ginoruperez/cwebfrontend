@@ -1,15 +1,11 @@
 import React, { useState } from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { Avatar, Container, CssBaseline, Box, Typography, TextField, Grid, FormControlLabel, Checkbox, Button } from '@mui/material';
-import { Link } from "react-router-dom"
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import { Avatar, Container, CssBaseline, Box, Typography, TextField, Grid, Button } from '@mui/material';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { footer } from './Footer';
 import dolphinico from './images/contractorlogo-tiny.png';
-import Main from './Main';
-import SignInLink from './SignInLink'
 
 async function profile(credentials) {
     return fetch('http://localhost:8081/api/users/profile', {
@@ -80,10 +76,7 @@ export default function MyProfile({ setToken }) {
             // Somewhere in your code, e.g. inside a handler:
             navigate("/");
 
-        } else {
-            { /* alert(username); */ }
-        }
-
+        } 
 
     }
 
@@ -141,7 +134,8 @@ export default function MyProfile({ setToken }) {
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
                                                 <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
-                                                <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
+                                                <li><a className="dropdown-item"  href="/CreateService" >Create Service</a></li>
+                                                <li><a className="dropdown-item"  href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>

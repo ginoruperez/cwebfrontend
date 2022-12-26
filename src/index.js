@@ -28,6 +28,7 @@ import MyProfile from './components/MyProfile';
 import ContractorAdmin from './components/ContractorAdmin';
 import UpdateContractor from './components/UpdateContractor';
 import DeleteContractor from './components/DeleteContractor';
+import CreateService from './components/CreateService';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -44,6 +45,7 @@ root.render(
       <Route path="Faq" element={<Faq />} />
       <Route path="Contractors" element={<Contractors />} />    
       <Route path="Services" element={<Services />} />      
+      <Route path="CreateService" element={<CreateService />} />      
       <Route path="ContractorAdmin" element={<ContractorAdmin />} />
       <Route path="AddContractor" element={<AddContractor />} />
       <Route path="/updatecontractor/:id" element={<UpdateContractor />} />

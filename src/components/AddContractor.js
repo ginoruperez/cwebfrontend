@@ -189,7 +189,7 @@ class AddContractor extends React.Component {
 
                                     <select className="form-control" name="specialties"
                                         onChange={(event) => { this.specialties = event.target.value }} id="specialties">
-
+                                        <option>Select Specialties</option>
                                         <option value="Roofing">Roofing</option>
                                         <option value="Painting">Painting</option>
                                         <option value="Heating">Heating</option>
