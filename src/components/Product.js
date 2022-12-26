@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import React from 'react';
 
 export default function Product(props) {
-    const { product, onAdd, removeItem } = props;
+    const { product, removeItem } = props;
 
     const { id } = product
     const navigate = useNavigate();
