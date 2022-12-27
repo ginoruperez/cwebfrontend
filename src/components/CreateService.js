@@ -7,7 +7,7 @@ import { footer } from './Footer';
 
 export default function CreateService() {
     const [title, setTitle] = useState('');
-    const [description, setDescription] = useState('');
+    const [name, setName] = useState('');
     const [type, setType] = useState('snorkel');
     const [rating, setRating] = useState(0);
     const [price, setPrice] = useState(0);
@@ -17,8 +17,8 @@ export default function CreateService() {
 
     const handleProductCreation = (e) => {
         e.preventDefault();
-        if (title && description && type && price) {
-            console.log({ title, type, description, rating, price, image });
+        if (title && name && type && price) {
+            console.log({ title, type, name, rating, price, image });
 
 
             const priceTotal = parseFloat(price, 10)
@@ -26,7 +26,7 @@ export default function CreateService() {
             fetch('http://localhost:8000/products', {
                 method: 'POST',
                 headers: { "content-type": "application/json" },
-                body: JSON.stringify({ title, type, description, rating, price: priceTotal, image })
+                body: JSON.stringify({ title, type, name, rating, price: priceTotal, image })
 
             }).then(() => navigateTo('/Services'))
         }
@@ -150,8 +150,8 @@ export default function CreateService() {
                         </TextField>
 
                         <TextField
-                            label='Service Description'
-                            onChange={(e) => setDescription(e.target.value)}
+                            label='Service name'
+                            onChange={(e) => setName(e.target.value)}
                             required
 
                             fullWidth
