@@ -62,13 +62,13 @@ class AddContractor extends React.Component {
                                     <a className="nav-link " href="/AboutUs">About Us</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link active" href="/Contact">Contact</a>
+                                    <a className="nav-link" href="/Contact">Contact</a>
                                 </li>
 
 
                                 <li className="nav-item dropdown">
 
-                                    <a className="nav-link dropdown-toggle" href="/" id="nav-dropdown" data-bs-toggle="dropdown"
+                                    <a className="nav-link active dropdown-toggle" href="/" id="nav-dropdown" data-bs-toggle="dropdown"
                                         aria-expanded="false" >
                                         Extras
                                     </a>
@@ -148,8 +148,10 @@ class AddContractor extends React.Component {
                     <nav className="my-3 ms-3" >
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><a href="/">Home</a></li>
-                            <li className="breadcrumb-item"><a href="/ContractorAdmin">Contractors Admin</a></li>
-                            <li className="breadcrumb-item">CRUD Facilities</li>
+                            <li className="breadcrumb-item"><a href="/">Extras</a></li>
+                            <li className="breadcrumb-item"><a href="/">External Links</a></li>
+                            <li className="breadcrumb-item"><a href="/ContractorAdmin">Contractor Admin</a></li>
+                            <li className="breadcrumb-item">Register Contractors</li>
                         </ol>
                     </nav>
 

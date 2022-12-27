@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { DataGrid, GridColDef  } from '@mui/x-data-grid';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import dolphinico from './images/contractorlogo-tiny.png';
 import { footer } from './Footer';
+import { GridToolbarContainer, GridToolbarExport } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', type: 'number', width: 70 },
@@ -33,6 +34,14 @@ const columns: GridColDef[] = [
 ];
 
 
+function CustomToolbar() {
+    return (
+        <GridToolbarContainer>
+            <GridToolbarExport />
+        </GridToolbarContainer>
+    );
+}
+
 
 export default function DataTable() {
 
@@ -43,7 +52,7 @@ export default function DataTable() {
     useEffect(() => {
         axios.get('http://localhost:8080/contractorweb/contractors').then(res => {
             setcontractorData(res.data);
-           // setLoading(false)
+            // setLoading(false)
         })
     }, [])
 
@@ -61,7 +70,7 @@ export default function DataTable() {
             // Somewhere in your code, e.g. inside a handler:
             navigate("/SignInLink");
 
-        } 
+        }
 
     }
 
@@ -118,8 +127,8 @@ export default function DataTable() {
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
                                                 <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
-                                                <li><a className="dropdown-item"  href="/CreateService" >Create Service</a></li>
-                                                <li><a className="dropdown-item"  href="/ContractorAdmin" >Contractor (Admin)</a></li>
+                                                <li><a className="dropdown-item" href="/CreateService" >Create Service</a></li>
+                                                <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -164,13 +173,20 @@ export default function DataTable() {
 
                 <div className="container">
 
+                    <nav className="my-3 ms-3" >
+                        <ol className="breadcrumb">
+                            <li className="breadcrumb-item"><a href="/">Home</a></li>
+                            <li className="breadcrumb-item">Contractors</li>
+                        </ol>
+                    </nav>
+
                     <h1 className="fw-bolder"> Contractors
-                        <small className="fw-normal fst-italic"> Wide selections of our Contractors for your Home service requirements!</small>
+                        <small className="fw-normal fst-italic"> Selections of our Contractors for your Home service needs!</small>
                         <a type="button" href="/Contact" className="btn btn-success float-end">
                             Get a Quote
                         </a>
                     </h1>
-                   
+
 
 
 
@@ -181,10 +197,13 @@ export default function DataTable() {
                             pageSize={20}
                             rowsPerPageOptions={[20]}
                             checkboxSelection
+                            components={{
+                                Toolbar: CustomToolbar,
+                            }}
                         />
                     </div>
 
-                    
+
 
                 </div>
             </main>

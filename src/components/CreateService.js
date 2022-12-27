@@ -55,7 +55,7 @@ export default function CreateService() {
                             <ul className="nav navbar-nav mr-auto">
 
                                 <li className="nav-item ">
-                                    <a className="nav-link active" href="/">Home</a>
+                                    <a className="nav-link" href="/">Home</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/Services">Services</a>
@@ -75,7 +75,7 @@ export default function CreateService() {
 
                                 <li className="nav-item dropdown">
 
-                                    <a className="nav-link dropdown-toggle" href="/" id="nav-dropdown" data-bs-toggle="dropdown"
+                                    <a className="nav-link active dropdown-toggle" href="/" id="nav-dropdown" data-bs-toggle="dropdown"
                                         aria-expanded="false" >
                                         Extras
                                     </a>
@@ -130,7 +130,7 @@ export default function CreateService() {
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><a href="/">Home</a></li>
                             <li className="breadcrumb-item"><a href="/">Extras</a></li>
-                            <li className="breadcrumb-item"><a href="/">Exteranl Links</a></li>
+                            <li className="breadcrumb-item"><a href="/">External Links</a></li>
                             <li className="breadcrumb-item">Create Service</li>
                         </ol>
                     </nav>

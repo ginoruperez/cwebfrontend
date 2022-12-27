@@ -34,7 +34,7 @@ export default function UpdateContractor() {
     const handleSubmit = async e => {
         //  e.preventDefault();
 
-        
+
 
         if (name !== undefined && location === undefined && specialties === undefined && size === undefined &&
             rate === undefined && owner === undefined) {
@@ -287,8 +287,10 @@ export default function UpdateContractor() {
                     <nav className="my-3 ms-3" >
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><a href="/">Home</a></li>
-                            <li className="breadcrumb-item"><a href="/ContractorAdmin">Contractors Admin</a></li>
-                            <li className="breadcrumb-item">CRUD Facilities</li>
+                            <li className="breadcrumb-item"><a href="/">Extras</a></li>
+                            <li className="breadcrumb-item"><a href="/">External Links</a></li>
+                            <li className="breadcrumb-item"><a href="/ContractorAdmin">Contractor Admin</a></li>
+                            <li className="breadcrumb-item">Register Contractors</li>
                         </ol>
                     </nav>
 
@@ -323,7 +325,7 @@ export default function UpdateContractor() {
 
                             </div>
 
-{/*  */ }
+                            {/*  */}
 
                             <div className="mb-2">
                                 <h5>Select Specialties</h5>

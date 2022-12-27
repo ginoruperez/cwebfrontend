@@ -8,7 +8,7 @@ function ServicesMain(props) {
     return (
         <div>
 
-            <h2>Services</h2>
+            {/* <h2>Services</h2> */}
             <div className="col-sm">
                 {products.map((product) => (
                     <div className="card-product" >

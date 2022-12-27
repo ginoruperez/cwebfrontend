@@ -51,8 +51,10 @@ export default function DeleteContractor() {
                     <nav className="my-3 ms-3" >
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><a href="/">Home</a></li>
-                            <li className="breadcrumb-item"><a href="/ContractorAdmin">Contractors Admin</a></li>
-                            <li className="breadcrumb-item">CRUD Facilities</li>
+                            <li className="breadcrumb-item"><a href="/">Extras</a></li>
+                            <li className="breadcrumb-item"><a href="/">External Links</a></li>
+                            <li className="breadcrumb-item"><a href="/ContractorAdmin">Contractor Admin</a></li>
+                            <li className="breadcrumb-item">Delete Contractor</li>
                         </ol>
                     </nav>
 
