@@ -59,7 +59,7 @@ export default function DataTable() {
 
         axios.get('http://ec2-44-197-178-102.compute-1.amazonaws.com:8081/api/contractors').then(res => {
             setcontractorData(res.data);
-            setLoading(false)
+           // setLoading(false)
         })
     }, [])
 
