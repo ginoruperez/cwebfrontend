@@ -8,7 +8,7 @@ import { footer } from './Footer';
 import dolphinico from './images/dolphin.ico';
 
 async function loginUser(credentials) {
-    return fetch('http://localhost:8081/api/users/login', {
+    return fetch('http://ec2-44-197-178-102.compute-1.amazonaws.com:8081/api/users/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

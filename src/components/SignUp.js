@@ -20,7 +20,8 @@ const theme = createTheme();
 
 async function signUp(credentials) {
 
-    return fetch('http://localhost:8081/api/users/register', {
+    //http://ec2-44-197-178-102.compute-1.amazonaws.com/  AWS endpoint can be changed to localhost for testing
+    return fetch('http://ec2-44-197-178-102.compute-1.amazonaws.com:8081/api/users/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
