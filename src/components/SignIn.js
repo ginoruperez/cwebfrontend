@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import PropTypes from 'prop-types';
 
 import { footer } from './Footer';
-import dolphinico from './images/dolphin.ico';
+import dolphinico from './images/contractorlogo-tiny.png';
 
 async function loginUser(credentials) {
     return fetch('http://ec2-44-197-178-102.compute-1.amazonaws.com:8081/api/users/login', {
