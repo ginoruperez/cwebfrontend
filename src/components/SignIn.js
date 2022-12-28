@@ -54,7 +54,7 @@ export default function SignIn({ setToken, setAdmin }) {
             setToken(token);
             setAdmin(true);
             console.log('the password is correct test atest')
-            
+
         }
 
         else if (token === "User does not exist")
@@ -68,12 +68,11 @@ export default function SignIn({ setToken, setAdmin }) {
     return (
         <div>
             <header>
-
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
                         <a className="navbar-brand" href="/">
-                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="Celtic Sea Dive Shop Logo" />
-                            Celtic Sea Dive Shop
+                            <img src={dolphinico} width="30" height="30" className="d-inline-block align-top" alt="K2G Contracting Logo" />
+                            K 2 G Contractor Ltd.
                         </a>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -82,36 +81,29 @@ export default function SignIn({ setToken, setAdmin }) {
                         </button>
 
                         <div className="collapse navbar-collapse" id="navbarCollapse">
+
+
                             <ul className="nav navbar-nav mr-auto">
+
                                 <li className="nav-item ">
                                     <a className="nav-link" href="/">Home</a>
                                 </li>
-                                <li className="nav-item dropdown">
+                                <li className="nav-item">
+                                    <a className="nav-link" href="/Services">Services</a>
+                                </li>
 
-                                    <a className="nav-link dropdown-toggle" href="test.html" id="nav-dropdown" data-bs-toggle="dropdown"
-                                        aria-expanded="false" >
-                                        Courses
-                                    </a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="/Contractors">Contractors</a>
 
-                                    <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
-                                        <li><a className="dropdown-item" href="/OpenWater">Open Water</a></li>
-                                        <li><a className="dropdown-item" href="/AdvOpenWater">Advanced Open Water</a></li>
-                                        <li><a className="dropdown-item" href="/Rescue">Rescue Diving</a></li>
-                                        <li>
-                                            <hr className="dropdown-divider" />
-                                        </li>
-                                        <li><a className="dropdown-item" href="/AllCourses">All Dive Courses</a></li>
-                                    </ul>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/Products">Shop</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="/AboutUs">About Us</a>
+                                    <a className="nav-link " href="/AboutUs">About Us</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/Contact">Contact</a>
                                 </li>
+
+
                                 <li className="nav-item dropdown">
 
                                     <a className="nav-link dropdown-toggle" href="/" id="nav-dropdown" data-bs-toggle="dropdown"
@@ -124,19 +116,22 @@ export default function SignIn({ setToken, setAdmin }) {
                                         <li><a className="dropdown-item" href="/Faq">FAQ</a></li>
                                         <li><a className="dropdown-item" href="/">External Links &raquo; </a>
                                             <ul className="submenu dropdown-menu">
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.padi.com/" rel="noreferrer">PADI Website</a></li>
-                                                <li><a className="dropdown-item" target="_blank" href="https://www.daneurope.org/en/home" rel="noreferrer">DAN Website</a></li>
+                                                <li><a className="dropdown-item" target="_blank" href="https://www.seai.ie/" rel="noreferrer">SEAI Website</a></li>
+                                                <li><a className="dropdown-item" href="/ContractorAdmin" >Contractor (Admin)</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
+
+
                             </ul>
+
                         </div>
                     </div>
-                    <div className="nav-item dropdown active" style={{ "width": "170px", "height": "20px" }} >
 
-                        <div className="profile-pic dropdown-toggle" data-bs-toggle="dropdown"
-                        >
+                    <div className="nav-item dropdown active " style={{ "width": "170px", "height": "20px" }} >
+
+                        <div className="profile-pic dropdown-toggle" data-bs-toggle="dropdown">
                             <i className="fa fa-user" aria-hidden="true"></i>
                         </div>
 
@@ -144,6 +139,7 @@ export default function SignIn({ setToken, setAdmin }) {
                         <ul className="dropdown-menu" aria-labelledby="nav-dropdown">
                             <li><a className="dropdown-item" href="/SignInLink">Sign-In</a></li>
                             <li><a className="dropdown-item" href="/SignUp">Sign-Up</a></li>
+                            <li><a className="dropdown-item" href="/MyProfile">Profile</a></li>
                             <li>
                                 <hr className="dropdown-divider" />
                             </li>
@@ -151,6 +147,7 @@ export default function SignIn({ setToken, setAdmin }) {
                         </ul>
 
                     </div>
+
                 </nav>
 
             </header>
