@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { DataGrid, GridColDef  } from '@mui/x-data-grid';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import dolphinico from './images/contractorlogo-tiny.png';
 import { footer } from './Footer';
+import { GridToolbarContainer, GridToolbarExport } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', type: 'number', width: 70 },
@@ -32,6 +33,16 @@ const columns: GridColDef[] = [
 ];
 
 
+
+function CustomToolbar() {
+    return (
+        <GridToolbarContainer>
+            <GridToolbarExport />
+        </GridToolbarContainer>
+    );
+}
+
+
 export default function DataTable() {
 
     const [contractorData, setcontractorData] = useState([])
@@ -45,7 +56,7 @@ export default function DataTable() {
 
         // Use for local implementation
         //get('http://localhost:8081/api/contractors').then(res => {
-          
+
         axios.get('http://ec2-44-197-178-102.compute-1.amazonaws.com:8081/api/contractors').then(res => {
             setcontractorData(res.data);
             setLoading(false)
@@ -55,10 +66,10 @@ export default function DataTable() {
 
     const rows = contractorData
 
-    
+
     return (
         <div>
-      
+
             <header>
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">
@@ -160,7 +171,7 @@ export default function DataTable() {
                             Get a Quote
                         </a>
                     </h1>
-                   
+
 
 
 
@@ -171,10 +182,13 @@ export default function DataTable() {
                             pageSize={20}
                             rowsPerPageOptions={[20]}
                             checkboxSelection
+                            components={{
+                                Toolbar: CustomToolbar,
+                            }}
                         />
                     </div>
 
-                    
+
 
                 </div>
             </main>
