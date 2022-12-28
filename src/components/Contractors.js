@@ -46,7 +46,7 @@ function CustomToolbar() {
 export default function DataTable() {
 
     const [contractorData, setcontractorData] = useState([])
-    const [isLoading, setLoading] = useState(true)
+    //const [isLoading, setLoading] = useState(true)
 
 
     useEffect(() => {
