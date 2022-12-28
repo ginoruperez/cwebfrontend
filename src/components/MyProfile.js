@@ -90,7 +90,7 @@ export default function MyProfile({ setToken }) {
 
     return (
         <div>
-            {checkAuthenticate()}
+            
             <header>
                 <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
                     <div className="container">

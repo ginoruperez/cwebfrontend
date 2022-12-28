@@ -1,9 +1,5 @@
 import React from 'react';
 import dolphinico from './images/contractorlogo-tiny.png';
-import mermaid from './images/products/mermaid-small.jpg';
-import photography from './images/products/dive-photography.jpg';
-import boatdiver from './images/products/boatdiver.jpg';
-import fundive from './images/products/fundive.jpg';
 import { footer } from './Footer';
 
 function Roofing() {
