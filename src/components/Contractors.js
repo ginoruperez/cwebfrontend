@@ -56,8 +56,8 @@ export default function DataTable() {
 
         // Use for local implementation
         //get('http://localhost:8081/api/contractors').then(res => {
-
-        axios.get('http://ec2-44-197-178-102.compute-1.amazonaws.com:8081/api/contractors').then(res => {
+            
+        axios.get('http://ec2-44-197-131-129.compute-1.amazonaws.com:8081/api/contractors').then(res => {
             setcontractorData(res.data);
            // setLoading(false)
         })
