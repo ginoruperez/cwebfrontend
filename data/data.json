@@ -69,6 +69,15 @@
       "price": 50,
       "image": "https://www.friscorepair.com/uploads/1/2/9/6/129603690/frisco-appliance-repair-washer-and-dryer-repair_orig.jpg",
       "id": 9
+    },
+    {
+      "title": "Gardening",
+      "type": "Improvement",
+      "name": "Landscaping",
+      "rating": 4,
+      "price": 340,
+      "image": "http://www.dublingardener.ie/ckeditor_uploads/images/rathfarnham_garden.jpg",
+      "id": 10
     }
   ]
 }
